@@ -55,6 +55,7 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
             dates.append(date)
         }
         return dates
+        
     }
     private func getUserId() -> String {
         return Auth.auth().currentUser!.uid
