@@ -8,17 +8,17 @@
 
 import Foundation
 class ServiceEntity {
-    var id:String!
-    var name:String!
-    var averageRating:Float!
-    var description:String!
-    var cost:String!
-    var userId:String!
-    var category:String!
-    var isPremium:Bool!
-    var creationDate:String!
-    var address:String!
-    var countOfRates:Int!
+    private var id:String!
+    private var name:String!
+    private var averageRating:Float!
+    private var description:String!
+    private var cost:String!
+    private var userId:String!
+    private var category:String!
+    private var isPremium:Bool!
+    private var creationDate:String!
+    private var address:String!
+    private var countOfRates:Int!
 
     func setId(_id:String) {
         id = _id

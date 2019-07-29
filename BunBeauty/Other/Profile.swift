@@ -8,24 +8,25 @@
 
 import UIKit
 import FirebaseAuth
-class Profile: UIViewController {
-
+class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
     @IBOutlet weak var nameText: UILabel!
     @IBOutlet weak var cityTex: UILabel!
     @IBOutlet weak var phoneText: UILabel!
+    @IBOutlet weak var serviceTableView: UITableView!
     var ownerId:String!
+    var serviceList = [ServiceEntity]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let userId = getUserId()
         
         if(ownerId == nil){
-            print("hi profile!")
             ownerId = userId
             //initFCM
         }
         if(userId == ownerId){
-            // визуал моего профитля
+            // визуал моего профиля
             
             // set data
         }
@@ -33,6 +34,14 @@ class Profile: UIViewController {
             //визуал др профиля
         }
         updateProfileData(ownerId: ownerId)
+    }
+   
+    override func viewWillAppear(_ animated: Bool) {
+        serviceList.removeAll()
+        updateServiceList(ownerId: ownerId)
+        self.serviceTableView.reloadData()
+        
+        print("ON RESUME BRO")
     }
 
     func updateProfileData(ownerId:String) -> Void {
@@ -57,11 +66,47 @@ class Profile: UIViewController {
         //set avatar
         //updateServiceList()!
     }
+    func updateServiceList(ownerId:String) -> Void {
+        
+        let realm = DBHelper().getDBhelper()
+        //read element from databse
+        let servicesCursor = realm.objects(TABLE_SERVICES.self).filter("KEY_USER_ID_SERVICES = '" + ownerId + "'")
+        //using filter equals WHERE
+        //let radioctivityElements = realm.objects(RadioctivyElement.self).filter("name = 'Золото'")
+        //sort
+        for serviceElement in servicesCursor{
+            let service = ServiceEntity()
+            service.setId(_id: serviceElement.KEY_ID!)
+            service.setName(_name: serviceElement.KEY_NAME_SERVICES!)
+            let rating = Float(serviceElement.KEY_RATING_SERVICES!)!
+            service.setAverageRating(_rating: rating)
+            serviceList.append(service)
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return serviceList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = serviceTableView.dequeueReusableCell(withIdentifier: "serviceIdCell")!
+        cell.textLabel?.text = serviceList[indexPath.row].getName()
+        return cell
+    }
+
+    
     func getUserId() -> String {
         return Auth.auth().currentUser!.uid
     }
+    
+   
     @IBAction func goToAdditionService(_ sender: Any) {
-        let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
-        navigationController?.pushViewController(additionServiceVC, animated: true)
+        //let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
+        //navigationController?.pushViewController(additionServiceVC, animated: true)
+        goToMyCalendar()
+    }
+    func goToMyCalendar() {
+        let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
+        navigationController?.pushViewController(myCalendarVC, animated: true)
     }
 }

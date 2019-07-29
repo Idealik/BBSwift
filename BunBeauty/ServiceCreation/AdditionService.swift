@@ -29,7 +29,6 @@ class AdditionService: UIViewController {
     @IBOutlet weak var descriptionInput: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func addServiceBtn(_ sender: Any) {
@@ -45,6 +44,23 @@ class AdditionService: UIViewController {
             service.setAverageRating(_rating: 0)
             service.setIsPremium(_isPremium: false)
             uploadService(service: service)
+            goToMyCalendar()
+        }
+        else{
+            let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2-125, y: self.view.frame.size.height-100, width: 250, height: 35))
+            toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            toastLabel.textColor = UIColor.white
+            toastLabel.textAlignment = .center;
+            toastLabel.text = "Не все поля заполнены"
+            toastLabel.alpha = 1.0
+            toastLabel.layer.cornerRadius = 10;
+            toastLabel.clipsToBounds  =  true
+            self.view.addSubview(toastLabel)
+            UIView.animate(withDuration: 6.0, delay: 0.1, options: .curveEaseOut, animations: {
+                toastLabel.alpha = 0.0
+            }, completion: {(isCompleted) in
+                toastLabel.removeFromSuperview()
+            })
         }
     }
     
@@ -90,7 +106,7 @@ class AdditionService: UIViewController {
     }
     
     private func isFullInputs() -> Bool {
-        if(nameText.text == nil && descriptionInput.text == nil && costText.text == nil && addressInput.text == nil) {
+        if(nameText.text == "" || descriptionInput.text == "" || costText.text == "" || addressInput.text == "") {
             return false
         }
         return true
@@ -99,5 +115,8 @@ class AdditionService: UIViewController {
     private func getUserId() -> String {
         return Auth.auth().currentUser!.uid
     }
-    
+    func goToMyCalendar() {
+        let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
+        navigationController?.pushViewController(myCalendarVC, animated: true)
+    }
 }

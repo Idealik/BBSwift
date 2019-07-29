@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02505DEC22D0D66300C35306 /* AppDelegate.swift */; };
+		02505DEF22D0D66300C35306 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02505DEE22D0D66300C35306 /* Authorization.swift */; };
+		02505DF222D0D66300C35306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF022D0D66300C35306 /* Main.storyboard */; };
+		02505DF422D0D66300C35306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF322D0D66300C35306 /* Assets.xcassets */; };
+		02505DF722D0D66300C35306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF522D0D66300C35306 /* LaunchScreen.storyboard */; };
+		02505E0122D0DEE900C35306 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02505E0022D0DEE900C35306 /* GoogleService-Info.plist */; };
+		02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1222ECABD200E35E1A /* PhotoEntity.swift */; };
+		02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1522ECAFAC00E35E1A /* AdditionService.swift */; };
+		02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */; };
+		02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */; };
+		02B53C2122EE368C00E35E1A /* TABLE_SERVICES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */; };
+		02B53C2522EEFF3B00E35E1A /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2422EEFF3B00E35E1A /* MyCalendar.swift */; };
+		02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2622EF056C00E35E1A /* DayCell.swift */; };
+		02E209C422D22C6400AC046C /* VerifyPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209C322D22C6400AC046C /* VerifyPhone.swift */; };
+		02E209CD22D296E800AC046C /* MyAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209CC22D296E800AC046C /* MyAuthorization.swift */; };
+		02E209CF22D341A800AC046C /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209CE22D341A800AC046C /* Registration.swift */; };
+		02E209D622D34D5200AC046C /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209D522D34D5200AC046C /* UserEntity.swift */; };
+		02E209D822D4C6FB00AC046C /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209D722D4C6FB00AC046C /* DBHelper.swift */; };
+		02E209DB22D4CFA900AC046C /* TABLE_USERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209DA22D4CFA900AC046C /* TABLE_USERS.swift */; };
+		02E209DE22D517EB00AC046C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209DD22D517EB00AC046C /* Profile.swift */; };
+		02E209E122D61FDC00AC046C /* LoadingProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209E022D61FDC00AC046C /* LoadingProfileData.swift */; };
+		02E209E322D6249900AC046C /* TABLE_PHOTOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209E222D6249900AC046C /* TABLE_PHOTOS.swift */; };
+		75E05849D769EFB500816DE0 /* Pods_BunBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5908CA29CBA84A545FEF3B07 /* Pods_BunBeauty.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02505DE922D0D66300C35306 /* BunBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BunBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02505DEC22D0D66300C35306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02505DEE22D0D66300C35306 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		02505DF122D0D66300C35306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02505DF322D0D66300C35306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02505DF622D0D66300C35306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02505DF822D0D66300C35306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02505E0022D0DEE900C35306 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02B53C1222ECABD200E35E1A /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
+		02B53C1522ECAFAC00E35E1A /* AdditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionService.swift; sourceTree = "<group>"; };
+		02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEntity.swift; sourceTree = "<group>"; };
+		02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithTimeApi.swift; sourceTree = "<group>"; };
+		02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_SERVICES.swift; sourceTree = "<group>"; };
+		02B53C2422EEFF3B00E35E1A /* MyCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
+		02B53C2622EF056C00E35E1A /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		02E209C322D22C6400AC046C /* VerifyPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhone.swift; sourceTree = "<group>"; };
+		02E209CC22D296E800AC046C /* MyAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAuthorization.swift; sourceTree = "<group>"; };
+		02E209CE22D341A800AC046C /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		02E209D522D34D5200AC046C /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		02E209D722D4C6FB00AC046C /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		02E209DA22D4CFA900AC046C /* TABLE_USERS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_USERS.swift; sourceTree = "<group>"; };
+		02E209DD22D517EB00AC046C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		02E209E022D61FDC00AC046C /* LoadingProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProfileData.swift; sourceTree = "<group>"; };
+		02E209E222D6249900AC046C /* TABLE_PHOTOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_PHOTOS.swift; sourceTree = "<group>"; };
+		5908CA29CBA84A545FEF3B07 /* Pods_BunBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BunBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA72BA1C387646C4A599237 /* Pods-BunBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BunBeauty.debug.xcconfig"; path = "Target Support Files/Pods-BunBeauty/Pods-BunBeauty.debug.xcconfig"; sourceTree = "<group>"; };
+		B67DD05E80DBE56F686C823B /* Pods-BunBeauty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BunBeauty.release.xcconfig"; path = "Target Support Files/Pods-BunBeauty/Pods-BunBeauty.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02505DE622D0D66300C35306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75E05849D769EFB500816DE0 /* Pods_BunBeauty.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02505DE022D0D66300C35306 = {
+			isa = PBXGroup;
+			children = (
+				02505DEB22D0D66300C35306 /* BunBeauty */,
+				02505DEA22D0D66300C35306 /* Products */,
+				A091E1DAA40D55741FF867F5 /* Pods */,
+				D83290CC296C2B8A8F3D8BFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		02505DEA22D0D66300C35306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02505DE922D0D66300C35306 /* BunBeauty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02505DEB22D0D66300C35306 /* BunBeauty */ = {
+			isa = PBXGroup;
+			children = (
+				02B53C1D22EE1C0200E35E1A /* HelpApi */,
+				02B53C1422ECAF0B00E35E1A /* ServiceCreation */,
+				02E209DF22D61FA800AC046C /* LoadingData */,
+				02E209DC22D517CC00AC046C /* Other */,
+				02E209D922D4CF8B00AC046C /* Tables */,
+				02E209D022D34ABB00AC046C /* Entities */,
+				02E209C522D2962500AC046C /* LogIn */,
+				02505DEC22D0D66300C35306 /* AppDelegate.swift */,
+				02505DF022D0D66300C35306 /* Main.storyboard */,
+				02505E0022D0DEE900C35306 /* GoogleService-Info.plist */,
+				02505DF322D0D66300C35306 /* Assets.xcassets */,
+				02505DF522D0D66300C35306 /* LaunchScreen.storyboard */,
+				02505DF822D0D66300C35306 /* Info.plist */,
+			);
+			path = BunBeauty;
+			sourceTree = "<group>";
+		};
+		02B53C1422ECAF0B00E35E1A /* ServiceCreation */ = {
+			isa = PBXGroup;
+			children = (
+				02B53C1522ECAFAC00E35E1A /* AdditionService.swift */,
+				02B53C2422EEFF3B00E35E1A /* MyCalendar.swift */,
+				02B53C2622EF056C00E35E1A /* DayCell.swift */,
+			);
+			path = ServiceCreation;
+			sourceTree = "<group>";
+		};
+		02B53C1D22EE1C0200E35E1A /* HelpApi */ = {
+			isa = PBXGroup;
+			children = (
+				02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */,
+			);
+			path = HelpApi;
+			sourceTree = "<group>";
+		};
+		02E209C522D2962500AC046C /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				02505DEE22D0D66300C35306 /* Authorization.swift */,
+				02E209C322D22C6400AC046C /* VerifyPhone.swift */,
+				02E209CC22D296E800AC046C /* MyAuthorization.swift */,
+				02E209CE22D341A800AC046C /* Registration.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		02E209D022D34ABB00AC046C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				02E209D522D34D5200AC046C /* UserEntity.swift */,
+				02B53C1222ECABD200E35E1A /* PhotoEntity.swift */,
+				02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		02E209D922D4CF8B00AC046C /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				02E209DA22D4CFA900AC046C /* TABLE_USERS.swift */,
+				02E209D722D4C6FB00AC046C /* DBHelper.swift */,
+				02E209E222D6249900AC046C /* TABLE_PHOTOS.swift */,
+				02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		02E209DC22D517CC00AC046C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				02E209DD22D517EB00AC046C /* Profile.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		02E209DF22D61FA800AC046C /* LoadingData */ = {
+			isa = PBXGroup;
+			children = (
+				02E209E022D61FDC00AC046C /* LoadingProfileData.swift */,
+			);
+			path = LoadingData;
+			sourceTree = "<group>";
+		};
+		A091E1DAA40D55741FF867F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA72BA1C387646C4A599237 /* Pods-BunBeauty.debug.xcconfig */,
+				B67DD05E80DBE56F686C823B /* Pods-BunBeauty.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D83290CC296C2B8A8F3D8BFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5908CA29CBA84A545FEF3B07 /* Pods_BunBeauty.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02505DE822D0D66300C35306 /* BunBeauty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02505DFB22D0D66300C35306 /* Build configuration list for PBXNativeTarget "BunBeauty" */;
+			buildPhases = (
+				3ED26D5D7E88904B5544C8D1 /* [CP] Check Pods Manifest.lock */,
+				02505DE522D0D66300C35306 /* Sources */,
+				02505DE622D0D66300C35306 /* Frameworks */,
+				02505DE722D0D66300C35306 /* Resources */,
+				9AAAAF2FDC3D7E0085A4447C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BunBeauty;
+			productName = BunBeauty;
+			productReference = 02505DE922D0D66300C35306 /* BunBeauty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02505DE122D0D66300C35306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = BunBeauty;
+				TargetAttributes = {
+					02505DE822D0D66300C35306 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 02505DE422D0D66300C35306 /* Build configuration list for PBXProject "BunBeauty" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02505DE022D0D66300C35306;
+			productRefGroup = 02505DEA22D0D66300C35306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02505DE822D0D66300C35306 /* BunBeauty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02505DE722D0D66300C35306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02505DF722D0D66300C35306 /* LaunchScreen.storyboard in Resources */,
+				02505E0122D0DEE900C35306 /* GoogleService-Info.plist in Resources */,
+				02505DF422D0D66300C35306 /* Assets.xcassets in Resources */,
+				02505DF222D0D66300C35306 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ED26D5D7E88904B5544C8D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BunBeauty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AAAAF2FDC3D7E0085A4447C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BunBeauty/Pods-BunBeauty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BunBeauty/Pods-BunBeauty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BunBeauty/Pods-BunBeauty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02505DE522D0D66300C35306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02505DEF22D0D66300C35306 /* Authorization.swift in Sources */,
+				02B53C2522EEFF3B00E35E1A /* MyCalendar.swift in Sources */,
+				02E209D622D34D5200AC046C /* UserEntity.swift in Sources */,
+				02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */,
+				02E209E122D61FDC00AC046C /* LoadingProfileData.swift in Sources */,
+				02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */,
+				02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */,
+				02E209D822D4C6FB00AC046C /* DBHelper.swift in Sources */,
+				02E209C422D22C6400AC046C /* VerifyPhone.swift in Sources */,
+				02E209DB22D4CFA900AC046C /* TABLE_USERS.swift in Sources */,
+				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
+				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
+				02B53C2122EE368C00E35E1A /* TABLE_SERVICES.swift in Sources */,
+				02E209CF22D341A800AC046C /* Registration.swift in Sources */,
+				02E209DE22D517EB00AC046C /* Profile.swift in Sources */,
+				02E209E322D6249900AC046C /* TABLE_PHOTOS.swift in Sources */,
+				02E209CD22D296E800AC046C /* MyAuthorization.swift in Sources */,
+				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02505DF022D0D66300C35306 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02505DF122D0D66300C35306 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02505DF522D0D66300C35306 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02505DF622D0D66300C35306 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02505DF922D0D66300C35306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02505DFA22D0D66300C35306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02505DFC22D0D66300C35306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA72BA1C387646C4A599237 /* Pods-BunBeauty.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR56L474YV;
+				INFOPLIST_FILE = BunBeauty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-bTeam.BunBeauty";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02505DFD22D0D66300C35306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B67DD05E80DBE56F686C823B /* Pods-BunBeauty.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FR56L474YV;
+				INFOPLIST_FILE = BunBeauty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-bTeam.BunBeauty";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02505DE422D0D66300C35306 /* Build configuration list for PBXProject "BunBeauty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02505DF922D0D66300C35306 /* Debug */,
+				02505DFA22D0D66300C35306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02505DFB22D0D66300C35306 /* Build configuration list for PBXNativeTarget "BunBeauty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02505DFC22D0D66300C35306 /* Debug */,
+				02505DFD22D0D66300C35306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02505DE122D0D66300C35306 /* Project object */;
+}

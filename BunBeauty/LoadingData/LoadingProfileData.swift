@@ -62,7 +62,6 @@ class LoadingProfileData {
         addPhotoInLocalStorage(photo: photo)
     }
     static func loadUserServices(servicesSnapshot:DataSnapshot, userId:String) -> Void {
-        print(servicesSnapshot)
         for serviceSnapshot in servicesSnapshot.children{
             let service = ServiceEntity()
             service.setId(_id: (serviceSnapshot as AnyObject).key)
