@@ -312,6 +312,7 @@
                         <outlet property="costText" destination="Utw-u4-goy" id="sCs-DU-boZ"/>
                         <outlet property="descriptionInput" destination="Kco-q7-jUR" id="uKo-hM-LIp"/>
                         <outlet property="nameText" destination="zRg-vj-P29" id="yTS-6N-7pd"/>
+                        <segue destination="rmh-3B-nQW" kind="show" id="7Bt-wL-IV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icN-wp-jnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,7 +328,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lrx-W2-DME">
-                                <rect key="frame" x="39" y="123" width="343" height="329"/>
+                                <rect key="frame" x="40" y="120" width="340" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pqj-zf-i1P">
@@ -367,11 +368,14 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tS-5p-heR">
-                                <rect key="frame" x="156" y="500" width="108" height="30"/>
+                                <rect key="frame" x="150" y="500" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Продлолждить"/>
+                                <connections>
+                                    <action selector="goToMyTime:" destination="rmh-3B-nQW" eventType="touchUpInside" id="Hdi-PJ-yhq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -379,11 +383,83 @@
                     </view>
                     <connections>
                         <outlet property="calendarCollection" destination="lrx-W2-DME" id="l0L-bc-Ohs"/>
+                        <segue destination="Hc1-YG-7JK" kind="show" id="Ocx-xU-qb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40k-lz-wq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3415.9420289855075" y="827.67857142857144"/>
+        </scene>
+        <!--My Time-->
+        <scene sceneID="wtt-8I-a01">
+            <objects>
+                <viewController storyboardIdentifier="MyTime" id="Hc1-YG-7JK" customClass="MyTime" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XTU-J2-NKO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gRL-ob-v8L">
+                                <rect key="frame" x="40" y="120" width="340" height="521"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E46-hy-XuE">
+                                    <size key="itemSize" width="50" height="25"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TimeCell" reuseIdentifier="timeCell" id="26Q-Du-9mF" customClass="TimeCell" customModule="BunBeauty" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3T-Vw-Bed">
+                                                    <rect key="frame" x="7.5" y="4" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="c3T-Vw-Bed" firstAttribute="centerX" secondItem="26Q-Du-9mF" secondAttribute="centerX" id="3Ti-zo-F3C"/>
+                                            <constraint firstItem="c3T-Vw-Bed" firstAttribute="centerY" secondItem="26Q-Du-9mF" secondAttribute="centerY" id="6gc-QJ-Dp7"/>
+                                        </constraints>
+                                        <size key="customSize" width="50" height="25"/>
+                                        <connections>
+                                            <outlet property="timeCell" destination="c3T-Vw-Bed" id="DzT-6t-uKC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hc1-YG-7JK" id="SPt-xs-BRb"/>
+                                    <outlet property="delegate" destination="Hc1-YG-7JK" id="fAT-Wp-PGR"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTl-Pq-AWN">
+                                <rect key="frame" x="163" y="712" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Подтвердить"/>
+                                <connections>
+                                    <action selector="confirmBtn:" destination="Hc1-YG-7JK" eventType="touchUpInside" id="4w1-9g-Euz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xcS-1W-HhZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="scheduleCollection" destination="gRL-ob-v8L" id="viM-EP-poz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdY-0E-BJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4431.884057971015" y="827.67857142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

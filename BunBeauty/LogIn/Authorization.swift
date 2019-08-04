@@ -26,11 +26,10 @@ class ViewController: UIViewController {
         })*/
         //check status in FB
         FirebaseApp.configure()
-        print("hooo")
+        
         let fbUser = Auth.auth().currentUser
         
         if(fbUser != nil){
-            print("Hi")
             //hideViewsOfScreen
             let myPhoneNumber = (fbUser?.phoneNumber)!
             

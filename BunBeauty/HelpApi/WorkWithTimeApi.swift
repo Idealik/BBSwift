@@ -13,6 +13,12 @@ class WorkWithTimeApi {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter.string(from: date)
     }
+    
+    static func getDateInFormatYMD(date:Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: date)
+    }
     static func getDateInFormatDM(date:Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM"
@@ -48,6 +54,36 @@ class WorkWithTimeApi {
             return "ноя"
         case "12":
             return "дек"
+        default:
+            return ""
+        }
+    }
+    static func monthToNumber(month:String) -> String{
+        switch month {
+        case "янв":
+            return "01"
+        case "фев":
+            return "02"
+        case "мар":
+            return "03"
+        case "апр":
+            return "04"
+        case "май":
+            return "05"
+        case "июня":
+            return "06"
+        case "июля":
+            return "07"
+        case "авг":
+            return "08"
+        case "сен":
+            return "09"
+        case "окт":
+            return "10"
+        case "ноя":
+            return "11"
+        case "дек":
+            return "12"
         default:
             return ""
         }

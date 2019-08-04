@@ -20,6 +20,13 @@
 		02B53C2122EE368C00E35E1A /* TABLE_SERVICES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */; };
 		02B53C2522EEFF3B00E35E1A /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2422EEFF3B00E35E1A /* MyCalendar.swift */; };
 		02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2622EF056C00E35E1A /* DayCell.swift */; };
+		02B53C2922F00EE900E35E1A /* MyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2822F00EE900E35E1A /* MyTime.swift */; };
+		02B53C2B22F01B9E00E35E1A /* WorkWithLocalStorageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2A22F01B9E00E35E1A /* WorkWithLocalStorageApi.swift */; };
+		02B53C2E22F5839A00E35E1A /* IWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2D22F5839A00E35E1A /* IWorker.swift */; };
+		02B53C3022F5849B00E35E1A /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2F22F5849B00E35E1A /* Worker.swift */; };
+		02B53C3222F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C3122F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift */; };
+		02B53C3422F5E63700E35E1A /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C3322F5E63700E35E1A /* TimeCell.swift */; };
+		02B53C3722F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C3622F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift */; };
 		02E209C422D22C6400AC046C /* VerifyPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209C322D22C6400AC046C /* VerifyPhone.swift */; };
 		02E209CD22D296E800AC046C /* MyAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209CC22D296E800AC046C /* MyAuthorization.swift */; };
 		02E209CF22D341A800AC046C /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209CE22D341A800AC046C /* Registration.swift */; };
@@ -48,6 +55,13 @@
 		02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_SERVICES.swift; sourceTree = "<group>"; };
 		02B53C2422EEFF3B00E35E1A /* MyCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
 		02B53C2622EF056C00E35E1A /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		02B53C2822F00EE900E35E1A /* MyTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTime.swift; sourceTree = "<group>"; };
+		02B53C2A22F01B9E00E35E1A /* WorkWithLocalStorageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithLocalStorageApi.swift; sourceTree = "<group>"; };
+		02B53C2D22F5839A00E35E1A /* IWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IWorker.swift; sourceTree = "<group>"; };
+		02B53C2F22F5849B00E35E1A /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		02B53C3122F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_WORKING_DAYS.swift; sourceTree = "<group>"; };
+		02B53C3322F5E63700E35E1A /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		02B53C3622F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_WORKING_TIME.swift; sourceTree = "<group>"; };
 		02E209C322D22C6400AC046C /* VerifyPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhone.swift; sourceTree = "<group>"; };
 		02E209CC22D296E800AC046C /* MyAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAuthorization.swift; sourceTree = "<group>"; };
 		02E209CE22D341A800AC046C /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
@@ -115,9 +129,11 @@
 		02B53C1422ECAF0B00E35E1A /* ServiceCreation */ = {
 			isa = PBXGroup;
 			children = (
+				02B53C3522F5E96000E35E1A /* Cells */,
+				02B53C2C22F5837F00E35E1A /* Worker */,
 				02B53C1522ECAFAC00E35E1A /* AdditionService.swift */,
 				02B53C2422EEFF3B00E35E1A /* MyCalendar.swift */,
-				02B53C2622EF056C00E35E1A /* DayCell.swift */,
+				02B53C2822F00EE900E35E1A /* MyTime.swift */,
 			);
 			path = ServiceCreation;
 			sourceTree = "<group>";
@@ -126,8 +142,27 @@
 			isa = PBXGroup;
 			children = (
 				02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */,
+				02B53C2A22F01B9E00E35E1A /* WorkWithLocalStorageApi.swift */,
 			);
 			path = HelpApi;
+			sourceTree = "<group>";
+		};
+		02B53C2C22F5837F00E35E1A /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				02B53C2D22F5839A00E35E1A /* IWorker.swift */,
+				02B53C2F22F5849B00E35E1A /* Worker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		02B53C3522F5E96000E35E1A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				02B53C2622EF056C00E35E1A /* DayCell.swift */,
+				02B53C3322F5E63700E35E1A /* TimeCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		02E209C522D2962500AC046C /* LogIn */ = {
@@ -158,6 +193,8 @@
 				02E209D722D4C6FB00AC046C /* DBHelper.swift */,
 				02E209E222D6249900AC046C /* TABLE_PHOTOS.swift */,
 				02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */,
+				02B53C3122F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift */,
+				02B53C3622F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -311,7 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B53C3422F5E63700E35E1A /* TimeCell.swift in Sources */,
 				02505DEF22D0D66300C35306 /* Authorization.swift in Sources */,
+				02B53C2E22F5839A00E35E1A /* IWorker.swift in Sources */,
 				02B53C2522EEFF3B00E35E1A /* MyCalendar.swift in Sources */,
 				02E209D622D34D5200AC046C /* UserEntity.swift in Sources */,
 				02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */,
@@ -319,15 +358,20 @@
 				02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */,
 				02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */,
 				02E209D822D4C6FB00AC046C /* DBHelper.swift in Sources */,
+				02B53C3022F5849B00E35E1A /* Worker.swift in Sources */,
 				02E209C422D22C6400AC046C /* VerifyPhone.swift in Sources */,
 				02E209DB22D4CFA900AC046C /* TABLE_USERS.swift in Sources */,
 				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
 				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
 				02B53C2122EE368C00E35E1A /* TABLE_SERVICES.swift in Sources */,
 				02E209CF22D341A800AC046C /* Registration.swift in Sources */,
+				02B53C3722F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift in Sources */,
 				02E209DE22D517EB00AC046C /* Profile.swift in Sources */,
 				02E209E322D6249900AC046C /* TABLE_PHOTOS.swift in Sources */,
 				02E209CD22D296E800AC046C /* MyAuthorization.swift in Sources */,
+				02B53C2B22F01B9E00E35E1A /* WorkWithLocalStorageApi.swift in Sources */,
+				02B53C2922F00EE900E35E1A /* MyTime.swift in Sources */,
+				02B53C3222F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift in Sources */,
 				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

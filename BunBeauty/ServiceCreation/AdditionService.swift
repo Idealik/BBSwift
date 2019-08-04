@@ -44,7 +44,6 @@ class AdditionService: UIViewController {
             service.setAverageRating(_rating: 0)
             service.setIsPremium(_isPremium: false)
             uploadService(service: service)
-            goToMyCalendar()
         }
         else{
             let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2-125, y: self.view.frame.size.height-100, width: 250, height: 35))
@@ -103,6 +102,7 @@ class AdditionService: UIViewController {
         try! realm.write {
             realm.add(serviceTable)
         }
+        goToMyCalendar(serviceId: service.getId())
     }
     
     private func isFullInputs() -> Bool {
@@ -115,8 +115,10 @@ class AdditionService: UIViewController {
     private func getUserId() -> String {
         return Auth.auth().currentUser!.uid
     }
-    func goToMyCalendar() {
+    func goToMyCalendar(serviceId:String) {
         let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
+        myCalendarVC.serviceId = serviceId
+        myCalendarVC.statusUser = "worker"
         navigationController?.pushViewController(myCalendarVC, animated: true)
     }
 }

@@ -40,11 +40,9 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
         serviceList.removeAll()
         updateServiceList(ownerId: ownerId)
         self.serviceTableView.reloadData()
-        
-        print("ON RESUME BRO")
-    }
+        }
 
-    func updateProfileData(ownerId:String) -> Void {
+    private func updateProfileData(ownerId:String) -> Void {
         let user = UserEntity()
         let realm = DBHelper().getDBhelper()
         let usersCursor = realm.objects(TABLE_USERS.self).filter("KEY_ID = '" + ownerId + "'")
@@ -58,7 +56,7 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
         setProfileData(_user: user)
     }
     
-    func  setProfileData(_user:UserEntity) -> Void {
+    private func  setProfileData(_user:UserEntity) -> Void {
         nameText.text = _user.getName()
         cityTex.text = _user.getCity()
         phoneText.text = _user.getPhone()
@@ -101,12 +99,8 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
    
     @IBAction func goToAdditionService(_ sender: Any) {
-        //let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
-        //navigationController?.pushViewController(additionServiceVC, animated: true)
-        goToMyCalendar()
+        let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
+        navigationController?.pushViewController(additionServiceVC, animated: true)
     }
-    func goToMyCalendar() {
-        let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
-        navigationController?.pushViewController(myCalendarVC, animated: true)
-    }
+    
 }
