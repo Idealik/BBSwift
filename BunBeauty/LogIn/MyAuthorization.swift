@@ -18,7 +18,10 @@ class MyAuthorization {
 
     func authorizeUser(_myPhoneNumber:String, _context:UIStoryboard, _controller:UIViewController) {
         
-        let ref = Database.database().reference().child(USERS).queryOrdered(byChild: PHONE).queryEqual(toValue : _myPhoneNumber)
+        let ref = Database.database().reference()
+            .child(USERS)
+            .queryOrdered(byChild: PHONE)
+            .queryEqual(toValue : _myPhoneNumber)
         
         ref.observeSingleEvent(of: .value) { (usersSnapshot) in
             if(usersSnapshot.childrenCount == 0){

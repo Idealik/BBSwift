@@ -31,7 +31,6 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         if statusUser == WORKER{
             worker = Worker(userId:userId,serviceId: serviceId)
         }
-      
     }
 
     @IBAction func confirmBtn(_ sender: Any) {
@@ -40,6 +39,13 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 worker.addTime(workingDaysId:workingDaysId, workingHours: workingHours)
                 workingHours.removeAll()
                 alertEvertingDone()
+            }
+            
+            if removedHours.count > 0 {
+                //check is free time
+                worker.deleteTime(workingDaysId: workingDaysId, removedHours: removedHours)
+                alertEvertingDone()
+                removedHours.removeAll()
             }
         }
     }
@@ -64,7 +70,9 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = scheduleCollection.dequeueReusableCell(withReuseIdentifier: "timeCell", for: indexPath) as! TimeCell
+        var cell = scheduleCollection.dequeueReusableCell(withReuseIdentifier: "timeCell", for: indexPath) as! TimeCell
+        
+       
         var minute:String?
         if counterForCell%2 == 0 && counterForCell != 0{
             hour+=1
@@ -79,7 +87,19 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             isNullTime = true
             minute = "30"
         }
-        cell.timeCell.text = String(hour) + ":" + minute!
+        let time = String(hour) + ":" + minute!
+        if statusUser == WORKER{
+            //select buttons for worker
+            if WorkWithLocalStorageApi.checkCurrentTimeForWorker(workingDaysId: workingDaysId, time: time){
+                cell = pressedButton(cell: cell)
+                //if !isFreeTime(time)
+            }
+        }
+        else{
+            //select buttons for user
+        }
+        
+        cell.timeCell.text = time
         return cell
     }
     
@@ -87,7 +107,7 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     var selectedIndexPath: IndexPath?
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = scheduleCollection.cellForItem(at: indexPath) as! TimeCell
+        var cell = scheduleCollection.cellForItem(at: indexPath) as! TimeCell
         let curSelectedTime = cell.timeCell.text!
         if cell.tag == 1{
             //selected
@@ -99,20 +119,23 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             cell.tag = 0
         }else{
             //unselected
-            cell.layer.backgroundColor = UIColor.yellow.cgColor
             workingHours.append(curSelectedTime)
             if let index = removedHours.firstIndex(of: curSelectedTime) {
                 removedHours.remove(at: index)
             }
-            cell.tag = 1
+            cell = pressedButton(cell: cell)
         }
         print(workingHours)
         print(removedHours)
         
         self.selectedIndexPath = indexPath
     }
-    
-    func alertEvertingDone()  {
+    private func pressedButton(cell:TimeCell) -> TimeCell {
+        cell.tag = 1
+        cell.layer.backgroundColor = UIColor.yellow.cgColor
+        return cell
+    }
+    private func alertEvertingDone()  {
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2-125, y: self.view.frame.size.height-100, width: 250, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white

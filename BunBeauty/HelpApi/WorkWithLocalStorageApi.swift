@@ -32,6 +32,14 @@ class WorkWithLocalStorageApi: Object {
     }
     
     static func checkCurrentTimeForWorker(workingDaysId:String, time:String) -> Bool {
+        
+        let realm = DBHelper().getDBhelper()
+        let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("(KEY_TIME_WORKING_TIME = '" + time + "') AND (KEY_WORKING_DAYS_ID_WORKING_TIME = '" + workingDaysId + "')" )
+        
+        for _ in timeCursor{
+            return true
+        }
+        
         return false
     }
 }

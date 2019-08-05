@@ -68,8 +68,41 @@ class Worker: IWorker {
     }
     
     func deleteTime(workingDaysId: String, removedHours: [String]) {
-        print("")
+        let timeRef = Database.database().reference()
+            .child(USERS)
+            .child(userId)
+            .child(SERVICES)
+            .child(serviceId)
+            .child(WORKING_DAYS)
+            .child(workingDaysId)
+            .child(WORKING_TIME)
+        
+        timeRef.observeSingleEvent(of: .value) { (timesSnapshot) in
+            for hour in removedHours{
+                for time in timesSnapshot.children{
+                    if hour == (time as! DataSnapshot).childSnapshot(forPath: self.TIME).value as! String{
+                        let timeId = (time as! DataSnapshot).key
+                        timeRef.child(timeId).removeValue()
+                    }
+                }
+            }
+            self.deleteTimeFromLocatlStorage(workingDaysId: workingDaysId, removerHours: removedHours)
+        }
+        
     }
+    
+    private func deleteTimeFromLocatlStorage(workingDaysId:String, removerHours:[String]){
+        for hour in removerHours{
+            let realm = DBHelper().getDBhelper()
+            let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_TIME_WORKING_TIME == %@ AND KEY_WORKING_DAYS_ID_WORKING_TIME == %@", hour, workingDaysId)
+                for time in timeCursor{
+                    try! realm.write {
+                        realm.delete(time)
+                    }
+                }
+            }
+        }
+    
     private func addDateInLocalStorage(serviceId:String, dayId:String, date:String){
         let realm = DBHelper().getDBhelper()
         let workingDaysTable = TABLE_WORKING_DAYS()
@@ -94,3 +127,4 @@ class Worker: IWorker {
         }
     }
 }
+
