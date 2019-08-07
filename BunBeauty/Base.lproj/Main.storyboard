@@ -250,11 +250,66 @@
                         <outlet property="phoneText" destination="KXt-1z-z37" id="Snf-e3-5q2"/>
                         <outlet property="serviceTableView" destination="3FJ-aF-cv9" id="5h6-NC-RBZ"/>
                         <segue destination="zbF-2V-tQx" kind="show" id="FvC-dh-om1"/>
+                        <segue destination="Ytz-lo-eM7" kind="show" id="2OY-tz-RYQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTJ-Xd-uZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1386.9565217391305" y="828.34821428571422"/>
+        </scene>
+        <!--Guest Service-->
+        <scene sceneID="QGQ-8L-l3i">
+            <objects>
+                <viewController storyboardIdentifier="GuestService" id="Ytz-lo-eM7" customClass="GuestService" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jjk-1l-ncZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-vk-DDl">
+                                <rect key="frame" x="90" y="188" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NE-ML-SqH">
+                                <rect key="frame" x="90" y="229" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi5-W7-mZB">
+                                <rect key="frame" x="90" y="268" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-P0-SAw">
+                                <rect key="frame" x="106" y="433" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Редактировать расписание"/>
+                                <connections>
+                                    <action selector="goToMyCalendar:" destination="Ytz-lo-eM7" eventType="touchUpInside" id="NQf-JK-pyW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bhn-BF-yDr"/>
+                    </view>
+                    <connections>
+                        <outlet property="costText" destination="6NE-ML-SqH" id="7Nz-kQ-gHF"/>
+                        <outlet property="descriptionText" destination="Oi5-W7-mZB" id="b90-rm-KiD"/>
+                        <outlet property="guestServiceBtn" destination="DM1-P0-SAw" id="8h1-FI-Fbb"/>
+                        <outlet property="nameText" destination="NHz-vk-DDl" id="DHx-4b-1op"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZ8-fa-jsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="1557.5892857142856"/>
         </scene>
         <!--Addition Service-->
         <scene sceneID="Dgj-iW-ymf">

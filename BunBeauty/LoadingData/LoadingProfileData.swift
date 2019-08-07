@@ -71,13 +71,7 @@ class LoadingProfileData {
             addServiceInLocalStroage(service: service)
         }
         
-        //service.setCost(_cost: serviceSnapshot.childSnapshot(forPath: self.COST).value as! String)
-        //service.setAddress(_address: serviceSnapshot.childSnapshot(forPath: self.ADDRESS).value as! String)
-        //service.setDescription(_description: serviceSnapshot.childSnapshot(forPath: self.DESCRIPTION).value as! String)
-        //service.setIsPremium(_isPremium: serviceSnapshot.childSnapshot(forPath: self.IS_PREMIUM).value as! Bool)
-        //service.setCategory(_category: serviceSnapshot.childSnapshot(forPath: self.CATEGORY).value as! String)
-        //service.setCountOfRates(_countOfRates: serviceSnapshot.childSnapshot(forPath: self.COUNT_OF_RATES).value as! Int)
-        //service.setCreationDate(_creationDate: serviceSnapshot.childSnapshot(forPath: self.CREATION_DATE).value as! String)
+       
         
     }
     static private func addServiceInLocalStroage(service:ServiceEntity){

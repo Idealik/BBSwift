@@ -91,16 +91,24 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
         cell.textLabel?.text = serviceList[indexPath.row].getName()
         return cell
     }
-
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        goToGuestService(serviceId: serviceList[indexPath.row].getId())
+    }
     func getUserId() -> String {
         return Auth.auth().currentUser!.uid
     }
     
-   
     @IBAction func goToAdditionService(_ sender: Any) {
         let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
         navigationController?.pushViewController(additionServiceVC, animated: true)
+    }
+    
+    func goToGuestService(serviceId:String) {
+        let  guestService = storyboard?.instantiateViewController(withIdentifier: "GuestService") as! GuestService
+        guestService.serviceId = serviceId
+        navigationController?.pushViewController(guestService, animated: true)
     }
     
 }

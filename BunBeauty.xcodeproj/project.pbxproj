@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021EC02522F8579500BCBF82 /* GuestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02422F8579500BCBF82 /* GuestService.swift */; };
+		021EC02722FA026E00BCBF82 /* LoadingGuestServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02622FA026E00BCBF82 /* LoadingGuestServiceData.swift */; };
 		02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02505DEC22D0D66300C35306 /* AppDelegate.swift */; };
 		02505DEF22D0D66300C35306 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02505DEE22D0D66300C35306 /* Authorization.swift */; };
 		02505DF222D0D66300C35306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF022D0D66300C35306 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021EC02422F8579500BCBF82 /* GuestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestService.swift; sourceTree = "<group>"; };
+		021EC02622FA026E00BCBF82 /* LoadingGuestServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingGuestServiceData.swift; sourceTree = "<group>"; };
 		02505DE922D0D66300C35306 /* BunBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BunBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02505DEC22D0D66300C35306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02505DEE22D0D66300C35306 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
@@ -88,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021EC02322F8577700BCBF82 /* SearchingService */ = {
+			isa = PBXGroup;
+			children = (
+				021EC02422F8579500BCBF82 /* GuestService.swift */,
+			);
+			path = SearchingService;
+			sourceTree = "<group>";
+		};
 		02505DE022D0D66300C35306 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 		02505DEB22D0D66300C35306 /* BunBeauty */ = {
 			isa = PBXGroup;
 			children = (
+				021EC02322F8577700BCBF82 /* SearchingService */,
 				02B53C1D22EE1C0200E35E1A /* HelpApi */,
 				02B53C1422ECAF0B00E35E1A /* ServiceCreation */,
 				02E209DF22D61FA800AC046C /* LoadingData */,
@@ -211,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				02E209E022D61FDC00AC046C /* LoadingProfileData.swift */,
+				021EC02622FA026E00BCBF82 /* LoadingGuestServiceData.swift */,
 			);
 			path = LoadingData;
 			sourceTree = "<group>";
@@ -348,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021EC02722FA026E00BCBF82 /* LoadingGuestServiceData.swift in Sources */,
 				02B53C3422F5E63700E35E1A /* TimeCell.swift in Sources */,
 				02505DEF22D0D66300C35306 /* Authorization.swift in Sources */,
 				02B53C2E22F5839A00E35E1A /* IWorker.swift in Sources */,
@@ -370,6 +385,7 @@
 				02E209E322D6249900AC046C /* TABLE_PHOTOS.swift in Sources */,
 				02E209CD22D296E800AC046C /* MyAuthorization.swift in Sources */,
 				02B53C2B22F01B9E00E35E1A /* WorkWithLocalStorageApi.swift in Sources */,
+				021EC02522F8579500BCBF82 /* GuestService.swift in Sources */,
 				02B53C2922F00EE900E35E1A /* MyTime.swift in Sources */,
 				02B53C3222F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift in Sources */,
 				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
