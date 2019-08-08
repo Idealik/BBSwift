@@ -25,7 +25,11 @@ class GuestService: UIViewController {
     private let ADDRESS:String = "address"
     private let COUNT_OF_RATES:String = "count of rates"
     private let CREATION_DATE:String = "creation date"
+    private let WORKING_DAYS:String = "working days"
+    private let WORKING_TIME:String = "working time"
     
+    private let DATE:String = "date"
+    private let TIME:String = "time"
     @IBOutlet weak var nameText: UILabel!
     @IBOutlet weak var costText: UILabel!
     @IBOutlet weak var descriptionText: UILabel!
@@ -79,6 +83,31 @@ class GuestService: UIViewController {
             LoadingGuestServiceData.addServiceInLocalStorage(service: service)
 
             //load wokring days
+            let workingDaysRef = ref.child(self.SERVICES)
+                .child(service.getId())
+                .child(self.WORKING_DAYS)
+            
+            workingDaysRef.observe(.childAdded, with: { (workingDaySnapshot) in
+                let workingDayId = workingDaySnapshot.key
+                let sysdateInt = WorkWithTimeApi.getSysadateInt()
+                let dateInt = WorkWithTimeApi.getMillisecondsStringDateYMD(date: workingDaySnapshot.childSnapshot(forPath: self.DATE).value as! String)
+                if dateInt > sysdateInt {
+                    LoadingGuestServiceData.addWorkingDaysInLocalStorage(workingDaySnapshot: workingDaySnapshot, serviceId: self.serviceId)
+                    
+                    let timeRef = workingDaysRef
+                        .child(workingDayId)
+                        .child(self.WORKING_TIME)
+                    
+                    timeRef.observe(.childAdded, with: { (timeSnapshot) in
+                        print("ADDED")
+                        LoadingGuestServiceData.addTimeInLocalStorage(timeSnapshot: timeSnapshot, workingDayId: workingDayId)
+                    })
+                    
+                    timeRef.observe(.childRemoved, with: { (timeSnapshot) in
+                        print("")
+                    })
+                }
+            })
         }
     }
     
@@ -101,7 +130,10 @@ class GuestService: UIViewController {
         return ""
     }
     @IBAction func goToMyCalendar(_ sender: Any) {
-        
+        let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
+        myCalendarVC.serviceId = serviceId
+        myCalendarVC.statusUser = status
+        navigationController?.pushViewController(myCalendarVC, animated: true)
     }
     
     func getUserId() -> String {

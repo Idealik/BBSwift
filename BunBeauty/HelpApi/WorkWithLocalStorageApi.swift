@@ -23,7 +23,7 @@ class WorkWithLocalStorageApi: Object {
     static func hasSomeWork(dayId:String) -> Bool{
         let realm = DBHelper().getDBhelper()
         //read element from databse
-        let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_WORKING_DAYS_ID_WORKING_TIME = '" + dayId + "'" )
+        let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_WORKING_DAYS_ID_WORKING_TIME = %@", dayId)
         
         for _ in timeCursor{
             return true
@@ -35,6 +35,18 @@ class WorkWithLocalStorageApi: Object {
         
         let realm = DBHelper().getDBhelper()
         let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("(KEY_TIME_WORKING_TIME = '" + time + "') AND (KEY_WORKING_DAYS_ID_WORKING_TIME = '" + workingDaysId + "')" )
+        
+        for _ in timeCursor{
+            return true
+        }
+        
+        return false
+    }
+    
+    static func hasSomeData(table:Object.Type, keyId:String) -> Bool {
+        
+        let realm = DBHelper().getDBhelper()
+        let timeCursor = realm.objects(table).filter("KEY_ID = %@" , keyId)
         
         for _ in timeCursor{
             return true

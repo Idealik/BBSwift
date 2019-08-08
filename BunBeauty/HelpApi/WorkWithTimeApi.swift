@@ -19,6 +19,17 @@ class WorkWithTimeApi {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
+    static func getSysadateInt() -> Double{
+        let timeInSeconds: TimeInterval = Date().timeIntervalSince1970
+        return timeInSeconds
+    }
+    static func getMillisecondsStringDateYMD(date:String) -> Double {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let curDate = formatter.date(from: date)!
+        let timeInSeconds: TimeInterval = curDate.timeIntervalSince1970
+        return timeInSeconds
+    }
     static func getDateInFormatDM(date:Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM"
