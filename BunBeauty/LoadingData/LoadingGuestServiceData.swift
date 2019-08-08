@@ -12,7 +12,7 @@ import FirebaseDatabase
 class LoadingGuestServiceData{
     private static let DATE:String = "date"
     private static let TIME:String = "time"
-
+    
     static func addServiceInLocalStorage(service:ServiceEntity) {
         let realm = DBHelper().getDBhelper()
         //read element from databse
@@ -26,7 +26,7 @@ class LoadingGuestServiceData{
             serviceTable.setValue(String(service.getAverageRating()), forKey: "KEY_RATING_SERVICES")
             serviceTable.setValue(service.getAddress(), forKey: "KEY_ADDRESS_SERVICES")
             serviceTable.setValue(service.getUserId(), forKey: "KEY_USER_ID_SERVICES")
-
+            
             //serviceTable.KEY_IS_PREMIUM_SERVICES = service.getIsPremium()
             
         }
@@ -56,7 +56,7 @@ class LoadingGuestServiceData{
             try! realm.write {
                 realm.add(workingDaysTable)
             }
-
+            
         }
     }
     static func addTimeInLocalStorage(timeSnapshot:DataSnapshot, workingDayId:String) {
@@ -74,15 +74,25 @@ class LoadingGuestServiceData{
             }
         }
         else{
-                let timeTable = TABLE_WORKING_TIME()
-                timeTable.KEY_ID = timeId
-                timeTable.KEY_TIME_WORKING_TIME = time
-                timeTable.KEY_WORKING_DAYS_ID_WORKING_TIME = workingDayId
-                
-                try! realm.write {
-                    realm.add(timeTable)
-                }
+            let timeTable = TABLE_WORKING_TIME()
+            timeTable.KEY_ID = timeId
+            timeTable.KEY_TIME_WORKING_TIME = time
+            timeTable.KEY_WORKING_DAYS_ID_WORKING_TIME = workingDayId
             
+            try! realm.write {
+                realm.add(timeTable)
+            }
+            
+        }
+    }
+    
+    static func deleteTimeFromLocalStorage(timeId:String) {
+        let realm = DBHelper().getDBhelper()
+        let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_ID == %@", timeId)
+        for time in timeCursor{
+            try! realm.write {
+                realm.delete(time)
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ class GuestService: UIViewController {
     private var isMyService:Bool!
     private var status:String!
     private var ownerId:String!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ownerId = getUserId()
@@ -66,7 +66,7 @@ class GuestService: UIViewController {
             
             let service = ServiceEntity()
             service.setUserId(_userId: userSnapshot.key)
-
+            
             //load service
             let serviceSnapshot = userSnapshot.childSnapshot(forPath: self.SERVICES)
                 .childSnapshot(forPath: self.serviceId)
@@ -81,7 +81,7 @@ class GuestService: UIViewController {
             //service.setIsPremium(_isPremium: serviceSnapshot.childSnapshot(forPath: self.IS_PREMIUM).value as! Bool)
             self.setGuestService(service: service)
             LoadingGuestServiceData.addServiceInLocalStorage(service: service)
-
+            
             //load wokring days
             let workingDaysRef = ref.child(self.SERVICES)
                 .child(service.getId())
@@ -104,7 +104,9 @@ class GuestService: UIViewController {
                     })
                     
                     timeRef.observe(.childRemoved, with: { (timeSnapshot) in
-                        print("")
+                        //when deleted time
+                        LoadingGuestServiceData.deleteTimeFromLocalStorage(timeId: timeSnapshot.key)
+                        
                     })
                 }
             })
