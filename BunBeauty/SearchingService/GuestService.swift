@@ -99,7 +99,6 @@ class GuestService: UIViewController {
                         .child(self.WORKING_TIME)
                     
                     timeRef.observe(.childAdded, with: { (timeSnapshot) in
-                        print("ADDED")
                         LoadingGuestServiceData.addTimeInLocalStorage(timeSnapshot: timeSnapshot, workingDayId: workingDayId)
                     })
                     

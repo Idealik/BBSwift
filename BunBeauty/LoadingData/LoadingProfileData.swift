@@ -22,17 +22,9 @@ class LoadingProfileData {
     
     //service
     private static let SERVICES:String = "services"
-    private static let COST:String = "cost"
-    private static let DESCRIPTION:String = "description"
-    private static let IS_PREMIUM:String = "is premium"
-    private static let CATEGORY:String = "category"
-    private static let ADDRESS:String = "address"
-    private static let CREATION_DATE:String = "creation date"
     
     static func loadUserInfo(userSnapshot:DataSnapshot, localDatabse:Realm) {
         let userId = userSnapshot.key
-        print(userId)
-        
         //load photo
         //load subscriptions
         
@@ -70,9 +62,6 @@ class LoadingProfileData {
             service.setAverageRating(_rating: (serviceSnapshot as AnyObject).childSnapshot(forPath: self.AVG_RATING).value as! Float)
             addServiceInLocalStroage(service: service)
         }
-        
-       
-        
     }
     static private func addServiceInLocalStroage(service:ServiceEntity){
         let realm = DBHelper().getDBhelper()
