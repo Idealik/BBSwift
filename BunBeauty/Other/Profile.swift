@@ -111,4 +111,8 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
         navigationController?.pushViewController(guestService, animated: true)
     }
     
+    @IBAction func goToMainScreen(_ sender: Any) {
+        let  mainScreen = storyboard?.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+        navigationController?.pushViewController(mainScreen, animated: true)
+    }
 }

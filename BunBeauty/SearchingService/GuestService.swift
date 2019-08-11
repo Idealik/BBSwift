@@ -91,6 +91,7 @@ class GuestService: UIViewController {
                 let workingDayId = workingDaySnapshot.key
                 let sysdateInt = WorkWithTimeApi.getSysadateInt()
                 let dateInt = WorkWithTimeApi.getMillisecondsStringDateYMD(date: workingDaySnapshot.childSnapshot(forPath: self.DATE).value as! String)
+                
                 if dateInt > sysdateInt {
                     LoadingGuestServiceData.addWorkingDaysInLocalStorage(workingDaySnapshot: workingDaySnapshot, serviceId: self.serviceId)
                     

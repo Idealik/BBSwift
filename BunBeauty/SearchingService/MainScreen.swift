@@ -20,10 +20,11 @@ class MainScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createMainScreen(category:"")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 0 
+        return serviceList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = serviceMainScreenTableView.dequeueReusableCell(withIdentifier: "mainScreenCell")!
@@ -55,6 +56,15 @@ class MainScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         userQuery.observeSingleEvent(of: .value) { (usersSnapshot) in
             //get services
+            var commonList = [[Any]]()
+            commonList =  Search.getServicesOfUsers(usersSnapshot: usersSnapshot, serviceName: "", userName: "", city: "", category: "")
+            print("Common list \(commonList)")
+            for serviceData in commonList{
+                self.serviceList.append(serviceData[1] as! ServiceEntity)
+                self.userList.append(serviceData[2] as! UserEntity)
+            }
+            print("service list \(self.serviceList)")
+            self.serviceMainScreenTableView.reloadData()
         }
     }
     func getUserId() -> String {

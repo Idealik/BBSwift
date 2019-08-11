@@ -17,6 +17,4 @@ class TABLE_USERS: Object {
     @objc dynamic var KEY_RATING_USERS:String?
     @objc dynamic var KEY_SUBSCRIPTIONS_COUNT_USERS:String?
     @objc dynamic var KEY_SUBSCRIBERS_COUNT_USERS:String?
-    @objc dynamic var TABLE_SERVICES:TABLE_SERVICES?
-
 }

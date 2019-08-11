@@ -24,12 +24,24 @@ class WorkWithTimeApi {
         return timeInSeconds
     }
     static func getMillisecondsStringDateYMD(date:String) -> Double {
+        print(date)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let curDate = formatter.date(from: date)!
-        let timeInSeconds: TimeInterval = curDate.timeIntervalSince1970
+        let curDate = formatter.date(from: date)
+        let timeInSeconds: TimeInterval = curDate?.timeIntervalSince1970 ?? 0
+        print(timeInSeconds)
         return timeInSeconds
     }
+    
+    static func getMillisecondsStringDateYMDHMS(date:String) -> Double {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let curDate = formatter.date(from: date)
+        let timeInSeconds: TimeInterval = curDate?.timeIntervalSince1970 ?? 0
+        print(timeInSeconds)
+        return timeInSeconds
+    }
+    
     static func getDateInFormatDM(date:Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM"

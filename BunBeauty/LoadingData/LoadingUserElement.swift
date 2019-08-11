@@ -21,9 +21,10 @@ class LoadingUserElement {
         user.setId(data: userSnapshot.key)
         user.setName(_name: userSnapshot.childSnapshot(forPath: self.NAME).value as! String)
         user.setCity(_city: userSnapshot.childSnapshot(forPath: self.CITY).value as! String)
+        addUserInfoInLocalStorage(user: user)
     }
     
-    private func addUserInfoInLocalStorage(user:UserEntity) -> Void {
+    static private func addUserInfoInLocalStorage(user:UserEntity) -> Void {
         let realm = DBHelper().getDBhelper()
         let userTable = TABLE_USERS()
         userTable.KEY_ID = user.getId()

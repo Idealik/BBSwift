@@ -31,7 +31,7 @@ class LoadingMainScreenElement {
                     serviceTable.setValue(serviceId, forKey: "KEY_ID")
                     serviceTable.setValue((serviceSnapshot as AnyObject).childSnapshot(forPath: self.NAME).value as? String, forKey: "KEY_NAME_SERVICES")
                     serviceTable.setValue(userId, forKey: "KEY_USER_ID_SERVICES")
-                    serviceTable.setValue((serviceSnapshot as AnyObject).childSnapshot(forPath: self.AVG_RATING).value as? String, forKey: "KEY_RATING_SERVICES")
+                    serviceTable.setValue(String((serviceSnapshot as AnyObject).childSnapshot(forPath: self.AVG_RATING).value as! Int), forKey: "KEY_RATING_SERVICES")
                     serviceTable.setValue((serviceSnapshot as AnyObject).childSnapshot(forPath: self.CREATION_DATE).value as? String, forKey: "KEY_CREATION_DATE_SERVICES")
                     serviceTable.setValue((serviceSnapshot as AnyObject).childSnapshot(forPath: self.CATEGORY).value as? String, forKey: "KEY_CATEGORY_SERVICES")
                     serviceTable.setValue((serviceSnapshot as AnyObject).childSnapshot(forPath: self.IS_PREMIUM).value as? String, forKey: "KEY_IS_PREMIUM_SERVICES")
@@ -44,7 +44,9 @@ class LoadingMainScreenElement {
                 serviceTable.KEY_ID = serviceId
                 serviceTable.KEY_NAME_SERVICES = (serviceSnapshot as AnyObject).childSnapshot(forPath: self.NAME).value as? String
                 serviceTable.KEY_USER_ID_SERVICES = userId
-                serviceTable.KEY_RATING_SERVICES = (serviceSnapshot as AnyObject).childSnapshot(forPath: self.AVG_RATING).value as? String
+                
+                serviceTable.KEY_RATING_SERVICES = String((serviceSnapshot as AnyObject).childSnapshot(forPath: self.AVG_RATING).value as! Int)
+                print()
                 serviceTable.KEY_CREATION_DATE_SERVICES = (serviceSnapshot as AnyObject).childSnapshot(forPath: self.CREATION_DATE).value as? String
                 serviceTable.KEY_CATEGORY_SERVICES = (serviceSnapshot as AnyObject).childSnapshot(forPath: self.CATEGORY).value as? String
                 serviceTable.KEY_IS_PREMIUM_SERVICES = (serviceSnapshot as AnyObject).childSnapshot(forPath: self.IS_PREMIUM).value as? String
