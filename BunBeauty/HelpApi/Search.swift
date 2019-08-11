@@ -49,7 +49,8 @@ class Search {
             user.setName(_name: userCursor.value(forKey: "KEY_NAME_USERS") as! String)
             user.setCity(_city: userCursor.value(forKey: "KEY_CITY_USERS") as! String)
             let servicesCursor = realm.objects(TABLE_SERVICES.self).filter("KEY_USER_ID_SERVICES = %@", userId)
-            
+            print("SERVICE CURSOR \(servicesCursor)")
+
             for serviceCursor in servicesCursor{
                 let service = ServiceEntity()
                 service.setId(_id: serviceCursor.value(forKey: "KEY_ID") as! String)
@@ -77,7 +78,6 @@ class Search {
         let costPoints = figureCostPoints(cost: Int(service.getCost())!, coefficient: coefficients[COST]!)
         let ratingPoints = figureRatingPoints(rating: service.getAverageRating(), coefficient: coefficients[RATING]!)
         let penaltyPoints = figurePenaltyPoints(serviceId: service.getId(), userId: user.getId())
-        print("dateP \(creationDatePoints) and costP \(costPoints) and ratingP \(ratingPoints)")
         let points = creationDatePoints+costPoints+ratingPoints - penaltyPoints
         var serviceData:[Any] = []
         serviceData.append(points)
@@ -114,18 +114,18 @@ class Search {
         return 1000
     }
     
-    static private func sortAddition(serviceData:[Any]){
+    static private func sortAddition(serviceData:[Any]) -> Void{
         var i = 0
         while i<serviceList.count {
             if (serviceList[i][0] as! Float) < (serviceData[0] as! Float){
                 serviceList.insert(serviceData, at: i)
+                //print(serviceList)
+
                 return
             }
             i += 1
         }
-        
         serviceList.append(serviceData)
-        print("Service list \(serviceList)")
     }
     
 }

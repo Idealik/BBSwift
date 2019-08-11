@@ -26,12 +26,24 @@ class LoadingUserElement {
     
     static private func addUserInfoInLocalStorage(user:UserEntity) -> Void {
         let realm = DBHelper().getDBhelper()
-        let userTable = TABLE_USERS()
-        userTable.KEY_ID = user.getId()
-        userTable.KEY_CITY_USERS = user.getCity()
-        userTable.KEY_NAME_USERS = user.getName()
-        try! realm.write {
-            realm.add(userTable)
+        let userId = user.getId()
+        if WorkWithLocalStorageApi.hasSomeData(table: TABLE_USERS.self, keyId:userId){
+            let userTable = realm.objects(TABLE_SERVICES.self).filter("KEY_ID = %@",userId)
+            try! realm.write {
+                userTable.setValue(userId, forKey: "KEY_ID")
+                userTable.setValue(user.getCity(), forKey: "KEY_CITY_USERS")
+                userTable.setValue(user.getName(), forKey: "KEY_NAME_USERS")
+            }
         }
+        else{
+            let userTable = TABLE_USERS()
+            userTable.KEY_ID = user.getId()
+            userTable.KEY_CITY_USERS = user.getCity()
+            userTable.KEY_NAME_USERS = user.getName()
+            try! realm.write {
+                realm.add(userTable)
+            }
+        }
+       
     }
 }

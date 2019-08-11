@@ -63,7 +63,6 @@ class MainScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 self.serviceList.append(serviceData[1] as! ServiceEntity)
                 self.userList.append(serviceData[2] as! UserEntity)
             }
-            print("service list \(self.serviceList)")
             self.serviceMainScreenTableView.reloadData()
         }
     }
