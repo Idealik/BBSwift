@@ -31,7 +31,11 @@ class MainScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = serviceList[indexPath.row].getName()
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        goToGuestService(serviceId: serviceList[indexPath.row].getId())
+    }
     func createMainScreen(category:String) ->  Void {
         let userId = getUserId()
         
@@ -58,13 +62,19 @@ class MainScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
             //get services
             var commonList = [[Any]]()
             commonList =  Search.getServicesOfUsers(usersSnapshot: usersSnapshot, serviceName: "", userName: "", city: "", category: "")
-            print("Common list \(commonList)")
+            
             for serviceData in commonList{
                 self.serviceList.append(serviceData[1] as! ServiceEntity)
                 self.userList.append(serviceData[2] as! UserEntity)
             }
             self.serviceMainScreenTableView.reloadData()
         }
+    }
+    
+    func goToGuestService(serviceId:String) {
+        let  guestService = storyboard?.instantiateViewController(withIdentifier: "GuestService") as! GuestService
+        guestService.serviceId = serviceId
+        navigationController?.pushViewController(guestService, animated: true)
     }
     func getUserId() -> String {
         return Auth.auth().currentUser!.uid

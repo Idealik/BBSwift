@@ -49,7 +49,7 @@ class Search {
             user.setName(_name: userCursor.value(forKey: "KEY_NAME_USERS") as! String)
             user.setCity(_city: userCursor.value(forKey: "KEY_CITY_USERS") as! String)
             let servicesCursor = realm.objects(TABLE_SERVICES.self).filter("KEY_USER_ID_SERVICES = %@", userId)
-            print("SERVICE CURSOR \(servicesCursor)")
+            
 
             for serviceCursor in servicesCursor{
                 let service = ServiceEntity()
@@ -119,8 +119,6 @@ class Search {
         while i<serviceList.count {
             if (serviceList[i][0] as! Float) < (serviceData[0] as! Float){
                 serviceList.insert(serviceData, at: i)
-                //print(serviceList)
-
                 return
             }
             i += 1

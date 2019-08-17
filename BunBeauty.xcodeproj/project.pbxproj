@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0210E8EB2301EC64008441F3 /* TABLE_ORDERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210E8EA2301EC64008441F3 /* TABLE_ORDERS.swift */; };
+		0210E8F02305E37A008441F3 /* IUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210E8EF2305E37A008441F3 /* IUser.swift */; };
+		0210E8F22305E3CC008441F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210E8F12305E3CC008441F3 /* User.swift */; };
+		0210E8F42306CD12008441F3 /* TABLE_REVIEWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210E8F32306CD12008441F3 /* TABLE_REVIEWS.swift */; };
 		021EC02522F8579500BCBF82 /* GuestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02422F8579500BCBF82 /* GuestService.swift */; };
 		021EC02722FA026E00BCBF82 /* LoadingGuestServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02622FA026E00BCBF82 /* LoadingGuestServiceData.swift */; };
 		021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02822FCAB7600BCBF82 /* MainScreen.swift */; };
@@ -46,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0210E8EA2301EC64008441F3 /* TABLE_ORDERS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_ORDERS.swift; sourceTree = "<group>"; };
+		0210E8EF2305E37A008441F3 /* IUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUser.swift; sourceTree = "<group>"; };
+		0210E8F12305E3CC008441F3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0210E8F32306CD12008441F3 /* TABLE_REVIEWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TABLE_REVIEWS.swift; sourceTree = "<group>"; };
 		021EC02422F8579500BCBF82 /* GuestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestService.swift; sourceTree = "<group>"; };
 		021EC02622FA026E00BCBF82 /* LoadingGuestServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingGuestServiceData.swift; sourceTree = "<group>"; };
 		021EC02822FCAB7600BCBF82 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -100,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0210E8EC2305E341008441F3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0210E8EF2305E37A008441F3 /* IUser.swift */,
+				0210E8F12305E3CC008441F3 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		021EC02322F8577700BCBF82 /* SearchingService */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +168,7 @@
 		02B53C1422ECAF0B00E35E1A /* ServiceCreation */ = {
 			isa = PBXGroup;
 			children = (
+				0210E8EC2305E341008441F3 /* User */,
 				02B53C3522F5E96000E35E1A /* Cells */,
 				02B53C2C22F5837F00E35E1A /* Worker */,
 				02B53C1522ECAFAC00E35E1A /* AdditionService.swift */,
@@ -218,6 +236,8 @@
 				02B53C2022EE368C00E35E1A /* TABLE_SERVICES.swift */,
 				02B53C3122F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift */,
 				02B53C3622F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift */,
+				0210E8EA2301EC64008441F3 /* TABLE_ORDERS.swift */,
+				0210E8F32306CD12008441F3 /* TABLE_REVIEWS.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -377,6 +397,7 @@
 				021EC02722FA026E00BCBF82 /* LoadingGuestServiceData.swift in Sources */,
 				02B53C3422F5E63700E35E1A /* TimeCell.swift in Sources */,
 				02D0B58722FD881500888617 /* LoadingUserElement.swift in Sources */,
+				0210E8EB2301EC64008441F3 /* TABLE_ORDERS.swift in Sources */,
 				02505DEF22D0D66300C35306 /* Authorization.swift in Sources */,
 				02B53C2E22F5839A00E35E1A /* IWorker.swift in Sources */,
 				02B53C2522EEFF3B00E35E1A /* MyCalendar.swift in Sources */,
@@ -393,9 +414,11 @@
 				02E209DB22D4CFA900AC046C /* TABLE_USERS.swift in Sources */,
 				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
 				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
+				0210E8F02305E37A008441F3 /* IUser.swift in Sources */,
 				02B53C2122EE368C00E35E1A /* TABLE_SERVICES.swift in Sources */,
 				02E209CF22D341A800AC046C /* Registration.swift in Sources */,
 				02B53C3722F5FCAD00E35E1A /* TABLE_WORKING_TIME.swift in Sources */,
+				0210E8F22305E3CC008441F3 /* User.swift in Sources */,
 				02E209DE22D517EB00AC046C /* Profile.swift in Sources */,
 				02E209E322D6249900AC046C /* TABLE_PHOTOS.swift in Sources */,
 				02E209CD22D296E800AC046C /* MyAuthorization.swift in Sources */,
@@ -405,6 +428,7 @@
 				02B53C3222F5A2FE00E35E1A /* TABLE_WORKING_DAYS.swift in Sources */,
 				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
 				02D0B58922FD8B7600888617 /* LoadingMainScreenElement.swift in Sources */,
+				0210E8F42306CD12008441F3 /* TABLE_REVIEWS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

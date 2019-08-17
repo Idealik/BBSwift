@@ -14,7 +14,7 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
     private let DAYS_COUNT = 7
     private let WORKER = "worker"
     private let USER = "user"
-
+    
     var serviceId:String!
     var statusUser:String!
     
@@ -23,7 +23,7 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
     private var dates = [String]()
     private var worker:Worker!
     private var userId:String!
-
+    
     @IBOutlet weak var calendarCollection: UICollectionView!
     
     override func viewDidLoad() {
@@ -56,24 +56,74 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = calendarCollection.dequeueReusableCell(withReuseIdentifier: "dayIdCell", for: indexPath) as! DayCell
-        cell.layer.backgroundColor = UIColor.white.cgColor
-        cell.dayText.textColor = UIColor.black
-
-        let dayId = WorkWithLocalStorageApi.checkCurrentDay(date: dates[indexDate], serviceId: serviceId)
-        if dayId != "0"{
-            if WorkWithLocalStorageApi.hasSomeWork(dayId: dayId) {
-                cell.dayText.textColor = UIColor.blue
-            }
-        }
+        var cell = calendarCollection.dequeueReusableCell(withReuseIdentifier: "dayIdCell", for: indexPath) as! DayCell
+        cell = setDefaultCell(cell: cell) as! DayCell
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let curDate = dateFormatter.date(from: dates[indexDate])!
         cell.dayText.text = WorkWithTimeApi.getDateInFormatDM(date: curDate)
+        if statusUser == WORKER{
+            //select day for worker
+            let dayId = WorkWithLocalStorageApi.checkCurrentDay(date: dates[indexDate], serviceId: serviceId)
+            if dayId != nil{
+                if WorkWithLocalStorageApi.hasSomeWork(dayId: dayId!) {
+                    cell.dayText.textColor = UIColor.blue
+                }
+            }
+        }else{
+            //checkOrder
+            cell = checkOrder(dateYMD: WorkWithTimeApi.getDateInFormatYMD(date: curDate), cell: cell) as! DayCell
+        }
         indexDate += 1
         return cell
     }
-   
+    private func checkOrder(dateYMD:String, cell:UICollectionViewCell) -> UICollectionViewCell {
+        let date = getOrderDate()
+        
+        if date != nil {
+            
+        }else{
+            let dayId = WorkWithLocalStorageApi.checkCurrentDay(date: dateYMD, serviceId: serviceId)
+            if dayId == nil{
+                //enable false
+                return noEnableCell(cell: cell)
+            }else{
+                /*if !hasSomeTime(dayId: dayId!){
+                    //enable false
+                    return noEnableCell(cell: cell)
+                }*/
+            }
+        }
+        return cell
+    }
+    
+    private func noEnableCell(cell:UICollectionViewCell) -> UICollectionViewCell {
+        let curCell = cell as! DayCell
+        curCell.isUserInteractionEnabled = false
+        curCell.dayText.isEnabled = false
+        return curCell
+    }
+    private func setDefaultCell(cell:UICollectionViewCell) -> UICollectionViewCell {
+        let curCell = cell as! DayCell
+        curCell.layer.backgroundColor = UIColor.white.cgColor
+        curCell.dayText.textColor = UIColor.black
+        curCell.isUserInteractionEnabled = true
+        curCell.dayText.isEnabled = true
+        return curCell
+    }
+    func getOrderDate() -> String? {
+       // let realm = DBHelper().getDBhelper()
+        //let ordersCursor = realm.objects(TABLE_ORDERS.self).filter("KEY_ID = %@", userId)
+        
+        //for orderCursor in ordersCursor{
+            
+        //}
+        return nil
+    }
+    
+    func hasSomeTime(dayId:String) -> Bool {
+        return false
+    }
     //select day
     var selectedIndexPath: IndexPath?
     
@@ -134,9 +184,9 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
     @IBAction func goToMyTime(_ sender: Any) {
         //day id, status, service id
         if(isDaySelected()){
-            if(WorkWithLocalStorageApi.checkCurrentDay(date: selectedDay, serviceId: serviceId) != "0"){
+            if(WorkWithLocalStorageApi.checkCurrentDay(date: selectedDay, serviceId: serviceId) != nil){
                 //use date
-                goToMyTimeNoBtn(dayId: WorkWithLocalStorageApi.checkCurrentDay(date: selectedDay, serviceId: serviceId), _statusUser: statusUser)
+                goToMyTimeNoBtn(dayId: WorkWithLocalStorageApi.checkCurrentDay(date: selectedDay, serviceId: serviceId)!, _statusUser: statusUser)
             }
             else{
                 //add new date
@@ -145,7 +195,7 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
             }
         }
     }
-
+    
     func goToMyTimeNoBtn(dayId:String, _statusUser:String){
         let  myTimeVC = storyboard?.instantiateViewController(withIdentifier: "MyTime") as! MyTime
         myTimeVC.serviceId = serviceId

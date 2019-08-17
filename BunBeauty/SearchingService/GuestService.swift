@@ -42,7 +42,7 @@ class GuestService: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ownerId = getUserId()
+        ownerId = getOwnerId()
         isMyService = ownerId == getUserId()
         
         if isMyService{
@@ -70,7 +70,6 @@ class GuestService: UIViewController {
             //load service
             let serviceSnapshot = userSnapshot.childSnapshot(forPath: self.SERVICES)
                 .childSnapshot(forPath: self.serviceId)
-            
             service.setId(_id: serviceSnapshot.key)
             service.setCost(_cost: serviceSnapshot.childSnapshot(forPath: self.COST).value as! String)
             service.setAddress(_address: serviceSnapshot.childSnapshot(forPath: self.ADDRESS).value as! String)
@@ -122,14 +121,14 @@ class GuestService: UIViewController {
         //rates
     }
     
-    private func getOwnerId() -> String{
+    private func getOwnerId() -> String? {
         let realm = DBHelper().getDBhelper()
         let ownerCursor = realm.objects(TABLE_SERVICES.self).filter("KEY_ID == %@", serviceId!)
         
         for ownerId in ownerCursor{
-            return ownerId.KEY_ID!
+            return ownerId.KEY_USER_ID_SERVICES!
         }
-        return ""
+        return nil
     }
     @IBAction func goToMyCalendar(_ sender: Any) {
         let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar

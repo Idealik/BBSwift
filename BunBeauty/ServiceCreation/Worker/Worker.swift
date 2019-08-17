@@ -19,8 +19,8 @@ class Worker: IWorker {
     private let DATE:String = "date"
     private let TIME:String = "time"
 
-    var userId: String
-    var serviceId: String
+    private var userId: String
+    private var serviceId: String
     
     init(userId: String, serviceId: String) {
         self.userId = userId
@@ -56,7 +56,6 @@ class Worker: IWorker {
                     .child(WORKING_DAYS)
                     .child(workingDaysId)
                     .child(WORKING_TIME)
-                
                 var items :Dictionary <String,Any> = [:]
                 items.updateValue(time, forKey: TIME)
                 let timeId = timeRef.childByAutoId().key!

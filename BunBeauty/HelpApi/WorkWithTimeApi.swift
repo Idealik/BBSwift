@@ -19,6 +19,7 @@ class WorkWithTimeApi {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
+    
     static func getSysadateInt() -> Double{
         let timeInSeconds: TimeInterval = Date().timeIntervalSince1970
         return timeInSeconds

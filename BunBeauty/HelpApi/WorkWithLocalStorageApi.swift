@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 class WorkWithLocalStorageApi: Object {
-    static func checkCurrentDay(date:String, serviceId:String) -> String {
+    static func checkCurrentDay(date:String, serviceId:String) -> String? {
         let realm = DBHelper().getDBhelper()
         //read element from databse
         let daysCursor = realm.objects(TABLE_WORKING_DAYS.self).filter("(KEY_SERVICE_ID_WORKING_DAYS = '" + serviceId + "') AND (KEY_DATE_WORKING_DAYS = '" + date + "')" )
@@ -17,7 +17,7 @@ class WorkWithLocalStorageApi: Object {
         for dayElement in daysCursor{
             return dayElement.KEY_ID!
         }
-        return "0"
+        return nil
     }
     
     static func hasSomeWork(dayId:String) -> Bool{
@@ -53,5 +53,31 @@ class WorkWithLocalStorageApi: Object {
         }
         
         return false
+    }
+    
+    static func getWorkingTimeId(time:String, workingDaysId:String) -> String{
+        let realm = DBHelper().getDBhelper()
+        let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_TIME_WORKING_TIME == %@ AND KEY_WORKING_DAYS_ID_WORKING_TIME == %@  " , time, workingDaysId)
+        for time in timeCursor{
+            return time.KEY_ID!
+        }
+        return ""
+    }
+    
+    static func getSertviceCursorByTimeId(workingTimeId:String) -> ServiceEntity {
+        let realm = DBHelper().getDBhelper()
+        let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_ID = %@" , workingTimeId)
+        //get workingDaysId
+        let workingDaysId = timeCursor[0].KEY_WORKING_DAYS_ID_WORKING_TIME!
+        let workingDaysCursor = realm.objects(TABLE_WORKING_DAYS.self).filter("KEY_ID = %@" , workingDaysId)
+        //get serviceId
+        let serviceId = workingDaysCursor[0].KEY_SERVICE_ID_WORKING_DAYS!
+        
+        let serviceCursor = realm.objects(TABLE_SERVICES.self).filter("KEY_ID = %@" , serviceId)
+
+        let service = ServiceEntity()
+        service.setUserId(_userId: serviceCursor[0].KEY_USER_ID_SERVICES!)
+        service.setName(_name: serviceCursor[0].KEY_NAME_SERVICES!)
+        return service
     }
 }

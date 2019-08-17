@@ -35,23 +35,23 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         updateProfileData(ownerId: ownerId)
     }
-   
+    
     override func viewWillAppear(_ animated: Bool) {
         serviceList.removeAll()
         updateServiceList(ownerId: ownerId)
         self.serviceTableView.reloadData()
-        }
-
+    }
+    
     private func updateProfileData(ownerId:String) -> Void {
         let user = UserEntity()
         let realm = DBHelper().getDBhelper()
-        let usersCursor = realm.objects(TABLE_USERS.self).filter("KEY_ID = '" + ownerId + "'")
+        let usersCursor = realm.objects(TABLE_USERS.self).filter("KEY_ID = %@", ownerId)
         for userCursor in usersCursor{
-        user.setName(_name: userCursor.value(forKey: "KEY_NAME_USERS") as! String)
-        user.setCity(_city: userCursor.value(forKey: "KEY_CITY_USERS") as! String)
-        user.setPhone(_phone: userCursor.value(forKey: "KEY_PHONE_USERS") as! String)
-        //setCountOfRates
-        //setRating
+            user.setName(_name: userCursor.value(forKey: "KEY_NAME_USERS") as! String)
+            user.setCity(_city: userCursor.value(forKey: "KEY_CITY_USERS") as! String)
+            user.setPhone(_phone: userCursor.value(forKey: "KEY_PHONE_USERS") as! String)
+            //setCountOfRates
+            //setRating
         }
         setProfileData(_user: user)
     }
@@ -99,6 +99,10 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func getUserId() -> String {
         return Auth.auth().currentUser!.uid
     }
+    @IBAction func goToMainScreen(_ sender: Any) {
+        let  mainScreen = storyboard?.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+        navigationController?.pushViewController(mainScreen, animated: true)
+    }
     
     @IBAction func goToAdditionService(_ sender: Any) {
         let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
@@ -111,8 +115,5 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
         navigationController?.pushViewController(guestService, animated: true)
     }
     
-    @IBAction func goToMainScreen(_ sender: Any) {
-        let  mainScreen = storyboard?.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
-        navigationController?.pushViewController(mainScreen, animated: true)
-    }
+    
 }
