@@ -34,11 +34,11 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             worker = Worker(userId:userId,serviceId: serviceId)
         }else{
             user = User(userId: userId, serviceId: serviceId, workingDaysId: workingDaysId)
+            myOrderTime = checkMyOrder()
         }
     }
     
     @IBAction func confirmBtn(_ sender: Any) {
-        print("HIII \(workingHours)")
         if statusUser == WORKER{
             if workingHours.count > 0 {
                 worker.addTime(workingDaysId:workingDaysId, workingHours: workingHours)
@@ -53,11 +53,13 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 removedHours.removeAll()
             }
         }else{
-            myOrderTime = checkMyOrder()
             if workingHours.count == 1 {
                 //is free timev else selectbtnsforuser
                 let workingTimeId = WorkWithLocalStorageApi.getWorkingTimeId(time: workingHours[0], workingDaysId: workingDaysId)
                 user.makeOrder(workingTimeId:workingTimeId)
+                scheduleCollection.reloadData()
+                workingHours.removeAll()
+                //attention
             }
         }
     }
@@ -119,9 +121,11 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 // have order
                 if myOrderTime! == time{
                     // my order select
+                    cell.timeCell.isUserInteractionEnabled = false
+                    return pressedButton(cell: cell)
                 }
                 else{
-                    // cell = false
+                    return noEnableCell(cell: cell)
                 }
             }
             else{
@@ -134,8 +138,12 @@ class MyTime: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     
-    
     private func checkMyOrder()->String?{
+        let realm = DBHelper().getDBhelper()
+        let ordersCursor = realm.objects(TABLE_ORDERS.self).filter("KEY_USER_ID == %@ AND KEY_IS_CANCELED_ORDERS == %@", userId!, "false")
+        for order in ordersCursor{ 
+           let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_ID == %@", order.KEY_WORKING_TIME_ID_ORDERS ?? "0")
+        }
         return nil
     }
     

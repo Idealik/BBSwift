@@ -99,6 +99,7 @@ class Profile: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func getUserId() -> String {
         return Auth.auth().currentUser!.uid
     }
+    
     @IBAction func goToMainScreen(_ sender: Any) {
         let  mainScreen = storyboard?.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
         navigationController?.pushViewController(mainScreen, animated: true)

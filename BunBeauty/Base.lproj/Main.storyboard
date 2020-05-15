@@ -240,16 +240,14 @@
                                     <outlet property="delegate" destination="HAC-v7-0IR" id="cRJ-zG-gap"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-7m-e6a">
-                                <rect key="frame" x="176" y="341" width="84" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZr-eb-4gL">
+                                <rect key="frame" x="195" y="331" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Main screen">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="goToAdditionService:" destination="HAC-v7-0IR" eventType="touchUpInside" id="QQu-mi-wrf"/>
-                                    <action selector="goToMainScreen:" destination="HAC-v7-0IR" eventType="touchUpInside" id="wPc-dn-rHg"/>
+                                    <action selector="goToMainScreen:" destination="HAC-v7-0IR" eventType="touchUpInside" id="DS3-gU-STD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -261,7 +259,6 @@
                         <outlet property="nameText" destination="8MA-VW-hbc" id="BsG-OK-zaJ"/>
                         <outlet property="phoneText" destination="KXt-1z-z37" id="Snf-e3-5q2"/>
                         <outlet property="serviceTableView" destination="3FJ-aF-cv9" id="5h6-NC-RBZ"/>
-                        <segue destination="zbF-2V-tQx" kind="show" id="FvC-dh-om1"/>
                         <segue destination="Ytz-lo-eM7" kind="show" id="2OY-tz-RYQ"/>
                     </connections>
                 </viewController>

@@ -16,14 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var codeInput: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        /*FirebaseApp.configure()
-        let ref = Database.database().reference().child("users")
-        ref.observeSingleEvent(of: .value, with: { (usersSnapshot) in
-            for userSnapshot in usersSnapshot.children{
-            
-        }
-        })*/
+        
         //check status in FB
         FirebaseApp.configure()
         
@@ -39,7 +32,6 @@ class ViewController: UIViewController {
         }
         else{
             //showViewOnScreen()
-            print("HOHOOOOOOOOO")
         }
     }
     

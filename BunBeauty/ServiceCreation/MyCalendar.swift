@@ -112,12 +112,12 @@ class MyCalendar: UIViewController, UICollectionViewDataSource, UICollectionView
         return curCell
     }
     func getOrderDate() -> String? {
-       // let realm = DBHelper().getDBhelper()
-        //let ordersCursor = realm.objects(TABLE_ORDERS.self).filter("KEY_ID = %@", userId)
+        let realm = DBHelper().getDBhelper()
+        let ordersCursor = realm.objects(TABLE_ORDERS.self).filter("KEY_ID = %@", userId)
         
-        //for orderCursor in ordersCursor{
+        for orderCursor in ordersCursor{
             
-        //}
+        }
         return nil
     }
     

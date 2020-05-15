@@ -63,7 +63,7 @@ class WorkWithLocalStorageApi: Object {
         }
         return ""
     }
-    
+    //??
     static func getSertviceCursorByTimeId(workingTimeId:String) -> ServiceEntity {
         let realm = DBHelper().getDBhelper()
         let timeCursor = realm.objects(TABLE_WORKING_TIME.self).filter("KEY_ID = %@" , workingTimeId)
