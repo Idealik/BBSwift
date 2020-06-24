@@ -88,20 +88,7 @@ class AdditionService: UIViewController {
     }
     
     func addServiceInLocalStorage(service:ServiceEntity) -> Void {
-        let realm = DBHelper().getDBhelper()
-        let serviceTable = TABLE_SERVICES()
-        serviceTable.KEY_ID = service.getId()
-        serviceTable.KEY_NAME_SERVICES = service.getName()
-        serviceTable.KEY_RATING_SERVICES = "0"
-        serviceTable.KEY_MIN_COST_SERVICES = service.getCost()
-        serviceTable.KEY_DESCRIPTION_SERVICES = service.getDescription()
-        serviceTable.KEY_USER_ID_SERVICES = service.getUserId()
-        serviceTable.KEY_CATEGORY_SERVICES = service.getCategory()
-        serviceTable.KEY_ADDRESS_SERVICES = service.getAddress()
-        
-        try! realm.write {
-            realm.add(serviceTable)
-        }
+
         goToMyCalendar(serviceId: service.getId())
     }
     
@@ -116,9 +103,7 @@ class AdditionService: UIViewController {
         return Auth.auth().currentUser!.uid
     }
     func goToMyCalendar(serviceId:String) {
-        let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
-        myCalendarVC.serviceId = serviceId
-        myCalendarVC.statusUser = "worker"
-        navigationController?.pushViewController(myCalendarVC, animated: true)
+      
+        
     }
 }

@@ -45,30 +45,10 @@ class MainScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func getUserCity(userId:String) -> String {
-        let realm = DBHelper().getDBhelper()
-        let userCursor = realm.objects(TABLE_USERS.self).filter("KEY_ID = %@",userId)
-        for user in userCursor{
-            return user.KEY_CITY_USERS!
-        }
         return ""
     }
     func getService(city:String) -> Void {
-        let userQuery = Database.database().reference()
-            .child(USERS)
-            .queryOrdered(byChild: CITY)
-            .queryEqual(toValue : city)
-        
-        userQuery.observeSingleEvent(of: .value) { (usersSnapshot) in
-            //get services
-            var commonList = [[Any]]()
-            commonList =  Search.getServicesOfUsers(usersSnapshot: usersSnapshot, serviceName: "", userName: "", city: "", category: "")
-            
-            for serviceData in commonList{
-                self.serviceList.append(serviceData[1] as! ServiceEntity)
-                self.userList.append(serviceData[2] as! UserEntity)
-            }
-            self.serviceMainScreenTableView.reloadData()
-        }
+       
     }
     
     func goToGuestService(serviceId:String) {

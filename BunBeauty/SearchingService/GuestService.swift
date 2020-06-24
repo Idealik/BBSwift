@@ -79,7 +79,6 @@ class GuestService: UIViewController {
             service.setCountOfRates(_countOfRates: serviceSnapshot.childSnapshot(forPath: self.COUNT_OF_RATES).value as! Int)
             //service.setIsPremium(_isPremium: serviceSnapshot.childSnapshot(forPath: self.IS_PREMIUM).value as! Bool)
             self.setGuestService(service: service)
-            LoadingGuestServiceData.addServiceInLocalStorage(service: service)
             
             //load wokring days
             let workingDaysRef = ref.child(self.SERVICES)
@@ -92,21 +91,7 @@ class GuestService: UIViewController {
                 let dateInt = WorkWithTimeApi.getMillisecondsStringDateYMD(date: workingDaySnapshot.childSnapshot(forPath: self.DATE).value as! String)
                 
                 if dateInt > sysdateInt {
-                    LoadingGuestServiceData.addWorkingDaysInLocalStorage(workingDaySnapshot: workingDaySnapshot, serviceId: self.serviceId)
                     
-                    let timeRef = workingDaysRef
-                        .child(workingDayId)
-                        .child(self.WORKING_TIME)
-                    
-                    timeRef.observe(.childAdded, with: { (timeSnapshot) in
-                        LoadingGuestServiceData.addTimeInLocalStorage(timeSnapshot: timeSnapshot, workingDayId: workingDayId)
-                    })
-                    
-                    timeRef.observe(.childRemoved, with: { (timeSnapshot) in
-                        //when deleted time
-                        LoadingGuestServiceData.deleteTimeFromLocalStorage(timeId: timeSnapshot.key)
-                        
-                    })
                 }
             })
         }
@@ -122,19 +107,11 @@ class GuestService: UIViewController {
     }
     
     private func getOwnerId() -> String? {
-        let realm = DBHelper().getDBhelper()
-        let ownerCursor = realm.objects(TABLE_SERVICES.self).filter("KEY_ID == %@", serviceId!)
         
-        for ownerId in ownerCursor{
-            return ownerId.KEY_USER_ID_SERVICES!
-        }
         return nil
     }
     @IBAction func goToMyCalendar(_ sender: Any) {
-        let  myCalendarVC = storyboard?.instantiateViewController(withIdentifier: "MyCalendar") as! MyCalendar
-        myCalendarVC.serviceId = serviceId
-        myCalendarVC.statusUser = status
-        navigationController?.pushViewController(myCalendarVC, animated: true)
+       
     }
     
     func getUserId() -> String {

@@ -39,9 +39,7 @@ class VerifyPhone: UIViewController {
         Auth.auth().signIn(with: credential) { (authResult, error) in
             if error == nil {
                 // do
-                //if tusk sucs
-                let myAuth = MyAuthorization()
-                myAuth.authorizeUser(_myPhoneNumber: self.myPhoneNumber, _context: self.storyboard!, _controller: self)
+
             }
             else{
                 print("Error ")

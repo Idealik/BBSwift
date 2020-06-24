@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Authorization Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorizationController" id="BYZ-38-t0r" customClass="AuthorizationController" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="99.776785714285708"/>
         </scene>
-        <!--Registration-->
+        <!--Registration Controller-->
         <scene sceneID="t4r-ro-OLU">
             <objects>
-                <viewController storyboardIdentifier="Registration" id="O43-Kr-z28" customClass="Registration" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationController" id="O43-Kr-z28" customClass="RegistrationController" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B2m-0w-oxd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="99.776785714285708"/>
         </scene>
-        <!--Profile-->
+        <!--Profile Controller-->
         <scene sceneID="y3p-UN-Jni">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="HAC-v7-0IR" customClass="Profile" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="HAC-v7-0IR" customClass="ProfileController" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mpV-ju-3iH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

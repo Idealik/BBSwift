@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-class Registration: UIViewController {
+class RegistrationController: UIViewController {
     
     private let PHONE:String = "phone"
     private let USERS:String = "users"
@@ -80,30 +80,12 @@ class Registration: UIViewController {
     }
     
     private func addUserInLocalSrorage(_user:UserEntity){
-        let realm = DBHelper().getDBhelper()
-        let userTable = TABLE_USERS()
-        userTable.KEY_ID = _user.getId()
-        userTable.KEY_CITY_USERS = _user.getCity()
-        userTable.KEY_NAME_USERS = _user.getName()
-        userTable.KEY_PHONE_USERS = _user.getPhone()
-        userTable.KEY_RATING_USERS = "0"
-        userTable.KEY_SUBSCRIBERS_COUNT_USERS = "0"
-        userTable.KEY_SUBSCRIPTIONS_COUNT_USERS = "0"
-        try! realm.write {
-            realm.add(userTable)
-        }
+        
         addPhotoInLocalStorage(_user:_user)
     }
     
     func addPhotoInLocalStorage(_user:UserEntity) {
-        let realm = DBHelper().getDBhelper()
-        let photoTable = TABLE_PHOTOS()
-        photoTable.KEY_ID = _user.getId()
-        photoTable.KEY_PHOTO_LINK_PHOTOS = defaultPhotoLink
-        photoTable.KEY_OWNER_ID_PHOTOS = _user.getId()
-        try! realm.write {
-            realm.add(photoTable)
-        }
+    
     }
     
     func areInputCorrect() -> Bool {
@@ -121,7 +103,7 @@ class Registration: UIViewController {
     }
     
     private func goToProfile(_myPhoneNumber:String) {
-        let  registrationVC = storyboard?.instantiateViewController(withIdentifier: "Profile") as! Profile
+        let  registrationVC = storyboard?.instantiateViewController(withIdentifier: "Profile") as! ProfileController
         navigationController?.pushViewController(registrationVC, animated: true)
     }
     
