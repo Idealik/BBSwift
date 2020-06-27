@@ -27,7 +27,7 @@ class UserRepository {
         updateUserCallback.returnUpdatedCallback(obj: user)
     }
     
-    func getByPhoneNumber(getUserCallback:GetUserCallback) {
-        
+    func getByPhoneNumber(userPhone:String, getUserCallback:GetUserCallback) {
+        userFirebase?.getByPhoneNumber(userPhone: userPhone, getUserCallback: getUserCallback)
     }
 }

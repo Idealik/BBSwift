@@ -21,31 +21,31 @@ class AuthorizationPresenter : AuthorizationPresenterCallback {
     
     func defaultAuthorize() {
         authorizationView.hideViewsOnScreen()
-        //authorizationInteractor.defaultAuthorize(this)
+        authorizationInteractor.defaultAuthorize(authorizationPresenterCallback: self)
     }
     
     func authorize(phone: String) {
-        //authorizationInteractor.authorize(phone, this)
+        authorizationInteractor.authorize(phone:phone, authorizationPresenterCallback: self)
     }
     
     func showViewOnScreen() {
-        
+        authorizationView.showViewsOnScreen()
     }
     
     func setPhoneError() {
-        
+        authorizationView.showPhoneError(error: "Неккоректно введен номер")
     }
     
     func goToRegistration(phone: String) {
-        
+        authorizationView.goToRegistration(phone: phone)
     }
     
     func goToProfile(user: User) {
-        
+        authorizationView.goToProfile(user: user)
     }
     
     func goToVerifyPhone(phone: String) {
-        
+        authorizationView.goToVerifyPhone(phone: phone)
     }
 
 }

@@ -8,55 +8,49 @@
 
 import Foundation
 import FirebaseAuth
-class AuthorizationInteractor {
+class AuthorizationInteractor: GetUserCallback {
     
     private var authorizationPresenterCallback: AuthorizationPresenterCallback?
+    var userRepository:UserRepository
+    
+    init(userRepository:UserRepository) {
+        self.userRepository = userRepository
+    }
     
     func defaultAuthorize(authorizationPresenterCallback: AuthorizationPresenterCallback) {
         self.authorizationPresenterCallback = authorizationPresenterCallback
         
         if (Auth.auth().currentUser != nil) {
-//            userRepository.getByPhoneNumber(
-//                FirebaseAuth.getInstance().currentUser!!.phoneNumber!!,
-//                this,
-//                true
-//            )
+            userRepository.getByPhoneNumber(
+                userPhone: Auth.auth().currentUser!.phoneNumber!,
+                getUserCallback:self)
         } else {
             authorizationPresenterCallback.showViewOnScreen()
         }
     }
     
-    /*
-     
-     
-     override fun returnUsers(users: List<User>) {
-     if (users.isNotEmpty() && users.first().name.isNotEmpty()) {
-     authorizationPresenterCallback.goToProfile()
-     return
-     }
-     
-     if (FirebaseAuth.getInstance().currentUser == null) {
-     authorizationPresenterCallback.showViewOnScreen()
-     return
-     } else {
-     authorizationPresenterCallback.goToRegistration(getCurrentFbUser()!!.phoneNumber!!)
-     }
-     }
-     
-     override fun authorize(
-     phone: String,
-     authorizationPresenterCallback: AuthorizationPresenterCallback
-     ) {
-     if (isPhoneCorrect(phone.trim())) {
-     authorizationPresenterCallback.goToVerifyPhone(phone)
-     } else {
-     authorizationPresenterCallback.setPhoneError()
-     }
-     }
-     
+    func returnElement(element: User?) {
+        if(element != nil){
+            if element?.name != ""{
+                authorizationPresenterCallback?.goToProfile(user: element!)
+            }else{
+                authorizationPresenterCallback?.goToRegistration(phone: element!.phone)
+            }
+        }else{
+            authorizationPresenterCallback?.showViewOnScreen()
+        }
+    }
     
-     fun isPhoneCorrect(phone: String): Boolean {
-     return phone.length == 12
-     }
-     */
+    func authorize(phone:String,authorizationPresenterCallback: AuthorizationPresenterCallback ){
+        
+        if (isPhoneCorrect(phone: phone)) {
+            authorizationPresenterCallback.goToVerifyPhone(phone: phone)
+        } else {
+            authorizationPresenterCallback.setPhoneError()
+        }
+        
+    }
+    func isPhoneCorrect(phone: String)-> Bool {
+        return phone.count == 12
+    }
 }

@@ -25,15 +25,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6v-aM-puH">
-                                <rect key="frame" x="106" y="438" width="204" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL3-xU-n5I">
-                                <rect key="frame" x="146" y="543" width="125" height="30"/>
+                                <rect key="frame" x="145" y="559" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,14 +35,19 @@
                                     <action selector="enterBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCW-IS-m8b"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uuT-Gk-8Uz">
+                                <rect key="frame" x="192" y="762" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="PoX-JS-Pn9"/>
                     <connections>
-                        <outlet property="codeInput" destination="cCg-xQ-ULc" id="XhB-xC-89g"/>
+                        <outlet property="authorizeAuthorizationBtn" destination="xL3-xU-n5I" id="ZJO-gK-GcR"/>
                         <outlet property="enterPhoneText" destination="cCg-xQ-ULc" id="hqJ-hR-SXh"/>
+                        <outlet property="loadingAuthorizationIndicatorView" destination="uuT-Gk-8Uz" id="XXu-XW-Zva"/>
                         <segue destination="eZ8-CI-V3C" kind="show" id="oUH-dT-l3C"/>
                     </connections>
                 </viewController>
@@ -567,6 +565,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uh9-cr-aHx"/>
+        <segue reference="O6K-Qc-8Wa"/>
     </inferredMetricsTieBreakers>
 </document>

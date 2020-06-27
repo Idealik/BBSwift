@@ -13,11 +13,14 @@ import FirebaseAuth
 class AuthorizationController: UIViewController, AuthorizationView {
     
     @IBOutlet weak var enterPhoneText: UITextField!
-    @IBOutlet weak var codeInput: UITextField!
     
-    var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor()
+    @IBOutlet weak var authorizeAuthorizationBtn: UIButton!
     
-//    init?(coder:NSCoder, authorizationPresenter:AuthorizationPresenter){
+    @IBOutlet weak var loadingAuthorizationIndicatorView: UIActivityIndicatorView!
+    var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository(userFirebase: UserFirebase()))
+    var authorizationPresenter:AuthorizationPresenter?
+    
+    //    init?(coder:NSCoder, authorizationPresenter:AuthorizationPresenter){
 //        self.authorizationPresenter = authorizationPresenter
 //        super.init(coder: coder)
 //    }
@@ -29,24 +32,30 @@ class AuthorizationController: UIViewController, AuthorizationView {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let authorizationPresenter:AuthorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: self)
+        authorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: self)
         
         //check status in FB
         FirebaseApp.configure()
         
-        authorizationPresenter.defaultAuthorize()
+        authorizationPresenter?.defaultAuthorize()
     }
     
     @IBAction func enterBtn(_ sender: Any) {
-        
+        authorizationPresenter?.authorize(phone: enterPhoneText.text ?? "")
     }
     
     func hideViewsOnScreen() {
+        loadingAuthorizationIndicatorView.isHidden = false
         
+        enterPhoneText.isHidden = true
+        authorizeAuthorizationBtn.isHidden = true
     }
     
     func showViewsOnScreen() {
-        
+        loadingAuthorizationIndicatorView.isHidden = true
+
+        enterPhoneText.isHidden = false
+        authorizeAuthorizationBtn.isHidden = false
     }
     
     func showPhoneError(error: String) {
