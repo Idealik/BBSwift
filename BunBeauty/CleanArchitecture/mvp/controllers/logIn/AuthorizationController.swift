@@ -13,10 +13,9 @@ import FirebaseAuth
 class AuthorizationController: UIViewController, AuthorizationView {
     
     @IBOutlet weak var enterPhoneText: UITextField!
-    
     @IBOutlet weak var authorizeAuthorizationBtn: UIButton!
-    
     @IBOutlet weak var loadingAuthorizationIndicatorView: UIActivityIndicatorView!
+    
     var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository(userFirebase: UserFirebase()))
     var authorizationPresenter:AuthorizationPresenter?
     
@@ -62,12 +61,8 @@ class AuthorizationController: UIViewController, AuthorizationView {
         
     }
     
-    func enableVerifyBtn(status: Bool) {
-        
-    }
-    
     func goToVerifyPhone(phone: String) {
-        let  verifyPhoneVC = storyboard?.instantiateViewController(withIdentifier: "VerifyPhone") as! VerifyPhone
+        let  verifyPhoneVC = storyboard?.instantiateViewController(withIdentifier: "VerifyPhone") as! VerifyPhoneController
         verifyPhoneVC.myPhoneNumber = phone
         navigationController?.pushViewController(verifyPhoneVC, animated: true)
     }

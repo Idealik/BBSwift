@@ -15,6 +15,9 @@
 		02505DF422D0D66300C35306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF322D0D66300C35306 /* Assets.xcassets */; };
 		02505DF722D0D66300C35306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF522D0D66300C35306 /* LaunchScreen.storyboard */; };
 		02505E0122D0DEE900C35306 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02505E0022D0DEE900C35306 /* GoogleService-Info.plist */; };
+		02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8524A7B62F00602633 /* VerifyPhoneView.swift */; };
+		02577C8824A7B8BC00602633 /* VerifyPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */; };
+		02577C8A24A7B90700602633 /* VerifyPhonePresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */; };
 		0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */; };
 		0268E314246E19FF00BA7A5E /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E313246E19FF00BA7A5E /* AuthorizationView.swift */; };
 		0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */; };
@@ -38,7 +41,7 @@
 		02D651C324A3AE7B00FBF45B /* InsertUserCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651C224A3AE7B00FBF45B /* InsertUserCallback.swift */; };
 		02D651C524A3B05E00FBF45B /* UpdateUserCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651C424A3B05E00FBF45B /* UpdateUserCallback.swift */; };
 		02D651C724A3B08200FBF45B /* GetUserCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651C624A3B08200FBF45B /* GetUserCallback.swift */; };
-		02E209C422D22C6400AC046C /* VerifyPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209C322D22C6400AC046C /* VerifyPhone.swift */; };
+		02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209C322D22C6400AC046C /* VerifyPhoneController.swift */; };
 		02E209CF22D341A800AC046C /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209CE22D341A800AC046C /* RegistrationController.swift */; };
 		02E209D622D34D5200AC046C /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209D522D34D5200AC046C /* UserEntity.swift */; };
 		02E209DE22D517EB00AC046C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209DD22D517EB00AC046C /* ProfileController.swift */; };
@@ -56,6 +59,9 @@
 		02505DF622D0D66300C35306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02505DF822D0D66300C35306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02505E0022D0DEE900C35306 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02577C8524A7B62F00602633 /* VerifyPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneView.swift; sourceTree = "<group>"; };
+		02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhonePresenter.swift; sourceTree = "<group>"; };
+		02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhonePresenterCallback.swift; sourceTree = "<group>"; };
 		0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		0268E313246E19FF00BA7A5E /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
@@ -79,7 +85,7 @@
 		02D651C224A3AE7B00FBF45B /* InsertUserCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertUserCallback.swift; sourceTree = "<group>"; };
 		02D651C424A3B05E00FBF45B /* UpdateUserCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserCallback.swift; sourceTree = "<group>"; };
 		02D651C624A3B08200FBF45B /* GetUserCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserCallback.swift; sourceTree = "<group>"; };
-		02E209C322D22C6400AC046C /* VerifyPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhone.swift; sourceTree = "<group>"; };
+		02E209C322D22C6400AC046C /* VerifyPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneController.swift; sourceTree = "<group>"; };
 		02E209CE22D341A800AC046C /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		02E209D522D34D5200AC046C /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		02E209DD22D517EB00AC046C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -169,7 +175,7 @@
 		0268E309246E186200BA7A5E /* mvp */ = {
 			isa = PBXGroup;
 			children = (
-				0268E30D246E18C400BA7A5E /* activities */,
+				0268E30D246E18C400BA7A5E /* controllers */,
 				0268E310246E18E500BA7A5E /* presenters */,
 				0268E30F246E18D700BA7A5E /* views */,
 				0268E30E246E18CB00BA7A5E /* fragments */,
@@ -204,12 +210,12 @@
 			path = callback;
 			sourceTree = "<group>";
 		};
-		0268E30D246E18C400BA7A5E /* activities */ = {
+		0268E30D246E18C400BA7A5E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0268E315246E1A5600BA7A5E /* logIn */,
 			);
-			path = activities;
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		0268E30E246E18CB00BA7A5E /* fragments */ = {
@@ -238,6 +244,7 @@
 		0268E315246E1A5600BA7A5E /* logIn */ = {
 			isa = PBXGroup;
 			children = (
+				02E209C322D22C6400AC046C /* VerifyPhoneController.swift */,
 				02505DEE22D0D66300C35306 /* AuthorizationController.swift */,
 			);
 			path = logIn;
@@ -247,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */,
+				02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */,
 			);
 			path = logIn;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				0268E313246E19FF00BA7A5E /* AuthorizationView.swift */,
+				02577C8524A7B62F00602633 /* VerifyPhoneView.swift */,
 			);
 			path = logIn;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				02D651AE24A2D40C00FBF45B /* AuthorizationPresenterCallback.swift */,
+				02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */,
 			);
 			path = logIn;
 			sourceTree = "<group>";
@@ -369,7 +379,6 @@
 		02E209C522D2962500AC046C /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				02E209C322D22C6400AC046C /* VerifyPhone.swift */,
 				02E209CE22D341A800AC046C /* RegistrationController.swift */,
 			);
 			path = LogIn;
@@ -543,8 +552,9 @@
 				02D651AF24A2D40C00FBF45B /* AuthorizationPresenterCallback.swift in Sources */,
 				02D651AA2487229400FBF45B /* Service.swift in Sources */,
 				02D651BA24A3ACBB00FBF45B /* BaseDeleteCallback.swift in Sources */,
+				02577C8A24A7B90700602633 /* VerifyPhonePresenterCallback.swift in Sources */,
 				02D651BE24A3AD2400FBF45B /* BaseReturnElement.swift in Sources */,
-				02E209C422D22C6400AC046C /* VerifyPhone.swift in Sources */,
+				02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */,
 				02D651C024A3AD6700FBF45B /* BaseReturnList.swift in Sources */,
 				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
 				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
@@ -552,6 +562,8 @@
 				02D651A82487228400FBF45B /* User.swift in Sources */,
 				02D651B124A3A64000FBF45B /* UserFirebase.swift in Sources */,
 				02E209DE22D517EB00AC046C /* ProfileController.swift in Sources */,
+				02577C8824A7B8BC00602633 /* VerifyPhonePresenter.swift in Sources */,
+				02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */,
 				02D651C324A3AE7B00FBF45B /* InsertUserCallback.swift in Sources */,
 				021EC02522F8579500BCBF82 /* GuestService.swift in Sources */,
 				0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */,

@@ -11,7 +11,6 @@ protocol AuthorizationView {
     func hideViewsOnScreen()
     func showViewsOnScreen()
     func showPhoneError(error:String)
-    func enableVerifyBtn(status:Bool)
     func goToVerifyPhone(phone:String)
     func goToRegistration(phone: String)
     func goToProfile(user: User)

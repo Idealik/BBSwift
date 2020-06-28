@@ -1,4 +1,6 @@
 PODS:
+  - DITranquillity (3.9.3):
+    - SwiftLazy
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.1.2)
@@ -73,15 +75,17 @@ PODS:
   - Realm/Headers (3.17.0)
   - RealmSwift (3.17.0):
     - Realm (= 3.17.0)
+  - SwiftLazy (1.1.7)
 
 DEPENDENCIES:
+  - DITranquillity
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - RealmSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -96,8 +100,12 @@ SPEC REPOS:
     - nanopb
     - Realm
     - RealmSwift
+  trunk:
+    - DITranquillity
+    - SwiftLazy
 
 SPEC CHECKSUMS:
+  DITranquillity: 7aba075b73dbb1f321a1218dd3d9f1bd5ad9427b
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAuth: 7fa2cc010b93770831a4e7a60651b52c3b8d111a
@@ -112,7 +120,8 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
   RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+  SwiftLazy: dcb1edc6c2b633ba2e68f28554d9dd6d1c0bfd13
 
-PODFILE CHECKSUM: c6b4d5ad090ea636b79a58948216ac8802366969
+PODFILE CHECKSUM: 210c1aee940c57c4db44a79722b6864254185bef
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.9.3
