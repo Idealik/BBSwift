@@ -8,18 +8,16 @@
 
 import UIKit
 import Firebase
-import DITranquillity
 
 class VerifyPhoneController: UIViewController, VerifyPhoneView {
    
     var myPhoneNumber:String!
     var myVerificationID:String?
-    var verifyPhonePresenter: VerifyPhonePresenter
+    //var verifyPhonePresenter: VerifyPhonePresenter
     
-    @IBOutlet weak var codeInput: UITextField!
+    @IBOutlet weak var verifyPhoneNumberInput: UITextField!
     
-    
-    init?(coder: NSCoder, verifyPhonePresenter: VerifyPhonePresenter) {
+/*    init?(coder: NSCoder, verifyPhonePresenter: VerifyPhonePresenter) {
         self.verifyPhonePresenter = verifyPhonePresenter
         super.init(coder: coder)
     }
@@ -28,7 +26,7 @@ class VerifyPhoneController: UIViewController, VerifyPhoneView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         sendVerificationCode(_myPhoneNumber: myPhoneNumber)
@@ -46,7 +44,7 @@ class VerifyPhoneController: UIViewController, VerifyPhoneView {
     }
     
     @IBAction func myVerifyBtn(_ sender: Any) {
-        let verificationCode = codeInput.text
+        let verificationCode = verifyPhoneNumberInput.text
         let credential = PhoneAuthProvider.provider().credential(
             withVerificationID: myVerificationID!,
             verificationCode: verificationCode!)

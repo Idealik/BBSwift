@@ -1,6 +1,4 @@
 PODS:
-  - DITranquillity (3.9.3):
-    - SwiftLazy
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.1.2)
@@ -75,14 +73,21 @@ PODS:
   - Realm/Headers (3.17.0)
   - RealmSwift (3.17.0):
     - Realm (= 3.17.0)
-  - SwiftLazy (1.1.7)
+  - Typhoon (4.0.8):
+    - Typhoon/DeallocNotifier (= 4.0.8)
+    - Typhoon/IntrospectionUtils (= 4.0.8)
+    - Typhoon/no-arc (= 4.0.8)
+  - Typhoon/DeallocNotifier (4.0.8)
+  - Typhoon/IntrospectionUtils (4.0.8)
+  - Typhoon/no-arc (4.0.8):
+    - Typhoon/IntrospectionUtils
 
 DEPENDENCIES:
-  - DITranquillity
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - RealmSwift
+  - Typhoon
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -101,11 +106,9 @@ SPEC REPOS:
     - Realm
     - RealmSwift
   trunk:
-    - DITranquillity
-    - SwiftLazy
+    - Typhoon
 
 SPEC CHECKSUMS:
-  DITranquillity: 7aba075b73dbb1f321a1218dd3d9f1bd5ad9427b
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAuth: 7fa2cc010b93770831a4e7a60651b52c3b8d111a
@@ -120,8 +123,8 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
   RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
-  SwiftLazy: dcb1edc6c2b633ba2e68f28554d9dd6d1c0bfd13
+  Typhoon: f8901ef1ad0e2fa520cda0f668492dd33353f7dc
 
-PODFILE CHECKSUM: 210c1aee940c57c4db44a79722b6864254185bef
+PODFILE CHECKSUM: 44a60e922ed44036e96b0c38a415bcf44c4b6eda
 
 COCOAPODS: 1.9.3

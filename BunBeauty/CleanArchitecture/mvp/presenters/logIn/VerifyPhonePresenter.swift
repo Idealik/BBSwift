@@ -7,18 +7,24 @@
 //
 
 import Foundation
-class VerifyPhonePresenter: VerifyPhonePresenterCallback {
+class VerifyPhonePresente: VerifyPhonePresenterCallback {
     
-    func getPhoneNumber()-> String {
-            return ""
+    
+    private let verifyPhoneInteractor:VerifyPhoneInteractor
+    private let verifyPhoneView:VerifyPhoneView
+    
+    init(verifyPhoneInteractor:VerifyPhoneInteractor, verifyPhoneView:VerifyPhoneView) {
+        self.verifyPhoneInteractor = verifyPhoneInteractor
+        self.verifyPhoneView = verifyPhoneView
+        return
     }
     
-    func sendCode() {
-
+    func sendCode(phoneNumber:String) {
+        verifyPhoneInteractor.sendVerificationCode(phoneNumber: phoneNumber, verifyPresenterCallback: self)
     }
     
-    func resendCode() {
-
+    func resendCode(phoneNumber:String) {
+        verifyPhoneInteractor.resendVerificationCode(phoneNumber: phoneNumber)
     }
     
     func goToRegistration(phone: String) {
