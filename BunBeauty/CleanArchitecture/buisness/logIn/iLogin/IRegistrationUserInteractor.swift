@@ -7,7 +7,6 @@
 //
 
 import Foundation
-protocol IRegistrationInteractor {
+protocol IRegistrationUserInteractor {
     func registerUser(user: User, registrationPresenterCallback: RegistrationPresenterCallback)
-    func getMyPhoneNumber()-> String
 }

@@ -8,5 +8,10 @@
 
 import Foundation
 protocol RegistrationView {
-    
+    func setNameInputError(error: String)
+    func setSurnameInputError(error: String)
+    func showNoSelectedCity()
+    func goToProfile(user: User)
+    func fillPhoneInput(phone: String)
+    func showSuccessfulRegistration()
 }

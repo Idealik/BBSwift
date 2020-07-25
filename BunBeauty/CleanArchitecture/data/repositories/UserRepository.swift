@@ -30,4 +30,9 @@ class UserRepository {
     func getByPhoneNumber(userPhone:String, getUserCallback:GetUserCallback) {
         userFirebase?.getByPhoneNumber(userPhone: userPhone, getUserCallback: getUserCallback)
     }
+    
+    public static func getInstance() -> UserRepository {
+        return UserRepository(userFirebase: UserFirebase())
+    }
+    
 }

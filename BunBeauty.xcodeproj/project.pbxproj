@@ -25,7 +25,7 @@
 		02B2A6F524B45B6F00F60827 /* RegisrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F424B45B6F00F60827 /* RegisrationView.swift */; };
 		02B2A6F724B45BB000F60827 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F624B45BB000F60827 /* RegistrationPresenter.swift */; };
 		02B2A6F924B45BE400F60827 /* RegistrationUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F824B45BE400F60827 /* RegistrationUserInteractor.swift */; };
-		02B2A6FC24B45C1800F60827 /* IRegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FB24B45C1800F60827 /* IRegistrationInteractor.swift */; };
+		02B2A6FC24B45C1800F60827 /* IRegistrationUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */; };
 		02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FD24B45C8100F60827 /* RegistrationPresenterCallback.swift */; };
 		02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1222ECABD200E35E1A /* PhotoEntity.swift */; };
 		02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1522ECAFAC00E35E1A /* AdditionService.swift */; };
@@ -75,7 +75,7 @@
 		02B2A6F424B45B6F00F60827 /* RegisrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisrationView.swift; sourceTree = "<group>"; };
 		02B2A6F624B45BB000F60827 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		02B2A6F824B45BE400F60827 /* RegistrationUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserInteractor.swift; sourceTree = "<group>"; };
-		02B2A6FB24B45C1800F60827 /* IRegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegistrationInteractor.swift; sourceTree = "<group>"; };
+		02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegistrationUserInteractor.swift; sourceTree = "<group>"; };
 		02B2A6FD24B45C8100F60827 /* RegistrationPresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenterCallback.swift; sourceTree = "<group>"; };
 		02B53C1222ECABD200E35E1A /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		02B53C1522ECAFAC00E35E1A /* AdditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionService.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		02B2A6FA24B45BF900F60827 /* iLogin */ = {
 			isa = PBXGroup;
 			children = (
-				02B2A6FB24B45C1800F60827 /* IRegistrationInteractor.swift */,
+				02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */,
 			);
 			path = iLogin;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 				02577C8824A7B8BC00602633 /* VerifyPhonePresenter.swift in Sources */,
 				02B2A6F324B44BEC00F60827 /* VerifyPhoneInteractor.swift in Sources */,
 				02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */,
-				02B2A6FC24B45C1800F60827 /* IRegistrationInteractor.swift in Sources */,
+				02B2A6FC24B45C1800F60827 /* IRegistrationUserInteractor.swift in Sources */,
 				02D651C324A3AE7B00FBF45B /* InsertUserCallback.swift in Sources */,
 				021EC02522F8579500BCBF82 /* GuestService.swift in Sources */,
 				0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */,

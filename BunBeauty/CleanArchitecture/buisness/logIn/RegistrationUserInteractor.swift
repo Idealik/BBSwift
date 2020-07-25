@@ -7,3 +7,22 @@
 //
 
 import Foundation
+class RegistrationUserInteractor: IRegistrationUserInteractor, InsertUserCallback {
+    
+    private var registrationPresenterCallback: RegistrationPresenterCallback?
+    var userRepository:UserRepository
+    
+    init(userRepository:UserRepository) {
+        self.userRepository = userRepository
+    }
+    
+    func registerUser(user: User, registrationPresenterCallback: RegistrationPresenterCallback) {
+        userRepository.insert(_user: user, insertUserCallback: self)
+    }
+
+    func returnCreatedCallback(obj: User) {
+        registrationPresenterCallback?.showSuccessfulRegistration(user: obj)
+    }
+    
+    
+}

@@ -16,7 +16,7 @@ class AuthorizationController: UIViewController, AuthorizationView {
     @IBOutlet weak var authorizeAuthorizationBtn: UIButton!
     @IBOutlet weak var loadingAuthorizationIndicatorView: UIActivityIndicatorView!
     
-    var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository(userFirebase: UserFirebase()))
+    var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository.getInstance())
     var authorizationPresenter:AuthorizationPresenter?
     
     //    init?(coder:NSCoder, authorizationPresenter:AuthorizationPresenter){
