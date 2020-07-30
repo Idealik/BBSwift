@@ -34,14 +34,15 @@ class AuthorizationInteractor: GetUserCallback {
             if element?.name != ""{
                 authorizationPresenterCallback?.goToProfile(user: element!)
             }else{
-                authorizationPresenterCallback?.goToRegistration(phone: element!.phone)
+                authorizationPresenterCallback?.goToRegistration(phone: Auth.auth().currentUser!.phoneNumber!)
             }
         }else{
             authorizationPresenterCallback?.showViewOnScreen()
         }
     }
     
-    func authorize(phone:String,authorizationPresenterCallback: AuthorizationPresenterCallback ){
+    func authorize(phone:String,
+                   authorizationPresenterCallback: AuthorizationPresenterCallback ){
         
         if (isPhoneCorrect(phone: phone)) {
             authorizationPresenterCallback.goToVerifyPhone(phone: phone)

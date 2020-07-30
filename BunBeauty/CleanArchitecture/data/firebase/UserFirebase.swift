@@ -12,8 +12,9 @@ import FirebaseAuth
 class UserFirebase {
     
     func insert(user:User) {
-        
-        let userRef = Database.database().reference().child(User.USERS).child(user.id)
+        let userRef = Database.database().reference()
+            .child(User.USERS)
+            .child(user.id)
         
         var items :Dictionary <String,Any> = [:]
         items.updateValue(user.name, forKey: User.NAME)
@@ -25,7 +26,7 @@ class UserFirebase {
         items.updateValue(user.subscribersCount, forKey: User.COUNT_OF_SUBSCRIBERS)
         items.updateValue(user.subscriptionsCount, forKey: User.COUNT_OF_SUBSCRIPTIONS)
         items.updateValue(user.countOfRates, forKey: User.COUNT_OF_RATES)
-        items.updateValue(ServerValue.timestamp, forKey: User.COUNT_OF_RATES)
+        //items.updateValue(ServerValue.timestamp, forKey: User.REGISTRATION_DATA)
         userRef.updateChildValues(items)
     }
     
@@ -53,11 +54,13 @@ class UserFirebase {
             .queryEqual(toValue : userPhone)
         
         ref.observeSingleEvent(of: .value) { (usersSnapshot) in
-        
+            
             if(usersSnapshot.childrenCount != 0 ){
                 getUserCallback.returnElement(element: self.getUserFromSnapshot(userSnapshot: usersSnapshot.children.nextObject() as! DataSnapshot))
+            }else{
+                getUserCallback.returnElement(element: User())
             }
-        
+            
         }
     }
     

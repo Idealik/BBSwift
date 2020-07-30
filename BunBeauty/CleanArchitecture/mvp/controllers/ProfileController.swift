@@ -8,39 +8,40 @@
 
 import UIKit
 import FirebaseAuth
+
 class ProfileController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var nameText: UILabel!
     @IBOutlet weak var cityTex: UILabel!
     @IBOutlet weak var phoneText: UILabel!
     @IBOutlet weak var serviceTableView: UITableView!
+    @IBOutlet weak var avatarProfileImageView: UIImageView!
+    
     var user:User?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if(user != nil){
-            setProfileData(user: user)
+            setProfileData(user: user!)
         }else{
             //get byId
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        serviceList.removeAll()
-        updateServiceList(ownerId: ownerId)
-        self.serviceTableView.reloadData()
+   
     }
     
     private func updateProfileData(ownerId:String) -> Void {
-        let user = UserEntity()
-        setProfileData(_user: user)
+      
     }
     
     private func  setProfileData(user:User) -> Void {
-        nameText.text = _user.getName()
-        cityTex.text = _user.getCity()
-        phoneText.text = _user.getPhone()
+        nameText.text = user.name
+        cityTex.text = user.city
+        phoneText.text = user.phone
         //get rating
         //set avatar
         //updateServiceList()!
@@ -50,22 +51,19 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return serviceList.count
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = serviceTableView.dequeueReusableCell(withIdentifier: "serviceIdCell")!
-        cell.textLabel?.text = serviceList[indexPath.row].getName()
+        //cell.textLabel?.text = serviceList[indexPath.row].getName()
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        goToGuestService(serviceId: serviceList[indexPath.row].getId())
     }
-    func getUserId() -> String {
-        return Auth.auth().currentUser!.uid
-    }
+
     
     @IBAction func goToMainScreen(_ sender: Any) {
         let  mainScreen = storyboard?.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen

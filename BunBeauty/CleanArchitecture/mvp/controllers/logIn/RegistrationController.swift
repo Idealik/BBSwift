@@ -23,13 +23,17 @@ class RegistrationController: UIViewController, RegistrationView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        phoneInput.text = myPhoneNumber!
+        fillPhoneInput(phone: myPhoneNumber)
+        //FirebaseApp.configure()
         registrationPresenter = RegisrationPresenter(registrationUserInteractor: registrationUserInteractor, registrationView: self)
         
     }
     
     @IBAction func registrateBtn(_ sender: Any) {
-       registrationPresenter?.registerUser(name: nameInput.text ?? "", surname: surnameInput.text ?? "", city: cityInput.text ?? "", phone: phoneInput.text ?? "")
+       registrationPresenter?.registerUser(name: nameInput.text ?? "",
+                                           surname: surnameInput.text ?? "",
+                                           city: cityInput.text ?? "",
+                                           phone: phoneInput.text ??   "")
     }
     
     func setNameInputError(error: String) {
@@ -44,19 +48,18 @@ class RegistrationController: UIViewController, RegistrationView {
         
     }
     
-    func goToProfile(user: User) {
-        let  registrationVC = storyboard?.instantiateViewController(withIdentifier: "Profile") as! ProfileController
-        //перелача юзера
-        navigationController?.pushViewController(registrationVC, animated: true)
-    }
-    
     func fillPhoneInput(phone: String) {
-        
+        phoneInput.text = phone
     }
     
     func showSuccessfulRegistration() {
         
     }
-
     
+    func goToProfile(user: User) {
+        let  profileVC = storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
+        profileVC.user = user
+        self.dismiss(animated: true)
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
 }

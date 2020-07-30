@@ -16,7 +16,9 @@ class RegistrationUserInteractor: IRegistrationUserInteractor, InsertUserCallbac
         self.userRepository = userRepository
     }
     
-    func registerUser(user: User, registrationPresenterCallback: RegistrationPresenterCallback) {
+    func registerUser(user: User,
+                      registrationPresenterCallback: RegistrationPresenterCallback) {
+        self.registrationPresenterCallback = registrationPresenterCallback
         userRepository.insert(_user: user, insertUserCallback: self)
     }
 

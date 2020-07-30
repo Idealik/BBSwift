@@ -70,12 +70,13 @@ class AuthorizationController: UIViewController, AuthorizationView {
     func goToRegistration(phone: String) {
         let  registrtationVC = storyboard?.instantiateViewController(withIdentifier: "RegistrationController") as! RegistrationController
         registrtationVC.myPhoneNumber = phone
+        self.dismiss(animated: true)
         navigationController?.pushViewController(registrtationVC, animated: true)
     }
     
     func goToProfile(user: User) {
         let profileVC = storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
-        //set user
+        profileVC.user = user
         navigationController?.pushViewController(profileVC, animated: true)
     }
     
