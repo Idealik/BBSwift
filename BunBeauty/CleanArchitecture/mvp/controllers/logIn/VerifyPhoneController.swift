@@ -10,25 +10,21 @@ import UIKit
 import Firebase
 
 class VerifyPhoneController: UIViewController, VerifyPhoneView {
-   
+    
     var myPhoneNumber:String!
     var myVerificationID:String?
-    //var verifyPhonePresenter: VerifyPhonePresenter
+    var verifyPhonePresenter: VerifyPhonePresenter?
     
+    var verifyPhoneInteractor:VerifyPhoneInteractor  = VerifyPhoneInteractor(userRepository: UserRepository.getInstance())
+    
+    @IBOutlet weak var phoneVeifyPhoneInput: UITextField!
     @IBOutlet weak var verifyPhoneNumberInput: UITextField!
     
-/*    init?(coder: NSCoder, verifyPhonePresenter: VerifyPhonePresenter) {
-        self.verifyPhonePresenter = verifyPhonePresenter
-        super.init(coder: coder)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-     */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        phoneVeifyPhoneInput.text = myPhoneNumber
+        verifyPhonePresenter = VerifyPhonePresenter(verifyPhoneInteractor: verifyPhoneInteractor, verifyPhoneView: self)
         sendVerificationCode(_myPhoneNumber: myPhoneNumber)
     }
     
@@ -45,12 +41,14 @@ class VerifyPhoneController: UIViewController, VerifyPhoneView {
     
     @IBAction func myVerifyBtn(_ sender: Any) {
         let verificationCode = verifyPhoneNumberInput.text
+        
         let credential = PhoneAuthProvider.provider().credential(
             withVerificationID: myVerificationID!,
             verificationCode: verificationCode!)
+        
         Auth.auth().signIn(with: credential) { (authResult, error) in
             if error == nil {
-                // do
+                self.verifyPhonePresenter?.checkUser(phoneNumber: self.myPhoneNumber)
             }
             else{
                 print("Error ")
@@ -66,20 +64,21 @@ class VerifyPhoneController: UIViewController, VerifyPhoneView {
         
     }
     
-    func showSendCode() {
-        
-    }
-    
     func showMessage(message: String) {
         
     }
     
     func goToRegistration(phone: String) {
-        
+        let  registrtationVC = storyboard?.instantiateViewController(withIdentifier: "RegistrationController") as! RegistrationController
+        registrtationVC.myPhoneNumber = phone
+        self.dismiss(animated: true)
+        navigationController?.pushViewController(registrtationVC, animated: true)
     }
     
-    func goToProfile() {
-        
+    func goToProfile(user:User) {
+        let profileVC = storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
+        profileVC.user = user
+        navigationController?.pushViewController(profileVC, animated: true)
     }
     
 }

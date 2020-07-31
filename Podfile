@@ -11,4 +11,5 @@ target 'BunBeauty' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
 	pod 'Typhoon'
+	pod 'Kingfisher', '~> 5.0'
 end

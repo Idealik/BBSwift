@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-
+import Kingfisher
 class ProfileController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var nameText: UILabel!
@@ -43,9 +43,10 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
         cityTex.text = user.city
         phoneText.text = user.phone
         //get rating
-        //set avatar
+        avatarProfileImageView.kf.setImage(with: URL(string: user.photoLink))
         //updateServiceList()!
     }
+    
     func updateServiceList(ownerId:String) -> Void {
     
         

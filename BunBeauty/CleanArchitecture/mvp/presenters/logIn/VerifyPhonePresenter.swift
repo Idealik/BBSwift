@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class VerifyPhonePresente: VerifyPhonePresenterCallback {
+class VerifyPhonePresenter: VerifyPhonePresenterCallback {
     
     
     private let verifyPhoneInteractor:VerifyPhoneInteractor
@@ -19,20 +19,16 @@ class VerifyPhonePresente: VerifyPhonePresenterCallback {
         return
     }
     
-    func sendCode(phoneNumber:String) {
-        verifyPhoneInteractor.sendVerificationCode(phoneNumber: phoneNumber, verifyPresenterCallback: self)
-    }
-    
-    func resendCode(phoneNumber:String) {
-        verifyPhoneInteractor.resendVerificationCode(phoneNumber: phoneNumber)
+    func checkUser(phoneNumber:String)  {
+        verifyPhoneInteractor.checkUser(phoneNumber: phoneNumber, verifyPresenterCallback: self)
     }
     
     func goToRegistration(phone: String) {
-        
+        verifyPhoneView.goToRegistration(phone: phone)
     }
     
-    func goToProfile() {
-        
+    func goToProfile(user:User) {
+        verifyPhoneView.goToProfile(user: user)
     }
     
     func showTooManyRequestsError() {

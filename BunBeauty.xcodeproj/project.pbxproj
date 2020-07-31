@@ -21,6 +21,25 @@
 		0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */; };
 		0268E314246E19FF00BA7A5E /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E313246E19FF00BA7A5E /* AuthorizationView.swift */; };
 		0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */; };
+		02A93BF624D2E10A00207134 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BF524D2E10A00207134 /* ProfilePresenter.swift */; };
+		02A93BF824D2E11800207134 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BF724D2E11800207134 /* ProfileView.swift */; };
+		02A93BFB24D2E15400207134 /* ProfileUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BFA24D2E15400207134 /* ProfileUserInteractor.swift */; };
+		02A93BFD24D2E17400207134 /* ProfileSubscriptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BFC24D2E17400207134 /* ProfileSubscriptionInteractor.swift */; };
+		02A93BFF24D2E18B00207134 /* ProfileSubscriberInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BFE24D2E18B00207134 /* ProfileSubscriberInteractor.swift */; };
+		02A93C0124D2E1A400207134 /* ProfileServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0024D2E1A400207134 /* ProfileServiceInteractor.swift */; };
+		02A93C0324D2E1B700207134 /* ProfileDialogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0224D2E1B700207134 /* ProfileDialogInteractor.swift */; };
+		02A93C0624D2E1E800207134 /* IProfileUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0524D2E1E800207134 /* IProfileUserInteractor.swift */; };
+		02A93C0824D2E20200207134 /* IProfileSubscriptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0724D2E20200207134 /* IProfileSubscriptionInteractor.swift */; };
+		02A93C0A24D2E21500207134 /* IProfileSubscriberInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0924D2E21500207134 /* IProfileSubscriberInteractor.swift */; };
+		02A93C0C24D2E23600207134 /* IProfileServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0B24D2E23600207134 /* IProfileServiceInteractor.swift */; };
+		02A93C0E24D2E24900207134 /* IProfileDialogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0D24D2E24900207134 /* IProfileDialogInteractor.swift */; };
+		02A93C1024D2E2D400207134 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C0F24D2E2D400207134 /* Dialog.swift */; };
+		02A93C1224D2E2F100207134 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C1124D2E2F100207134 /* Message.swift */; };
+		02A93C1424D2E31500207134 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C1324D2E31500207134 /* Order.swift */; };
+		02A93C1624D2E32000207134 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C1524D2E32000207134 /* Photo.swift */; };
+		02A93C1824D2E33000207134 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C1724D2E33000207134 /* Subscriber.swift */; };
+		02A93C1A24D2E34600207134 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C1924D2E34600207134 /* Subscription.swift */; };
+		02A93C1C24D2E35500207134 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93C1B24D2E35500207134 /* Tag.swift */; };
 		02B2A6F324B44BEC00F60827 /* VerifyPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F224B44BEC00F60827 /* VerifyPhoneInteractor.swift */; };
 		02B2A6F524B45B6F00F60827 /* RegisrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F424B45B6F00F60827 /* RegisrationView.swift */; };
 		02B2A6F724B45BB000F60827 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F624B45BB000F60827 /* RegistrationPresenter.swift */; };
@@ -71,6 +90,25 @@
 		0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		0268E313246E19FF00BA7A5E /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
+		02A93BF524D2E10A00207134 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		02A93BF724D2E11800207134 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		02A93BFA24D2E15400207134 /* ProfileUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserInteractor.swift; sourceTree = "<group>"; };
+		02A93BFC24D2E17400207134 /* ProfileSubscriptionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubscriptionInteractor.swift; sourceTree = "<group>"; };
+		02A93BFE24D2E18B00207134 /* ProfileSubscriberInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubscriberInteractor.swift; sourceTree = "<group>"; };
+		02A93C0024D2E1A400207134 /* ProfileServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceInteractor.swift; sourceTree = "<group>"; };
+		02A93C0224D2E1B700207134 /* ProfileDialogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDialogInteractor.swift; sourceTree = "<group>"; };
+		02A93C0524D2E1E800207134 /* IProfileUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileUserInteractor.swift; sourceTree = "<group>"; };
+		02A93C0724D2E20200207134 /* IProfileSubscriptionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileSubscriptionInteractor.swift; sourceTree = "<group>"; };
+		02A93C0924D2E21500207134 /* IProfileSubscriberInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileSubscriberInteractor.swift; sourceTree = "<group>"; };
+		02A93C0B24D2E23600207134 /* IProfileServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileServiceInteractor.swift; sourceTree = "<group>"; };
+		02A93C0D24D2E24900207134 /* IProfileDialogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProfileDialogInteractor.swift; sourceTree = "<group>"; };
+		02A93C0F24D2E2D400207134 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		02A93C1124D2E2F100207134 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		02A93C1324D2E31500207134 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		02A93C1524D2E32000207134 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		02A93C1724D2E33000207134 /* Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
+		02A93C1924D2E34600207134 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		02A93C1B24D2E35500207134 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		02B2A6F224B44BEC00F60827 /* VerifyPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneInteractor.swift; sourceTree = "<group>"; };
 		02B2A6F424B45B6F00F60827 /* RegisrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisrationView.swift; sourceTree = "<group>"; };
 		02B2A6F624B45BB000F60827 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
@@ -152,9 +190,7 @@
 				021EC02322F8577700BCBF82 /* SearchingService */,
 				02B53C1D22EE1C0200E35E1A /* HelpApi */,
 				02B53C1422ECAF0B00E35E1A /* ServiceCreation */,
-				02E209DC22D517CC00AC046C /* Other */,
 				02E209D022D34ABB00AC046C /* Entities */,
-				02E209C522D2962500AC046C /* LogIn */,
 				02505DEC22D0D66300C35306 /* AppDelegate.swift */,
 				02505DF022D0D66300C35306 /* Main.storyboard */,
 				02505E0022D0DEE900C35306 /* GoogleService-Info.plist */,
@@ -208,6 +244,7 @@
 		0268E30B246E187300BA7A5E /* buisness */ = {
 			isa = PBXGroup;
 			children = (
+				02A93BF924D2E13500207134 /* profile */,
 				0268E318246E1AA800BA7A5E /* logIn */,
 			);
 			path = buisness;
@@ -225,8 +262,8 @@
 		0268E30D246E18C400BA7A5E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				02E209DD22D517EB00AC046C /* ProfileController.swift */,
 				0268E315246E1A5600BA7A5E /* logIn */,
+				02E209DD22D517EB00AC046C /* ProfileController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -242,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				0268E317246E1A7400BA7A5E /* logIn */,
+				02A93BF724D2E11800207134 /* ProfileView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -250,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				0268E316246E1A6600BA7A5E /* logIn */,
+				02A93BF524D2E10A00207134 /* ProfilePresenter.swift */,
 			);
 			path = presenters;
 			sourceTree = "<group>";
@@ -293,6 +332,31 @@
 				02B2A6F824B45BE400F60827 /* RegistrationUserInteractor.swift */,
 			);
 			path = logIn;
+			sourceTree = "<group>";
+		};
+		02A93BF924D2E13500207134 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				02A93C0424D2E1CA00207134 /* iProfile */,
+				02A93BFA24D2E15400207134 /* ProfileUserInteractor.swift */,
+				02A93BFC24D2E17400207134 /* ProfileSubscriptionInteractor.swift */,
+				02A93BFE24D2E18B00207134 /* ProfileSubscriberInteractor.swift */,
+				02A93C0024D2E1A400207134 /* ProfileServiceInteractor.swift */,
+				02A93C0224D2E1B700207134 /* ProfileDialogInteractor.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		02A93C0424D2E1CA00207134 /* iProfile */ = {
+			isa = PBXGroup;
+			children = (
+				02A93C0524D2E1E800207134 /* IProfileUserInteractor.swift */,
+				02A93C0724D2E20200207134 /* IProfileSubscriptionInteractor.swift */,
+				02A93C0924D2E21500207134 /* IProfileSubscriberInteractor.swift */,
+				02A93C0B24D2E23600207134 /* IProfileServiceInteractor.swift */,
+				02A93C0D24D2E24900207134 /* IProfileDialogInteractor.swift */,
+			);
+			path = iProfile;
 			sourceTree = "<group>";
 		};
 		02B2A6FA24B45BF900F60827 /* iLogin */ = {
@@ -351,6 +415,13 @@
 			children = (
 				02D651A72487228400FBF45B /* User.swift */,
 				02D651A92487229400FBF45B /* Service.swift */,
+				02A93C0F24D2E2D400207134 /* Dialog.swift */,
+				02A93C1124D2E2F100207134 /* Message.swift */,
+				02A93C1324D2E31500207134 /* Order.swift */,
+				02A93C1524D2E32000207134 /* Photo.swift */,
+				02A93C1724D2E33000207134 /* Subscriber.swift */,
+				02A93C1924D2E34600207134 /* Subscription.swift */,
+				02A93C1B24D2E35500207134 /* Tag.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -404,13 +475,6 @@
 			path = user;
 			sourceTree = "<group>";
 		};
-		02E209C522D2962500AC046C /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LogIn;
-			sourceTree = "<group>";
-		};
 		02E209D022D34ABB00AC046C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,13 +483,6 @@
 				02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		02E209DC22D517CC00AC046C /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		A091E1DAA40D55741FF867F5 /* Pods */ = {
@@ -561,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A93C1624D2E32000207134 /* Photo.swift in Sources */,
 				02D651B824A3AAFD00FBF45B /* BaseInsertCallback.swift in Sources */,
 				02D651C724A3B08200FBF45B /* GetUserCallback.swift in Sources */,
 				0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */,
@@ -571,25 +629,37 @@
 				02B2A6F524B45B6F00F60827 /* RegisrationView.swift in Sources */,
 				02E209D622D34D5200AC046C /* UserEntity.swift in Sources */,
 				02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */,
+				02A93C1024D2E2D400207134 /* Dialog.swift in Sources */,
+				02A93C1A24D2E34600207134 /* Subscription.swift in Sources */,
 				02D651AC248728AD00FBF45B /* UserRepository.swift in Sources */,
 				021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */,
 				02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */,
 				02D651BC24A3ACE900FBF45B /* BaseUpdateCallback.swift in Sources */,
+				02A93C0124D2E1A400207134 /* ProfileServiceInteractor.swift in Sources */,
+				02A93BF624D2E10A00207134 /* ProfilePresenter.swift in Sources */,
+				02A93C0A24D2E21500207134 /* IProfileSubscriberInteractor.swift in Sources */,
 				02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */,
 				02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */,
+				02A93C0824D2E20200207134 /* IProfileSubscriptionInteractor.swift in Sources */,
+				02A93C1224D2E2F100207134 /* Message.swift in Sources */,
 				02D651B424A3AA5C00FBF45B /* IUserRepository.swift in Sources */,
 				02D651AF24A2D40C00FBF45B /* AuthorizationPresenterCallback.swift in Sources */,
 				02D651AA2487229400FBF45B /* Service.swift in Sources */,
 				02D651BA24A3ACBB00FBF45B /* BaseDeleteCallback.swift in Sources */,
+				02A93C1824D2E33000207134 /* Subscriber.swift in Sources */,
 				02577C8A24A7B90700602633 /* VerifyPhonePresenterCallback.swift in Sources */,
 				02D651BE24A3AD2400FBF45B /* BaseReturnElement.swift in Sources */,
 				02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */,
+				02A93C1C24D2E35500207134 /* Tag.swift in Sources */,
 				02D651C024A3AD6700FBF45B /* BaseReturnList.swift in Sources */,
 				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
 				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
 				02E209CF22D341A800AC046C /* RegistrationController.swift in Sources */,
 				02D651A82487228400FBF45B /* User.swift in Sources */,
+				02A93C0C24D2E23600207134 /* IProfileServiceInteractor.swift in Sources */,
 				02D651B124A3A64000FBF45B /* UserFirebase.swift in Sources */,
+				02A93C0E24D2E24900207134 /* IProfileDialogInteractor.swift in Sources */,
+				02A93C1424D2E31500207134 /* Order.swift in Sources */,
 				02E209DE22D517EB00AC046C /* ProfileController.swift in Sources */,
 				02B2A6F724B45BB000F60827 /* RegistrationPresenter.swift in Sources */,
 				02577C8824A7B8BC00602633 /* VerifyPhonePresenter.swift in Sources */,
@@ -597,9 +667,15 @@
 				02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */,
 				02B2A6FC24B45C1800F60827 /* IRegistrationUserInteractor.swift in Sources */,
 				02D651C324A3AE7B00FBF45B /* InsertUserCallback.swift in Sources */,
+				02A93C0324D2E1B700207134 /* ProfileDialogInteractor.swift in Sources */,
 				021EC02522F8579500BCBF82 /* GuestService.swift in Sources */,
+				02A93BFF24D2E18B00207134 /* ProfileSubscriberInteractor.swift in Sources */,
 				0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */,
+				02A93BFD24D2E17400207134 /* ProfileSubscriptionInteractor.swift in Sources */,
+				02A93C0624D2E1E800207134 /* IProfileUserInteractor.swift in Sources */,
+				02A93BFB24D2E15400207134 /* ProfileUserInteractor.swift in Sources */,
 				02D651C524A3B05E00FBF45B /* UpdateUserCallback.swift in Sources */,
+				02A93BF824D2E11800207134 /* ProfileView.swift in Sources */,
 				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

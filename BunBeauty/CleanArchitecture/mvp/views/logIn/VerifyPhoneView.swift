@@ -10,8 +10,7 @@ import Foundation
 protocol VerifyPhoneView {
     func hideViewsOnScreen()
     func showViewsOnScreen()
-    func showSendCode()
     func showMessage(message: String)
     func goToRegistration(phone: String)
-    func goToProfile()
+    func goToProfile(user:User)
 }

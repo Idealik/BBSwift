@@ -9,7 +9,7 @@
 import Foundation
 protocol VerifyPhonePresenterCallback {
     func goToRegistration(phone: String)
-    func goToProfile()
+    func goToProfile(user:User)
     func showTooManyRequestsError()
     func showVerificationFailed()
     func showTooShortCodeError()

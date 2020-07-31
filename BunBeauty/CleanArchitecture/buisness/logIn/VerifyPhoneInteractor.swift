@@ -7,29 +7,40 @@
 //
 
 import Foundation
-class VerifyPhoneInteractor {
+class VerifyPhoneInteractor: GetUserCallback {
     
+    private var userRepository:UserRepository
     private var verifyPresenterCallback: VerifyPhonePresenterCallback?
+    private var userPhone:String = ""
 
-    func sendVerificationCode(
+    init(userRepository:UserRepository) {
+        self.userRepository = userRepository
+    }
+    
+    func checkUser(
         phoneNumber: String,
         verifyPresenterCallback: VerifyPhonePresenterCallback
-        ) {
+    ) {
         self.verifyPresenterCallback = verifyPresenterCallback
+        userPhone = phoneNumber
+        userRepository.getByPhoneNumber(
+            userPhone: phoneNumber,
+            getUserCallback:self)
+    }
+    
+    func returnElement(element: User?) {
         
-        //verifyPhoneNumberApi.sendVerificationCode(phoneNumber, this)
+        if(element != nil){
+            if element?.name != ""{
+                verifyPresenterCallback?.goToProfile(user: element!)
+            }else{
+                verifyPresenterCallback?.goToRegistration(phone:userPhone)
+            }
+        }else{
+            verifyPresenterCallback?.goToRegistration(phone: userPhone)
+            
+        }
     }
-    
-    
-    func resendVerificationCode(phoneNumber: String) {
-        //verifyPhoneNumberApi.resendVerificationCode(phoneNumber)
-    }
-    
-    
-    func checkCode(code: String) {
-        //verifyPhoneNumberApi.checkCode(code, this)
-    }
-    
     
     func returnTooManyRequestsError() {
         //verifyPresenterCallback.showTooManyRequestsError()
