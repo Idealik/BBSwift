@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0202417E24D600B400300E45 /* IServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202417D24D600B400300E45 /* IServiceRepository.swift */; };
+		0202418024D600FC00300E45 /* ServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202417F24D600FC00300E45 /* ServiceRepository.swift */; };
+		0202418224D6011E00300E45 /* ServiceFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202418124D6011E00300E45 /* ServiceFirebase.swift */; };
+		0202418424D6079000300E45 /* CreationServicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202418324D6079000300E45 /* CreationServicePresenter.swift */; };
+		0202418824D6082E00300E45 /* ICreationServiceServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202418724D6082E00300E45 /* ICreationServiceServiceInteractor.swift */; };
+		0202418A24D6085000300E45 /* ICreationServiceTagInteractor.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202418924D6085000300E45 /* ICreationServiceTagInteractor.swift.swift */; };
+		0202418C24D6087400300E45 /* CreationServiceServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202418B24D6087400300E45 /* CreationServiceServiceInteractor.swift */; };
+		0202418E24D6089900300E45 /* CreationServiceTagInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202418D24D6089900300E45 /* CreationServiceTagInteractor.swift */; };
+		0202419224D6092100300E45 /* CreationServicePresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202419124D6092100300E45 /* CreationServicePresenterCallback.swift */; };
+		0202419424D6093D00300E45 /* ProfilePresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202419324D6093D00300E45 /* ProfilePresenterCallback.swift */; };
 		021EC02522F8579500BCBF82 /* GuestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02422F8579500BCBF82 /* GuestService.swift */; };
 		021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EC02822FCAB7600BCBF82 /* MainScreen.swift */; };
 		02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02505DEC22D0D66300C35306 /* AppDelegate.swift */; };
@@ -47,7 +57,7 @@
 		02B2A6FC24B45C1800F60827 /* IRegistrationUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */; };
 		02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FD24B45C8100F60827 /* RegistrationPresenterCallback.swift */; };
 		02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1222ECABD200E35E1A /* PhotoEntity.swift */; };
-		02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1522ECAFAC00E35E1A /* AdditionService.swift */; };
+		02B53C1622ECAFAC00E35E1A /* CreationServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1522ECAFAC00E35E1A /* CreationServiceController.swift */; };
 		02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */; };
 		02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */; };
 		02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2622EF056C00E35E1A /* DayCell.swift */; };
@@ -74,6 +84,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0202417D24D600B400300E45 /* IServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceRepository.swift; sourceTree = "<group>"; };
+		0202417F24D600FC00300E45 /* ServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRepository.swift; sourceTree = "<group>"; };
+		0202418124D6011E00300E45 /* ServiceFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFirebase.swift; sourceTree = "<group>"; };
+		0202418324D6079000300E45 /* CreationServicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServicePresenter.swift; sourceTree = "<group>"; };
+		0202418724D6082E00300E45 /* ICreationServiceServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICreationServiceServiceInteractor.swift; sourceTree = "<group>"; };
+		0202418924D6085000300E45 /* ICreationServiceTagInteractor.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICreationServiceTagInteractor.swift.swift; sourceTree = "<group>"; };
+		0202418B24D6087400300E45 /* CreationServiceServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceServiceInteractor.swift; sourceTree = "<group>"; };
+		0202418D24D6089900300E45 /* CreationServiceTagInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceTagInteractor.swift; sourceTree = "<group>"; };
+		0202419124D6092100300E45 /* CreationServicePresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServicePresenterCallback.swift; sourceTree = "<group>"; };
+		0202419324D6093D00300E45 /* ProfilePresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterCallback.swift; sourceTree = "<group>"; };
 		021EC02422F8579500BCBF82 /* GuestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestService.swift; sourceTree = "<group>"; };
 		021EC02822FCAB7600BCBF82 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		02505DE922D0D66300C35306 /* BunBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BunBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +136,7 @@
 		02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegistrationUserInteractor.swift; sourceTree = "<group>"; };
 		02B2A6FD24B45C8100F60827 /* RegistrationPresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenterCallback.swift; sourceTree = "<group>"; };
 		02B53C1222ECABD200E35E1A /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
-		02B53C1522ECAFAC00E35E1A /* AdditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionService.swift; sourceTree = "<group>"; };
+		02B53C1522ECAFAC00E35E1A /* CreationServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceController.swift; sourceTree = "<group>"; };
 		02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEntity.swift; sourceTree = "<group>"; };
 		02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithTimeApi.swift; sourceTree = "<group>"; };
 		02B53C2622EF056C00E35E1A /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
@@ -156,6 +176,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0202418524D607D000300E45 /* createService */ = {
+			isa = PBXGroup;
+			children = (
+				0202418624D607F600300E45 /* iCreateService */,
+				0202418B24D6087400300E45 /* CreationServiceServiceInteractor.swift */,
+				0202418D24D6089900300E45 /* CreationServiceTagInteractor.swift */,
+			);
+			path = createService;
+			sourceTree = "<group>";
+		};
+		0202418624D607F600300E45 /* iCreateService */ = {
+			isa = PBXGroup;
+			children = (
+				0202418724D6082E00300E45 /* ICreationServiceServiceInteractor.swift */,
+				0202418924D6085000300E45 /* ICreationServiceTagInteractor.swift.swift */,
+			);
+			path = iCreateService;
+			sourceTree = "<group>";
+		};
+		0202418F24D608EB00300E45 /* createService */ = {
+			isa = PBXGroup;
+			children = (
+				0202419124D6092100300E45 /* CreationServicePresenterCallback.swift */,
+			);
+			path = createService;
+			sourceTree = "<group>";
+		};
+		0202419024D6090900300E45 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				0202419324D6093D00300E45 /* ProfilePresenterCallback.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
 		021EC02322F8577700BCBF82 /* SearchingService */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +299,7 @@
 		0268E30B246E187300BA7A5E /* buisness */ = {
 			isa = PBXGroup;
 			children = (
+				0202418524D607D000300E45 /* createService */,
 				02A93BF924D2E13500207134 /* profile */,
 				0268E318246E1AA800BA7A5E /* logIn */,
 			);
@@ -253,6 +309,8 @@
 		0268E30C246E189500BA7A5E /* callback */ = {
 			isa = PBXGroup;
 			children = (
+				0202419024D6090900300E45 /* profile */,
+				0202418F24D608EB00300E45 /* createService */,
 				02D651B524A3AACA00FBF45B /* subscribers */,
 				02D651AD24A2D3E600FBF45B /* logIn */,
 			);
@@ -264,6 +322,7 @@
 			children = (
 				0268E315246E1A5600BA7A5E /* logIn */,
 				02E209DD22D517EB00AC046C /* ProfileController.swift */,
+				02B53C1522ECAFAC00E35E1A /* CreationServiceController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -289,6 +348,7 @@
 			children = (
 				0268E316246E1A6600BA7A5E /* logIn */,
 				02A93BF524D2E10A00207134 /* ProfilePresenter.swift */,
+				0202418324D6079000300E45 /* CreationServicePresenter.swift */,
 			);
 			path = presenters;
 			sourceTree = "<group>";
@@ -371,7 +431,6 @@
 			isa = PBXGroup;
 			children = (
 				02B53C3522F5E96000E35E1A /* Cells */,
-				02B53C1522ECAFAC00E35E1A /* AdditionService.swift */,
 			);
 			path = ServiceCreation;
 			sourceTree = "<group>";
@@ -398,6 +457,7 @@
 			children = (
 				02D651B224A3AA3B00FBF45B /* iRepositories */,
 				02D651AB248728AD00FBF45B /* UserRepository.swift */,
+				0202417F24D600FC00300E45 /* ServiceRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -406,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				02D651B024A3A64000FBF45B /* UserFirebase.swift */,
+				0202418124D6011E00300E45 /* ServiceFirebase.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -440,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				02D651B324A3AA5C00FBF45B /* IUserRepository.swift */,
+				0202417D24D600B400300E45 /* IServiceRepository.swift */,
 			);
 			path = iRepositories;
 			sourceTree = "<group>";
@@ -628,17 +690,22 @@
 				02505DEF22D0D66300C35306 /* AuthorizationController.swift in Sources */,
 				02B2A6F524B45B6F00F60827 /* RegisrationView.swift in Sources */,
 				02E209D622D34D5200AC046C /* UserEntity.swift in Sources */,
-				02B53C1622ECAFAC00E35E1A /* AdditionService.swift in Sources */,
+				0202418224D6011E00300E45 /* ServiceFirebase.swift in Sources */,
+				02B53C1622ECAFAC00E35E1A /* CreationServiceController.swift in Sources */,
 				02A93C1024D2E2D400207134 /* Dialog.swift in Sources */,
 				02A93C1A24D2E34600207134 /* Subscription.swift in Sources */,
 				02D651AC248728AD00FBF45B /* UserRepository.swift in Sources */,
 				021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */,
+				0202419224D6092100300E45 /* CreationServicePresenterCallback.swift in Sources */,
 				02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */,
 				02D651BC24A3ACE900FBF45B /* BaseUpdateCallback.swift in Sources */,
+				0202418A24D6085000300E45 /* ICreationServiceTagInteractor.swift.swift in Sources */,
 				02A93C0124D2E1A400207134 /* ProfileServiceInteractor.swift in Sources */,
+				0202418424D6079000300E45 /* CreationServicePresenter.swift in Sources */,
 				02A93BF624D2E10A00207134 /* ProfilePresenter.swift in Sources */,
 				02A93C0A24D2E21500207134 /* IProfileSubscriberInteractor.swift in Sources */,
 				02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */,
+				0202418E24D6089900300E45 /* CreationServiceTagInteractor.swift in Sources */,
 				02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */,
 				02A93C0824D2E20200207134 /* IProfileSubscriptionInteractor.swift in Sources */,
 				02A93C1224D2E2F100207134 /* Message.swift in Sources */,
@@ -651,7 +718,9 @@
 				02D651BE24A3AD2400FBF45B /* BaseReturnElement.swift in Sources */,
 				02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */,
 				02A93C1C24D2E35500207134 /* Tag.swift in Sources */,
+				0202419424D6093D00300E45 /* ProfilePresenterCallback.swift in Sources */,
 				02D651C024A3AD6700FBF45B /* BaseReturnList.swift in Sources */,
+				0202418C24D6087400300E45 /* CreationServiceServiceInteractor.swift in Sources */,
 				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
 				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
 				02E209CF22D341A800AC046C /* RegistrationController.swift in Sources */,
@@ -659,6 +728,8 @@
 				02A93C0C24D2E23600207134 /* IProfileServiceInteractor.swift in Sources */,
 				02D651B124A3A64000FBF45B /* UserFirebase.swift in Sources */,
 				02A93C0E24D2E24900207134 /* IProfileDialogInteractor.swift in Sources */,
+				0202418024D600FC00300E45 /* ServiceRepository.swift in Sources */,
+				0202417E24D600B400300E45 /* IServiceRepository.swift in Sources */,
 				02A93C1424D2E31500207134 /* Order.swift in Sources */,
 				02E209DE22D517EB00AC046C /* ProfileController.swift in Sources */,
 				02B2A6F724B45BB000F60827 /* RegistrationPresenter.swift in Sources */,
@@ -675,6 +746,7 @@
 				02A93C0624D2E1E800207134 /* IProfileUserInteractor.swift in Sources */,
 				02A93BFB24D2E15400207134 /* ProfileUserInteractor.swift in Sources */,
 				02D651C524A3B05E00FBF45B /* UpdateUserCallback.swift in Sources */,
+				0202418824D6082E00300E45 /* ICreationServiceServiceInteractor.swift in Sources */,
 				02A93BF824D2E11800207134 /* ProfileView.swift in Sources */,
 				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
 			);
@@ -835,7 +907,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-bTeam.BunBeauty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -854,7 +926,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-bTeam.BunBeauty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

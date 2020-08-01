@@ -10,4 +10,5 @@ import Foundation
 
 protocol IUserRepository {
     func insert(user:User)
+    func update(user:User)
 }

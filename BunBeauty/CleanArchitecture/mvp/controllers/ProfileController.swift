@@ -72,7 +72,7 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     @IBAction func goToAdditionService(_ sender: Any) {
-        let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! AdditionService
+        let  additionServiceVC = storyboard?.instantiateViewController(withIdentifier: "AdditionService") as! CreationServiceController
         navigationController?.pushViewController(additionServiceVC, animated: true)
     }
     
