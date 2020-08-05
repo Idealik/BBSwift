@@ -17,10 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-//        let win = window
-//        let authorizationPresenter = AuthorizationPresenter()
-//        let rootVC = window?.rootViewController as? AuthorizationController
-//        rootVC?.authorizationPresenter = authorizationPresenter
+//        let authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository.getInstance())
+//        let authorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: AuthorizationController() as! AuthorizationView)
+//        let rootVC = AuthorizationController(authorizationPresenter: authorizationPresenter)
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        window.rootViewController = rootVC
+//        window.makeKeyAndVisible()
+//        self.window = window
         
         return true
     }

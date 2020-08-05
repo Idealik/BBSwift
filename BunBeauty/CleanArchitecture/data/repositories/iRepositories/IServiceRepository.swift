@@ -8,5 +8,5 @@
 
 import Foundation
 protocol IServiceRepository {
-    func insert(service:Service)
+    func insert(service:Service, insertServiceCallback:InsertServiceCallback)
 }

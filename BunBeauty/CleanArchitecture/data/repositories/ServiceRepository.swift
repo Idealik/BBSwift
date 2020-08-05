@@ -15,7 +15,7 @@ class ServiceRepository: IServiceRepository {
         self.serviceFirebase = serviceFirebase
     }
     
-    func insert(service: Service) {
+    func insert(service: Service,  insertServiceCallback:InsertServiceCallback) {
         var finaService = service
         finaService.id = serviceFirebase?.getIdForNew(service: service) ?? ""
         serviceFirebase?.insert(service: finaService)

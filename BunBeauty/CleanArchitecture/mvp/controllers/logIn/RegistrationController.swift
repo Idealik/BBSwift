@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import iOSDropDown
 class RegistrationController: UIViewController, RegistrationView {
   
     var registrationUserInteractor:RegistrationUserInteractor  = RegistrationUserInteractor(userRepository: UserRepository.getInstance())
@@ -17,22 +18,21 @@ class RegistrationController: UIViewController, RegistrationView {
     @IBOutlet weak var phoneInput: UITextField!
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var surnameInput: UITextField!
-    @IBOutlet weak var cityInput: UITextField!
+    @IBOutlet weak var citySpinner: DropDown!
     
     var myPhoneNumber:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fillPhoneInput(phone: myPhoneNumber)
-        //FirebaseApp.configure()
+        citySpinner.optionArray = Strings.cicites
         registrationPresenter = RegisrationPresenter(registrationUserInteractor: registrationUserInteractor, registrationView: self)
-        
     }
     
     @IBAction func registrateBtn(_ sender: Any) {
        registrationPresenter?.registerUser(name: nameInput.text ?? "",
                                            surname: surnameInput.text ?? "",
-                                           city: cityInput.text ?? "",
+                                           city: citySpinner.text ?? "",
                                            phone: phoneInput.text ??   "")
     }
     

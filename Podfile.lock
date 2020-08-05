@@ -62,6 +62,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.2.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
+  - iOSDropDown (0.3.4)
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - iOSDropDown
   - Kingfisher (~> 5.0)
   - RealmSwift
   - Typhoon
@@ -110,6 +112,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
   trunk:
+    - iOSDropDown
     - Kingfisher
     - Typhoon
 
@@ -124,6 +127,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: a35a645835bae31b6bdc0576396bc23908f12a22
   GoogleUtilities: c7a0b08bda3bf808be823ed151f0e28ac6866e71
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
@@ -131,6 +135,6 @@ SPEC CHECKSUMS:
   RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
   Typhoon: f8901ef1ad0e2fa520cda0f668492dd33353f7dc
 
-PODFILE CHECKSUM: ced3b7fdfa8998372815cc2d647ee8654b22b1ab
+PODFILE CHECKSUM: 870cea4a58f588e5ba73a2174f96db386c71265a
 
 COCOAPODS: 1.9.3

@@ -167,7 +167,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Город" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-cx-via">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Город" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-cx-via" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="111" y="468" width="193" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -188,7 +188,7 @@
                         <viewLayoutGuide key="safeArea" id="gJ7-Kn-9j8"/>
                     </view>
                     <connections>
-                        <outlet property="cityInput" destination="eUE-cx-via" id="eT0-kg-aMV"/>
+                        <outlet property="citySpinner" destination="eUE-cx-via" id="Cmg-VZ-85v"/>
                         <outlet property="nameInput" destination="A46-tk-EfY" id="gn3-aI-n1Z"/>
                         <outlet property="phoneInput" destination="pNl-c9-muW" id="WZ8-7I-MWH"/>
                         <outlet property="surnameInput" destination="ko0-DA-lqE" id="il3-zV-KoB"/>
@@ -243,8 +243,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToAdditionService:" destination="HAC-v7-0IR" eventType="touchUpInside" id="Oun-Z9-7ug"/>
-                                    <segue destination="zbF-2V-tQx" kind="show" id="pnG-zL-qyI"/>
+                                    <segue destination="zbF-2V-tQx" kind="show" id="xKl-JV-1Nw"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-aF-cv9">
@@ -400,7 +399,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRg-vj-P29">
-                                <rect key="frame" x="104" y="243" width="206" height="30"/>
+                                <rect key="frame" x="104" y="247" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -423,8 +422,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Категория" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqL-jb-NJn" customClass="DropDown" customModule="iOSDropDown">
+                                <rect key="frame" x="104" y="399" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="226-4d-sJv" userLabel="Фото">
+                                <rect key="frame" x="189" y="477" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Фото">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addServiceBtn:" destination="zbF-2V-tQx" eventType="touchUpInside" id="EJF-kv-nJm"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og8-t1-3Yy">
-                                <rect key="frame" x="147" y="433" width="120" height="30"/>
+                                <rect key="frame" x="147" y="621" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Добавить услугу">
@@ -441,159 +457,15 @@
                     <navigationItem key="navigationItem" id="Equ-ow-f1G"/>
                     <connections>
                         <outlet property="addressInput" destination="Ev4-6k-v8g" id="ZVn-G7-O9J"/>
+                        <outlet property="categorySpinner" destination="CqL-jb-NJn" id="7ES-oD-OI5"/>
                         <outlet property="costText" destination="Utw-u4-goy" id="sCs-DU-boZ"/>
                         <outlet property="descriptionInput" destination="Kco-q7-jUR" id="uKo-hM-LIp"/>
                         <outlet property="nameText" destination="zRg-vj-P29" id="yTS-6N-7pd"/>
-                        <segue destination="rmh-3B-nQW" kind="show" id="7Bt-wL-IV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icN-wp-jnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2395.6521739130435" y="827.67857142857144"/>
-        </scene>
-        <!--My Calendar-->
-        <scene sceneID="r1P-FY-7fU">
-            <objects>
-                <viewController storyboardIdentifier="MyCalendar" id="rmh-3B-nQW" customClass="MyCalendar" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Pr-Bz-ke3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lrx-W2-DME">
-                                <rect key="frame" x="40" y="120" width="340" height="330"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pqj-zf-i1P">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayIdCell" id="Phd-Lg-R7f" customClass="DayCell" customModule="BunBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCR-aU-dPZ">
-                                                    <rect key="frame" x="7.5" y="16.5" width="35.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="QCR-aU-dPZ" firstAttribute="centerX" secondItem="Phd-Lg-R7f" secondAttribute="centerX" id="758-9b-EvL"/>
-                                            <constraint firstItem="QCR-aU-dPZ" firstAttribute="centerY" secondItem="Phd-Lg-R7f" secondAttribute="centerY" id="lio-C2-kyR"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dayText" destination="QCR-aU-dPZ" id="GWO-wc-fdZ"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="rmh-3B-nQW" id="tKC-gq-gQ8"/>
-                                    <outlet property="delegate" destination="rmh-3B-nQW" id="jrV-O7-VrU"/>
-                                </connections>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tS-5p-heR">
-                                <rect key="frame" x="150" y="500" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Продлолждить"/>
-                                <connections>
-                                    <action selector="goToMyTime:" destination="rmh-3B-nQW" eventType="touchUpInside" id="Hdi-PJ-yhq"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="oVQ-26-wo6"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fCh-y9-yI9"/>
-                    <connections>
-                        <outlet property="calendarCollection" destination="lrx-W2-DME" id="l0L-bc-Ohs"/>
-                        <segue destination="Hc1-YG-7JK" kind="show" id="Ocx-xU-qb4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="40k-lz-wq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3415.9420289855075" y="827.67857142857144"/>
-        </scene>
-        <!--My Time-->
-        <scene sceneID="wtt-8I-a01">
-            <objects>
-                <viewController storyboardIdentifier="MyTime" id="Hc1-YG-7JK" customClass="MyTime" customModule="BunBeauty" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XTU-J2-NKO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gRL-ob-v8L">
-                                <rect key="frame" x="40" y="120" width="340" height="521"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E46-hy-XuE">
-                                    <size key="itemSize" width="50" height="25"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TimeCell" reuseIdentifier="timeCell" id="26Q-Du-9mF" customClass="TimeCell" customModule="BunBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3T-Vw-Bed">
-                                                    <rect key="frame" x="7.5" y="4" width="35.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="c3T-Vw-Bed" firstAttribute="centerX" secondItem="26Q-Du-9mF" secondAttribute="centerX" id="3Ti-zo-F3C"/>
-                                            <constraint firstItem="c3T-Vw-Bed" firstAttribute="centerY" secondItem="26Q-Du-9mF" secondAttribute="centerY" id="6gc-QJ-Dp7"/>
-                                        </constraints>
-                                        <size key="customSize" width="50" height="25"/>
-                                        <connections>
-                                            <outlet property="timeCell" destination="c3T-Vw-Bed" id="DzT-6t-uKC"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Hc1-YG-7JK" id="SPt-xs-BRb"/>
-                                    <outlet property="delegate" destination="Hc1-YG-7JK" id="fAT-Wp-PGR"/>
-                                </connections>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTl-Pq-AWN">
-                                <rect key="frame" x="163" y="712" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Подтвердить"/>
-                                <connections>
-                                    <action selector="confirmBtn:" destination="Hc1-YG-7JK" eventType="touchUpInside" id="4w1-9g-Euz"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xcS-1W-HhZ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="saR-LF-84R"/>
-                    <connections>
-                        <outlet property="scheduleCollection" destination="gRL-ob-v8L" id="viM-EP-poz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BdY-0E-BJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4431.884057971015" y="827.67857142857144"/>
+            <point key="canvasLocation" x="2207" y="828"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

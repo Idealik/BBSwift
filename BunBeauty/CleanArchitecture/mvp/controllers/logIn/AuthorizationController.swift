@@ -19,18 +19,18 @@ class AuthorizationController: UIViewController, AuthorizationView {
     var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository.getInstance())
     var authorizationPresenter:AuthorizationPresenter?
     
-    //    init?(coder:NSCoder, authorizationPresenter:AuthorizationPresenter){
+//    init(authorizationPresenter:AuthorizationPresenter){
 //        self.authorizationPresenter = authorizationPresenter
-//        super.init(coder: coder)
+//        super.init(nibName:nil, bundle:nil)
 //    }
 //
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
+// required init?(coder aDecoder: NSCoder) {
+//       super.init(coder: aDecoder)
 //    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         authorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: self)
         
         //check status in FB
@@ -52,7 +52,7 @@ class AuthorizationController: UIViewController, AuthorizationView {
     
     func showViewsOnScreen() {
         loadingAuthorizationIndicatorView.isHidden = true
-
+        
         enterPhoneText.isHidden = false
         authorizeAuthorizationBtn.isHidden = false
     }

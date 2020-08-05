@@ -11,6 +11,4 @@ class CreationServiceTagInteractor: ICreationServiceTagInteractor {
     func addTags(service: Service) {
         
     }
-    
-    
 }

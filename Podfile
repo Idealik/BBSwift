@@ -12,4 +12,5 @@ target 'BunBeauty' do
 	pod 'Firebase/Auth'
 	pod 'Typhoon'
 	pod 'Kingfisher', '~> 5.0'
+	pod 'iOSDropDown'
 end

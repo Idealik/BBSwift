@@ -61,50 +61,9 @@ class GuestService: UIViewController {
         let ref = Database.database().reference()
             .child(USERS)
             .child(ownerId)
-        ref.observeSingleEvent(of: .value) { (userSnapshot) in
-            //load photo
-            
-            let service = ServiceEntity()
-            service.setUserId(_userId: userSnapshot.key)
-            
-            //load service
-            let serviceSnapshot = userSnapshot.childSnapshot(forPath: self.SERVICES)
-                .childSnapshot(forPath: self.serviceId)
-            service.setId(_id: serviceSnapshot.key)
-            service.setCost(_cost: serviceSnapshot.childSnapshot(forPath: self.COST).value as! String)
-            service.setAddress(_address: serviceSnapshot.childSnapshot(forPath: self.ADDRESS).value as! String)
-            service.setDescription(_description: serviceSnapshot.childSnapshot(forPath: self.DESCRIPTION).value as! String)
-            service.setName(_name: serviceSnapshot.childSnapshot(forPath: self.NAME).value as! String)
-            service.setAverageRating(_rating: serviceSnapshot.childSnapshot(forPath: self.AVG_RATING).value as! Float)
-            service.setCountOfRates(_countOfRates: serviceSnapshot.childSnapshot(forPath: self.COUNT_OF_RATES).value as! Int)
-            //service.setIsPremium(_isPremium: serviceSnapshot.childSnapshot(forPath: self.IS_PREMIUM).value as! Bool)
-            self.setGuestService(service: service)
-            
-            //load wokring days
-            let workingDaysRef = ref.child(self.SERVICES)
-                .child(service.getId())
-                .child(self.WORKING_DAYS)
-            
-            workingDaysRef.observe(.childAdded, with: { (workingDaySnapshot) in
-                let workingDayId = workingDaySnapshot.key
-                let sysdateInt = WorkWithTimeApi.getSysadateInt()
-                let dateInt = WorkWithTimeApi.getMillisecondsStringDateYMD(date: workingDaySnapshot.childSnapshot(forPath: self.DATE).value as! String)
-                
-                if dateInt > sysdateInt {
-                    
-                }
-            })
-        }
+    
     }
     
-    private func setGuestService(service:ServiceEntity){
-        nameText.text = service.getName()
-        costText.text = service.getCost()
-        descriptionText.text = service.getDescription()
-        //premium
-        //photo feed
-        //rates
-    }
     
     private func getOwnerId() -> String? {
         

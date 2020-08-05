@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 struct User {
     var id: String = ""
     var name: String = ""
@@ -35,4 +36,7 @@ struct User {
     static let DEFAULT_PHOTO_LINK = "https://firebasestorage.googleapis.com/v0/b/bun-beauty.appspot.com/o/avatar%2FdefaultAva.jpg?alt=media&token=f15dbe15-0541-46cc-8272-2578627ed311"
     static let REGISTRATION_DATA = "registration data"
     
+    static func getMyId() ->String {
+        return Auth.auth().currentUser!.uid
+    }
 }

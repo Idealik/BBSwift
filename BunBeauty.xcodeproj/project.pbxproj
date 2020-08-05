@@ -25,6 +25,14 @@
 		02505DF422D0D66300C35306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF322D0D66300C35306 /* Assets.xcassets */; };
 		02505DF722D0D66300C35306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF522D0D66300C35306 /* LaunchScreen.storyboard */; };
 		02505E0122D0DEE900C35306 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02505E0022D0DEE900C35306 /* GoogleService-Info.plist */; };
+		025581CD24D6E9B80061F7D3 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025581CC24D6E9B80061F7D3 /* iOSDropDown.framework */; };
+		025581CF24D701A60061F7D3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581CE24D701A60061F7D3 /* Strings.swift */; };
+		025581D124D875590061F7D3 /* CreationServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581D024D875590061F7D3 /* CreationServiceView.swift */; };
+		025581D424D983080061F7D3 /* InsertServiceCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581D324D983080061F7D3 /* InsertServiceCallback.swift */; };
+		025581D624D983170061F7D3 /* UpdateServiceCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581D524D983170061F7D3 /* UpdateServiceCallback.swift */; };
+		025581D824D983450061F7D3 /* DeleteServiceCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581D724D983450061F7D3 /* DeleteServiceCallback.swift */; };
+		025581DA24D983670061F7D3 /* GetServiceCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581D924D983670061F7D3 /* GetServiceCallback.swift */; };
+		025581DC24D983810061F7D3 /* GetServicesCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581DB24D983810061F7D3 /* GetServicesCallback.swift */; };
 		02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8524A7B62F00602633 /* VerifyPhoneView.swift */; };
 		02577C8824A7B8BC00602633 /* VerifyPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */; };
 		02577C8A24A7B90700602633 /* VerifyPhonePresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */; };
@@ -56,12 +64,8 @@
 		02B2A6F924B45BE400F60827 /* RegistrationUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6F824B45BE400F60827 /* RegistrationUserInteractor.swift */; };
 		02B2A6FC24B45C1800F60827 /* IRegistrationUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */; };
 		02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2A6FD24B45C8100F60827 /* RegistrationPresenterCallback.swift */; };
-		02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1222ECABD200E35E1A /* PhotoEntity.swift */; };
 		02B53C1622ECAFAC00E35E1A /* CreationServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1522ECAFAC00E35E1A /* CreationServiceController.swift */; };
-		02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */; };
 		02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */; };
-		02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C2622EF056C00E35E1A /* DayCell.swift */; };
-		02B53C3422F5E63700E35E1A /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B53C3322F5E63700E35E1A /* TimeCell.swift */; };
 		02D651A82487228400FBF45B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651A72487228400FBF45B /* User.swift */; };
 		02D651AA2487229400FBF45B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651A92487229400FBF45B /* Service.swift */; };
 		02D651AC248728AD00FBF45B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651AB248728AD00FBF45B /* UserRepository.swift */; };
@@ -78,7 +82,6 @@
 		02D651C724A3B08200FBF45B /* GetUserCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D651C624A3B08200FBF45B /* GetUserCallback.swift */; };
 		02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209C322D22C6400AC046C /* VerifyPhoneController.swift */; };
 		02E209CF22D341A800AC046C /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209CE22D341A800AC046C /* RegistrationController.swift */; };
-		02E209D622D34D5200AC046C /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209D522D34D5200AC046C /* UserEntity.swift */; };
 		02E209DE22D517EB00AC046C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E209DD22D517EB00AC046C /* ProfileController.swift */; };
 		75E05849D769EFB500816DE0 /* Pods_BunBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5908CA29CBA84A545FEF3B07 /* Pods_BunBeauty.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +107,14 @@
 		02505DF622D0D66300C35306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02505DF822D0D66300C35306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02505E0022D0DEE900C35306 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		025581CC24D6E9B80061F7D3 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		025581CE24D701A60061F7D3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		025581D024D875590061F7D3 /* CreationServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceView.swift; sourceTree = "<group>"; };
+		025581D324D983080061F7D3 /* InsertServiceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertServiceCallback.swift; sourceTree = "<group>"; };
+		025581D524D983170061F7D3 /* UpdateServiceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceCallback.swift; sourceTree = "<group>"; };
+		025581D724D983450061F7D3 /* DeleteServiceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceCallback.swift; sourceTree = "<group>"; };
+		025581D924D983670061F7D3 /* GetServiceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceCallback.swift; sourceTree = "<group>"; };
+		025581DB24D983810061F7D3 /* GetServicesCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServicesCallback.swift; sourceTree = "<group>"; };
 		02577C8524A7B62F00602633 /* VerifyPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneView.swift; sourceTree = "<group>"; };
 		02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhonePresenter.swift; sourceTree = "<group>"; };
 		02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhonePresenterCallback.swift; sourceTree = "<group>"; };
@@ -135,12 +146,8 @@
 		02B2A6F824B45BE400F60827 /* RegistrationUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserInteractor.swift; sourceTree = "<group>"; };
 		02B2A6FB24B45C1800F60827 /* IRegistrationUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegistrationUserInteractor.swift; sourceTree = "<group>"; };
 		02B2A6FD24B45C8100F60827 /* RegistrationPresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenterCallback.swift; sourceTree = "<group>"; };
-		02B53C1222ECABD200E35E1A /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		02B53C1522ECAFAC00E35E1A /* CreationServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceController.swift; sourceTree = "<group>"; };
-		02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEntity.swift; sourceTree = "<group>"; };
 		02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithTimeApi.swift; sourceTree = "<group>"; };
-		02B53C2622EF056C00E35E1A /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
-		02B53C3322F5E63700E35E1A /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		02D651A72487228400FBF45B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		02D651A92487229400FBF45B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		02D651AB248728AD00FBF45B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -157,7 +164,6 @@
 		02D651C624A3B08200FBF45B /* GetUserCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserCallback.swift; sourceTree = "<group>"; };
 		02E209C322D22C6400AC046C /* VerifyPhoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneController.swift; sourceTree = "<group>"; };
 		02E209CE22D341A800AC046C /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
-		02E209D522D34D5200AC046C /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		02E209DD22D517EB00AC046C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5908CA29CBA84A545FEF3B07 /* Pods_BunBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BunBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA72BA1C387646C4A599237 /* Pods-BunBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BunBeauty.debug.xcconfig"; path = "Target Support Files/Pods-BunBeauty/Pods-BunBeauty.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025581CD24D6E9B80061F7D3 /* iOSDropDown.framework in Frameworks */,
 				75E05849D769EFB500816DE0 /* Pods_BunBeauty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,8 +251,6 @@
 				0268E307246E181200BA7A5E /* CleanArchitecture */,
 				021EC02322F8577700BCBF82 /* SearchingService */,
 				02B53C1D22EE1C0200E35E1A /* HelpApi */,
-				02B53C1422ECAF0B00E35E1A /* ServiceCreation */,
-				02E209D022D34ABB00AC046C /* Entities */,
 				02505DEC22D0D66300C35306 /* AppDelegate.swift */,
 				02505DF022D0D66300C35306 /* Main.storyboard */,
 				02505E0022D0DEE900C35306 /* GoogleService-Info.plist */,
@@ -256,6 +261,18 @@
 			path = BunBeauty;
 			sourceTree = "<group>";
 		};
+		025581D224D982C00061F7D3 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				025581D324D983080061F7D3 /* InsertServiceCallback.swift */,
+				025581D524D983170061F7D3 /* UpdateServiceCallback.swift */,
+				025581D724D983450061F7D3 /* DeleteServiceCallback.swift */,
+				025581D924D983670061F7D3 /* GetServiceCallback.swift */,
+				025581DB24D983810061F7D3 /* GetServicesCallback.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
 		0268E307246E181200BA7A5E /* CleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +281,7 @@
 				0268E30A246E186A00BA7A5E /* data */,
 				0268E309246E186200BA7A5E /* mvp */,
 				0268E308246E185300BA7A5E /* di */,
+				025581CE24D701A60061F7D3 /* Strings.swift */,
 			);
 			path = CleanArchitecture;
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 			children = (
 				0268E317246E1A7400BA7A5E /* logIn */,
 				02A93BF724D2E11800207134 /* ProfileView.swift */,
+				025581D024D875590061F7D3 /* CreationServiceView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -427,29 +446,12 @@
 			path = iLogin;
 			sourceTree = "<group>";
 		};
-		02B53C1422ECAF0B00E35E1A /* ServiceCreation */ = {
-			isa = PBXGroup;
-			children = (
-				02B53C3522F5E96000E35E1A /* Cells */,
-			);
-			path = ServiceCreation;
-			sourceTree = "<group>";
-		};
 		02B53C1D22EE1C0200E35E1A /* HelpApi */ = {
 			isa = PBXGroup;
 			children = (
 				02B53C1E22EE1C2000E35E1A /* WorkWithTimeApi.swift */,
 			);
 			path = HelpApi;
-			sourceTree = "<group>";
-		};
-		02B53C3522F5E96000E35E1A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				02B53C2622EF056C00E35E1A /* DayCell.swift */,
-				02B53C3322F5E63700E35E1A /* TimeCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		02D651A42487220200FBF45B /* repositories */ = {
@@ -509,6 +511,7 @@
 		02D651B524A3AACA00FBF45B /* subscribers */ = {
 			isa = PBXGroup;
 			children = (
+				025581D224D982C00061F7D3 /* service */,
 				02D651C124A3AE2900FBF45B /* user */,
 				02D651B624A3AADB00FBF45B /* baseSubscribers */,
 			);
@@ -537,16 +540,6 @@
 			path = user;
 			sourceTree = "<group>";
 		};
-		02E209D022D34ABB00AC046C /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				02E209D522D34D5200AC046C /* UserEntity.swift */,
-				02B53C1222ECABD200E35E1A /* PhotoEntity.swift */,
-				02B53C1B22EDCF3200E35E1A /* ServiceEntity.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		A091E1DAA40D55741FF867F5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +552,7 @@
 		D83290CC296C2B8A8F3D8BFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				025581CC24D6E9B80061F7D3 /* iOSDropDown.framework */,
 				5908CA29CBA84A545FEF3B07 /* Pods_BunBeauty.framework */,
 			);
 			name = Frameworks;
@@ -684,20 +678,21 @@
 				02D651B824A3AAFD00FBF45B /* BaseInsertCallback.swift in Sources */,
 				02D651C724A3B08200FBF45B /* GetUserCallback.swift in Sources */,
 				0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */,
-				02B53C3422F5E63700E35E1A /* TimeCell.swift in Sources */,
 				02B2A6F924B45BE400F60827 /* RegistrationUserInteractor.swift in Sources */,
 				0268E314246E19FF00BA7A5E /* AuthorizationView.swift in Sources */,
 				02505DEF22D0D66300C35306 /* AuthorizationController.swift in Sources */,
 				02B2A6F524B45B6F00F60827 /* RegisrationView.swift in Sources */,
-				02E209D622D34D5200AC046C /* UserEntity.swift in Sources */,
+				025581DA24D983670061F7D3 /* GetServiceCallback.swift in Sources */,
 				0202418224D6011E00300E45 /* ServiceFirebase.swift in Sources */,
 				02B53C1622ECAFAC00E35E1A /* CreationServiceController.swift in Sources */,
 				02A93C1024D2E2D400207134 /* Dialog.swift in Sources */,
 				02A93C1A24D2E34600207134 /* Subscription.swift in Sources */,
+				025581D124D875590061F7D3 /* CreationServiceView.swift in Sources */,
 				02D651AC248728AD00FBF45B /* UserRepository.swift in Sources */,
 				021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */,
 				0202419224D6092100300E45 /* CreationServicePresenterCallback.swift in Sources */,
 				02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */,
+				025581D424D983080061F7D3 /* InsertServiceCallback.swift in Sources */,
 				02D651BC24A3ACE900FBF45B /* BaseUpdateCallback.swift in Sources */,
 				0202418A24D6085000300E45 /* ICreationServiceTagInteractor.swift.swift in Sources */,
 				02A93C0124D2E1A400207134 /* ProfileServiceInteractor.swift in Sources */,
@@ -707,6 +702,7 @@
 				02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */,
 				0202418E24D6089900300E45 /* CreationServiceTagInteractor.swift in Sources */,
 				02505DED22D0D66300C35306 /* AppDelegate.swift in Sources */,
+				025581DC24D983810061F7D3 /* GetServicesCallback.swift in Sources */,
 				02A93C0824D2E20200207134 /* IProfileSubscriptionInteractor.swift in Sources */,
 				02A93C1224D2E2F100207134 /* Message.swift in Sources */,
 				02D651B424A3AA5C00FBF45B /* IUserRepository.swift in Sources */,
@@ -718,11 +714,10 @@
 				02D651BE24A3AD2400FBF45B /* BaseReturnElement.swift in Sources */,
 				02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */,
 				02A93C1C24D2E35500207134 /* Tag.swift in Sources */,
+				025581CF24D701A60061F7D3 /* Strings.swift in Sources */,
 				0202419424D6093D00300E45 /* ProfilePresenterCallback.swift in Sources */,
 				02D651C024A3AD6700FBF45B /* BaseReturnList.swift in Sources */,
 				0202418C24D6087400300E45 /* CreationServiceServiceInteractor.swift in Sources */,
-				02B53C2722EF056C00E35E1A /* DayCell.swift in Sources */,
-				02B53C1C22EDCF3200E35E1A /* ServiceEntity.swift in Sources */,
 				02E209CF22D341A800AC046C /* RegistrationController.swift in Sources */,
 				02D651A82487228400FBF45B /* User.swift in Sources */,
 				02A93C0C24D2E23600207134 /* IProfileServiceInteractor.swift in Sources */,
@@ -730,6 +725,7 @@
 				02A93C0E24D2E24900207134 /* IProfileDialogInteractor.swift in Sources */,
 				0202418024D600FC00300E45 /* ServiceRepository.swift in Sources */,
 				0202417E24D600B400300E45 /* IServiceRepository.swift in Sources */,
+				025581D824D983450061F7D3 /* DeleteServiceCallback.swift in Sources */,
 				02A93C1424D2E31500207134 /* Order.swift in Sources */,
 				02E209DE22D517EB00AC046C /* ProfileController.swift in Sources */,
 				02B2A6F724B45BB000F60827 /* RegistrationPresenter.swift in Sources */,
@@ -748,7 +744,7 @@
 				02D651C524A3B05E00FBF45B /* UpdateUserCallback.swift in Sources */,
 				0202418824D6082E00300E45 /* ICreationServiceServiceInteractor.swift in Sources */,
 				02A93BF824D2E11800207134 /* ProfileView.swift in Sources */,
-				02B53C1322ECABD200E35E1A /* PhotoEntity.swift in Sources */,
+				025581D624D983170061F7D3 /* UpdateServiceCallback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

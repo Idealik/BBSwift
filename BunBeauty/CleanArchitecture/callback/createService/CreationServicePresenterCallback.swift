@@ -8,5 +8,6 @@
 
 import Foundation
 protocol CreationServicePresenterCallback {
-    
+    func addTags(service: Service)
+    func addPhotos(service: Service)
 }
