@@ -25,6 +25,7 @@
 		02505DF422D0D66300C35306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF322D0D66300C35306 /* Assets.xcassets */; };
 		02505DF722D0D66300C35306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02505DF522D0D66300C35306 /* LaunchScreen.storyboard */; };
 		02505E0122D0DEE900C35306 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02505E0022D0DEE900C35306 /* GoogleService-Info.plist */; };
+		0255023824DC0AB800CE0967 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255023724DC0AB800CE0967 /* Style.swift */; };
 		025581CD24D6E9B80061F7D3 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025581CC24D6E9B80061F7D3 /* iOSDropDown.framework */; };
 		025581CF24D701A60061F7D3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581CE24D701A60061F7D3 /* Strings.swift */; };
 		025581D124D875590061F7D3 /* CreationServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025581D024D875590061F7D3 /* CreationServiceView.swift */; };
@@ -107,6 +108,7 @@
 		02505DF622D0D66300C35306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02505DF822D0D66300C35306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02505E0022D0DEE900C35306 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0255023724DC0AB800CE0967 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		025581CC24D6E9B80061F7D3 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		025581CE24D701A60061F7D3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		025581D024D875590061F7D3 /* CreationServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceView.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				0268E309246E186200BA7A5E /* mvp */,
 				0268E308246E185300BA7A5E /* di */,
 				025581CE24D701A60061F7D3 /* Strings.swift */,
+				0255023724DC0AB800CE0967 /* Style.swift */,
 			);
 			path = CleanArchitecture;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				02B2A6F924B45BE400F60827 /* RegistrationUserInteractor.swift in Sources */,
 				0268E314246E19FF00BA7A5E /* AuthorizationView.swift in Sources */,
 				02505DEF22D0D66300C35306 /* AuthorizationController.swift in Sources */,
+				0255023824DC0AB800CE0967 /* Style.swift in Sources */,
 				02B2A6F524B45B6F00F60827 /* RegisrationView.swift in Sources */,
 				025581DA24D983670061F7D3 /* GetServiceCallback.swift in Sources */,
 				0202418224D6011E00300E45 /* ServiceFirebase.swift in Sources */,

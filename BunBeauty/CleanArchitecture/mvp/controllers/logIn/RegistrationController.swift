@@ -10,16 +10,17 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import iOSDropDown
+import MaterialComponents
 class RegistrationController: UIViewController, RegistrationView {
-  
+    
     var registrationUserInteractor:RegistrationUserInteractor  = RegistrationUserInteractor(userRepository: UserRepository.getInstance())
     var registrationPresenter:RegisrationPresenter?
     
-    @IBOutlet weak var phoneInput: UITextField!
-    @IBOutlet weak var nameInput: UITextField!
-    @IBOutlet weak var surnameInput: UITextField!
+    @IBOutlet weak var phoneInput: MDCBaseTextField!
+    @IBOutlet weak var nameInput: MDCFilledTextField!
+    @IBOutlet weak var surnameInput: MDCBaseTextField!
     @IBOutlet weak var citySpinner: DropDown!
-    
+    @IBOutlet weak var saveRegistrationBtn: MDCButton!
     var myPhoneNumber:String!
     
     override func viewDidLoad() {
@@ -29,11 +30,17 @@ class RegistrationController: UIViewController, RegistrationView {
         registrationPresenter = RegisrationPresenter(registrationUserInteractor: registrationUserInteractor, registrationView: self)
     }
     
+    func initView(){
+        saveRegistrationBtn.layer.cornerRadius = CGFloat(Style.buttunCornerRadius)
+        saveRegistrationBtn.clipsToBounds = true
+        nameInput.placeholder = Strings.name
+    }
+    
     @IBAction func registrateBtn(_ sender: Any) {
-       registrationPresenter?.registerUser(name: nameInput.text ?? "",
-                                           surname: surnameInput.text ?? "",
-                                           city: citySpinner.text ?? "",
-                                           phone: phoneInput.text ??   "")
+        registrationPresenter?.registerUser(name: nameInput.text ?? "",
+                                            surname: surnameInput.text ?? "",
+                                            city: citySpinner.text ?? "",
+                                            phone: phoneInput.text ??   "")
     }
     
     func setNameInputError(error: String) {

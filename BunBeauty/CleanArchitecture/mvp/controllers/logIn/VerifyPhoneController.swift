@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+import MaterialComponents
 class VerifyPhoneController: UIViewController, VerifyPhoneView {
     
     var myPhoneNumber:String!
@@ -17,9 +17,10 @@ class VerifyPhoneController: UIViewController, VerifyPhoneView {
     
     var verifyPhoneInteractor:VerifyPhoneInteractor  = VerifyPhoneInteractor(userRepository: UserRepository.getInstance())
     
-    @IBOutlet weak var phoneVeifyPhoneInput: UITextField!
-    @IBOutlet weak var verifyPhoneNumberInput: UITextField!
+    @IBOutlet weak var phoneVeifyPhoneInput: MDCTextField!
+    @IBOutlet weak var verifyPhoneNumberInput: MDCFilledTextField!
     
+    @IBOutlet weak var verifyPhoneBtn: MDCButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +38,11 @@ class VerifyPhoneController: UIViewController, VerifyPhoneView {
                 print("Unable to get SVC from firebase ")
             }
         }
+    }
+    
+    func initView(){
+        verifyPhoneBtn.layer.cornerRadius = CGFloat(Style.buttunCornerRadius)
+        verifyPhoneBtn.clipsToBounds = true
     }
     
     @IBAction func myVerifyBtn(_ sender: Any) {

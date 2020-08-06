@@ -13,4 +13,5 @@ target 'BunBeauty' do
 	pod 'Typhoon'
 	pod 'Kingfisher', '~> 5.0'
 	pod 'iOSDropDown'
+	pod 'MaterialComponents'
 end

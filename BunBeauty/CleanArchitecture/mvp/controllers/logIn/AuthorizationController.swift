@@ -9,11 +9,11 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-
+import MaterialComponents
 class AuthorizationController: UIViewController, AuthorizationView {
     
     @IBOutlet weak var enterPhoneText: UITextField!
-    @IBOutlet weak var authorizeAuthorizationBtn: UIButton!
+    @IBOutlet weak var authorizeAuthorizationBtn: MDCButton!
     @IBOutlet weak var loadingAuthorizationIndicatorView: UIActivityIndicatorView!
     
     var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository.getInstance())
@@ -30,13 +30,15 @@ class AuthorizationController: UIViewController, AuthorizationView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         authorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: self)
-        
-        //check status in FB
         FirebaseApp.configure()
-        
+        initView()
         authorizationPresenter?.defaultAuthorize()
+    }
+    
+    func initView(){
+        authorizeAuthorizationBtn.layer.cornerRadius = CGFloat(Style.buttunCornerRadius)
+        authorizeAuthorizationBtn.clipsToBounds = true
     }
     
     @IBAction func enterBtn(_ sender: Any) {
