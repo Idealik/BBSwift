@@ -701,14 +701,7 @@ PODS:
   - Realm/Headers (3.17.0)
   - RealmSwift (3.17.0):
     - Realm (= 3.17.0)
-  - Typhoon (4.0.8):
-    - Typhoon/DeallocNotifier (= 4.0.8)
-    - Typhoon/IntrospectionUtils (= 4.0.8)
-    - Typhoon/no-arc (= 4.0.8)
-  - Typhoon/DeallocNotifier (4.0.8)
-  - Typhoon/IntrospectionUtils (4.0.8)
-  - Typhoon/no-arc (4.0.8):
-    - Typhoon/IntrospectionUtils
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -718,7 +711,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - MaterialComponents
   - RealmSwift
-  - Typhoon
+  - Swinject
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -744,7 +737,7 @@ SPEC REPOS:
     - MDFTextAccessibility
     - MotionAnimator
     - MotionInterchange
-    - Typhoon
+    - Swinject
 
 SPEC CHECKSUMS:
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
@@ -768,8 +761,8 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
   RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
-  Typhoon: f8901ef1ad0e2fa520cda0f668492dd33353f7dc
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 0d5212f8fc7fd4698dae0acf81f268631ce177d0
+PODFILE CHECKSUM: 62f8067e2219df37d0cfe60f56ad82f89bd56966
 
 COCOAPODS: 1.9.3

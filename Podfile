@@ -10,7 +10,7 @@ target 'BunBeauty' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
-	pod 'Typhoon'
+	pod 'Swinject'
 	pod 'Kingfisher', '~> 5.0'
 	pod 'iOSDropDown'
 	pod 'MaterialComponents'

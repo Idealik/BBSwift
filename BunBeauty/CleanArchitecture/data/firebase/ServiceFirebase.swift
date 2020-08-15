@@ -13,9 +13,8 @@ class ServiceFirebase {
     
     func insert(service:Service){
         let serviceRef = Database.database().reference()
-            .child(User.USERS)
-            .child(service.userId)
             .child(Service.SERVICES)
+            .child(service.userId)
             .child(service.id)
         
         var items :Dictionary <String,Any> = [:]

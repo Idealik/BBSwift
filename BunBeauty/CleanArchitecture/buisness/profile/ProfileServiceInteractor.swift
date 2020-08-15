@@ -8,5 +8,10 @@
 
 import Foundation
 class ProfileServiceInteractor:IProfileServiceInteractor {
+    private var serviceRepository:ServiceRepository
     
+    init(serviceRepository:ServiceRepository) {
+        self.serviceRepository = serviceRepository
+    }
+
 }

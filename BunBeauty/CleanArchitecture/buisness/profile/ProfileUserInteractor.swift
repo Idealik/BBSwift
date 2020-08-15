@@ -9,4 +9,11 @@
 import Foundation
 class ProfileUserInteractor: IProfileUserInteractor {
     
+    private var userRepository:UserRepository
+
+    init(userRepository:UserRepository) {
+        self.userRepository = userRepository
+    }
+    
+    
 }

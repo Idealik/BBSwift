@@ -18,10 +18,14 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var avatarProfileImageView: UIImageView!
     
     var user:User?
-
+    
+    //var profileUserInteractor:ProfileUserInteractor  = ProfileUserInteractor()
+    var profilePresenter:ProfilePresenter?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if(user != nil){
             setProfileData(user: user!)
         }else{
@@ -34,22 +38,17 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
    
     }
     
-    private func updateProfileData(ownerId:String) -> Void {
-      
-    }
-    
     private func  setProfileData(user:User) -> Void {
         nameText.text = user.name
         cityTex.text = user.city
         phoneText.text = user.phone
-        //get rating
         avatarProfileImageView.kf.setImage(with: URL(string: user.photoLink))
+        
         //updateServiceList()!
     }
     
     func updateServiceList(ownerId:String) -> Void {
     
-        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return 0

@@ -7,14 +7,13 @@
 //
 
 import Foundation
-class RegisrationPresenter : RegistrationPresenterCallback{
+class RegistrationPresenter : RegistrationPresenterCallback{
     
     private let registrationUserInteractor:IRegistrationUserInteractor
-    private let registrationView:RegistrationView
+    var registrationView:RegistrationView?
     
-    init(registrationUserInteractor:RegistrationUserInteractor, registrationView:RegistrationView) {
+    init(registrationUserInteractor:RegistrationUserInteractor) {
         self.registrationUserInteractor = registrationUserInteractor
-        self.registrationView = registrationView
         return
     }
     
@@ -28,35 +27,36 @@ class RegisrationPresenter : RegistrationPresenterCallback{
     }
     
     func showSuccessfulRegistration(user: User) {
-        registrationView.showSuccessfulRegistration()
-        registrationView.goToProfile(user: user)
+        registrationView?.showSuccessfulRegistration()
+        registrationView?.goToProfile(user: user)
     }
     
     func registrationNameInputError() {
-        registrationView.setNameInputError(error: "Неккоректно введено имя")
+        registrationView?.setNameInputError(error: "Неккоректно введено имя")
     }
     
     func registrationNameInputErrorEmpty() {
-        registrationView.setNameInputError(error: "Введите имя")
+        registrationView?.setNameInputError(error: "Введите имя")
     }
     
     func registrationNameInputErrorLong() {
-        registrationView.setNameInputError(error: "Неккоректно введено имя")
+        registrationView?.setNameInputError(error: "Неккоректно введено имя")
     }
     
     func registrationSurnameInputError() {
-        registrationView.setNameInputError(error: "Неккоректно введена фамилия")
+        registrationView?.setNameInputError(error: "Неккоректно введена фамилия")
     }
     
     func registrationSurnameInputErrorEmpty() {
-        registrationView.setNameInputError(error: "Введите фамилию")
+        registrationView?.setNameInputError(error: "Введите фамилию")
     }
     
     func registrationSurnameInputErrorLong() {
-        registrationView.setNameInputError(error: "Неккоректно введена фамилия")
+        registrationView?.setNameInputError(error: "Неккоректно введена фамилия")
     }
     
     func registrationCityInputError() {
-        registrationView.setNameInputError(error: "Выберите город")
+        registrationView?.setNameInputError(error: "Выберите город")
     }
+    
 }

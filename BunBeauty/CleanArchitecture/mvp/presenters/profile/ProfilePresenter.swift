@@ -34,8 +34,4 @@ class ProfilePresenter {
     }
     
     
-    func getProfileOwner(user:User)  {
-        
-    }
-    
 }

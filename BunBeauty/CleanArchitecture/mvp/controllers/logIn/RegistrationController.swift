@@ -14,7 +14,7 @@ import MaterialComponents
 class RegistrationController: UIViewController, RegistrationView {
     
     var registrationUserInteractor:RegistrationUserInteractor  = RegistrationUserInteractor(userRepository: UserRepository.getInstance())
-    var registrationPresenter:RegisrationPresenter?
+    var registrationPresenter:RegistrationPresenter?
     
     @IBOutlet weak var phoneInput: MDCBaseTextField!
     @IBOutlet weak var nameInput: MDCFilledTextField!
@@ -23,11 +23,26 @@ class RegistrationController: UIViewController, RegistrationView {
     @IBOutlet weak var saveRegistrationBtn: MDCButton!
     var myPhoneNumber:String!
     
+    
+    init(presenter: RegistrationPresenter?) {
+      super.init(nibName: nil, bundle: nil)
+      if presenter == nil {
+        fatalError("Presenter must be injected")
+      }
+      self.registrationPresenter = presenter
+      self.registrationPresenter?.registrationView = self
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillPhoneInput(phone: myPhoneNumber)
         citySpinner.optionArray = Strings.cicites
-        registrationPresenter = RegisrationPresenter(registrationUserInteractor: registrationUserInteractor, registrationView: self)
+        //registrationPresenter = RegisrationPresenter(registrationUserInteractor: registrationUserInteractor)
     }
     
     func initView(){

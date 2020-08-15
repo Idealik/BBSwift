@@ -7,23 +7,37 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    let container: Container = {
+        let container = Container()
+        container.register(UserFirebase.self) { _ in UserFirebase()}
+        container.register(UserRepository.self) { r in
+            UserRepository(userFirebase: r.resolve(UserFirebase.self)!)
+        }
+        container.register(RegistrationUserInteractor.self) { r in
+            RegistrationUserInteractor(userRepository: r.resolve(UserRepository.self)!)
+        }
+        container.register(RegistrationPresenter.self) { r in
+            RegistrationPresenter(registrationUserInteractor: r.resolve(RegistrationUserInteractor.self)!)
+        }
+        container.register(RegistrationController.self) { r in
+            RegistrationController(presenter: r.resolve(RegistrationPresenter.self)!)
+        }
+        return container
+    }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        if let rootViewController = window?.rootViewController as? RegistrationController {
+            rootViewController.registrationPresenter =  container.resolve(RegistrationController.self)?.registrationPresenter!
+        }
         
-//        let authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository.getInstance())
-//        let authorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: AuthorizationController() as! AuthorizationView)
-//        let rootVC = AuthorizationController(authorizationPresenter: authorizationPresenter)
-//        let window = UIWindow(frame: UIScreen.main.bounds)
-//        window.rootViewController = rootVC
-//        window.makeKeyAndVisible()
-//        self.window = window
         
         return true
     }

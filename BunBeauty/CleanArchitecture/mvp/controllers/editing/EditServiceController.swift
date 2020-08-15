@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 class EditServiceController: UIViewController{
     
 }
