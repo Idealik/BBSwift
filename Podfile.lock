@@ -702,6 +702,8 @@ PODS:
   - RealmSwift (3.17.0):
     - Realm (= 3.17.0)
   - Swinject (2.7.1)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -712,6 +714,7 @@ DEPENDENCIES:
   - MaterialComponents
   - RealmSwift
   - Swinject
+  - SwinjectStoryboard
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -738,6 +741,7 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - Swinject
+    - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
@@ -762,7 +766,8 @@ SPEC CHECKSUMS:
   Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
   RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 62f8067e2219df37d0cfe60f56ad82f89bd56966
+PODFILE CHECKSUM: 0467165e2638e35435852fede17be1cbd63b52a4
 
 COCOAPODS: 1.9.3

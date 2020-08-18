@@ -8,5 +8,12 @@
 
 import Foundation
 struct Subscription {
-    
+    var id: String = ""
+    var userId:String = ""
+    var date:Int = 0
+    var subscriptionId:String = ""
+    //CONSTS
+    static let SUBSCRIPTIONS:String = "subscriptions"
+    static let SUBSCRIPTION_ID:String = "subscription id"
+    static let DATE:String = "date"
 }

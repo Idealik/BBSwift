@@ -14,4 +14,5 @@ target 'BunBeauty' do
 	pod 'Kingfisher', '~> 5.0'
 	pod 'iOSDropDown'
 	pod 'MaterialComponents'
+	pod 'SwinjectStoryboard'
 end

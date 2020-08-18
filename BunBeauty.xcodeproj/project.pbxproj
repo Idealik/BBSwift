@@ -45,6 +45,7 @@
 		02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8524A7B62F00602633 /* VerifyPhoneView.swift */; };
 		02577C8824A7B8BC00602633 /* VerifyPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */; };
 		02577C8A24A7B90700602633 /* VerifyPhonePresenterCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */; };
+		0258475524E973D6001B3254 /* RepositoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258475424E973D6001B3254 /* RepositoryContainer.swift */; };
 		0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */; };
 		0268E314246E19FF00BA7A5E /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E313246E19FF00BA7A5E /* AuthorizationView.swift */; };
 		0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */; };
@@ -136,6 +137,7 @@
 		02577C8524A7B62F00602633 /* VerifyPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneView.swift; sourceTree = "<group>"; };
 		02577C8724A7B8BC00602633 /* VerifyPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhonePresenter.swift; sourceTree = "<group>"; };
 		02577C8924A7B90700602633 /* VerifyPhonePresenterCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhonePresenterCallback.swift; sourceTree = "<group>"; };
+		0258475424E973D6001B3254 /* RepositoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryContainer.swift; path = BunBeauty/CleanArchitecture/mvp/controllers/comments/RepositoryContainer.swift; sourceTree = SOURCE_ROOT; };
 		0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		0268E313246E19FF00BA7A5E /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		0268E308246E185300BA7A5E /* di */ = {
 			isa = PBXGroup;
 			children = (
+				0258475424E973D6001B3254 /* RepositoryContainer.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -559,15 +562,15 @@
 		02D651A62487224800FBF45B /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				02D651A72487228400FBF45B /* User.swift */,
-				02D651A92487229400FBF45B /* Service.swift */,
 				02A93C0F24D2E2D400207134 /* Dialog.swift */,
 				02A93C1124D2E2F100207134 /* Message.swift */,
 				02A93C1324D2E31500207134 /* Order.swift */,
 				02A93C1524D2E32000207134 /* Photo.swift */,
+				02D651A92487229400FBF45B /* Service.swift */,
 				02A93C1724D2E33000207134 /* Subscriber.swift */,
 				02A93C1924D2E34600207134 /* Subscription.swift */,
 				02A93C1B24D2E35500207134 /* Tag.swift */,
+				02D651A72487228400FBF45B /* User.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -775,6 +778,7 @@
 				02A93C1024D2E2D400207134 /* Dialog.swift in Sources */,
 				02A93C1A24D2E34600207134 /* Subscription.swift in Sources */,
 				025581D124D875590061F7D3 /* CreationServiceView.swift in Sources */,
+				0258475524E973D6001B3254 /* RepositoryContainer.swift in Sources */,
 				02D651AC248728AD00FBF45B /* UserRepository.swift in Sources */,
 				021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */,
 				0202419224D6092100300E45 /* CreationServicePresenterCallback.swift in Sources */,

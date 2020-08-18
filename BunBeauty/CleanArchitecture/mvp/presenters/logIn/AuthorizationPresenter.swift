@@ -9,18 +9,17 @@
 import Foundation
 
 class AuthorizationPresenter : AuthorizationPresenterCallback {
-
+    
     private let authorizationInteractor:AuthorizationInteractor
-    private let authorizationView:AuthorizationView
-
-    init(authorizationInteractor:AuthorizationInteractor, authorizationView:AuthorizationView) {
+    var authorizationView:AuthorizationView?
+    
+    init(authorizationInteractor:AuthorizationInteractor) {
         self.authorizationInteractor = authorizationInteractor
-        self.authorizationView = authorizationView
         return
     }
     
     func defaultAuthorize() {
-        authorizationView.hideViewsOnScreen()
+        authorizationView?.hideViewsOnScreen()
         authorizationInteractor.defaultAuthorize(authorizationPresenterCallback: self)
     }
     
@@ -29,23 +28,23 @@ class AuthorizationPresenter : AuthorizationPresenterCallback {
     }
     
     func showViewOnScreen() {
-        authorizationView.showViewsOnScreen()
+        authorizationView?.showViewsOnScreen()
     }
     
     func setPhoneError() {
-        authorizationView.showPhoneError(error: "Неккоректно введен номер")
+        authorizationView?.showPhoneError(error: "Неккоректно введен номер")
     }
     
     func goToRegistration(phone: String) {
-        authorizationView.goToRegistration(phone: phone)
+        authorizationView?.goToRegistration(phone: phone)
     }
     
     func goToProfile(user: User) {
-        authorizationView.goToProfile(user: user)
+        authorizationView?.goToProfile(user: user)
     }
     
     func goToVerifyPhone(phone: String) {
-        authorizationView.goToVerifyPhone(phone: phone)
+        authorizationView?.goToVerifyPhone(phone: phone)
     }
-
+    
 }

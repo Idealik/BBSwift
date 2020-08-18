@@ -16,21 +16,23 @@ class AuthorizationController: UIViewController, AuthorizationView {
     @IBOutlet weak var authorizeAuthorizationBtn: MDCButton!
     @IBOutlet weak var loadingAuthorizationIndicatorView: UIActivityIndicatorView!
     
-    var authorizationInteractor:AuthorizationInteractor  = AuthorizationInteractor(userRepository: UserRepository.getInstance())
     var authorizationPresenter:AuthorizationPresenter?
     
-//    init(authorizationPresenter:AuthorizationPresenter){
-//        self.authorizationPresenter = authorizationPresenter
-//        super.init(nibName:nil, bundle:nil)
-//    }
-//
-// required init?(coder aDecoder: NSCoder) {
-//       super.init(coder: aDecoder)
-//    }
+    init(presenter: AuthorizationPresenter?) {
+        super.init(nibName: nil, bundle: nil)
+        if presenter == nil {
+            fatalError("Presenter must be injected")
+        }
+        self.authorizationPresenter = presenter
+        self.authorizationPresenter?.authorizationView = self
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizationPresenter = AuthorizationPresenter(authorizationInteractor: authorizationInteractor, authorizationView: self)
         FirebaseApp.configure()
         initView()
         authorizationPresenter?.defaultAuthorize()

@@ -20,8 +20,7 @@ struct Service {
     var cost:Int = 0
     var creationDate:Int = 0
     var premiumDate:Int = 0
-    
-    
+    //CONSTS
     static let USERS:String = "users"
     static let NAME:String = "name"
     static let SERVICES:String = "services"

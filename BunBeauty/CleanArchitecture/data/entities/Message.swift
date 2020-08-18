@@ -8,5 +8,23 @@
 
 import Foundation
 struct Message {
+    var id: String = ""
+    var dialogId: String = ""
+    var userId: String = ""
+    var message: String = ""
+    var orderId: String = ""
+    var ownerId: String = ""
+    var tine: Int = 0
+    var type: Int = 0
+    
+    static let MESSAGES = "messages"
+    static let MESSAGE = "message"
+    static let TYPE = "type"
+    static let TEXT_MESSAGE_STATUS = 0
+    static let USER_REVIEW_MESSAGE_STATUS = 1
+    static let SERVICE_REVIEW_MESSAGE_STATUS = 2
+    static let TIME = "time"
+    static let ORDER_ID = "order id"
+    static let OWNER_ID = "owner id"
     
 }

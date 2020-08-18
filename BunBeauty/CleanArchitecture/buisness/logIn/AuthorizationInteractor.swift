@@ -11,7 +11,7 @@ import FirebaseAuth
 class AuthorizationInteractor: GetUserCallback {
     
     private var authorizationPresenterCallback: AuthorizationPresenterCallback?
-    private var userRepository:UserRepository
+    var userRepository:UserRepository
     
     init(userRepository:UserRepository) {
         self.userRepository = userRepository
