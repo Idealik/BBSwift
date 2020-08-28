@@ -9,4 +9,11 @@
 import Foundation
 class ProfileSubscriptionInteractor:IProfileSubscriptionInteractor{
     
+    private var serviceRepository:ServiceRepository
+
+    init(serviceRepository:ServiceRepository) {
+        self.serviceRepository = serviceRepository
+    }
+    
+    
 }

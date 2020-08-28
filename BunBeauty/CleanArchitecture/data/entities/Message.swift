@@ -14,9 +14,10 @@ struct Message {
     var message: String = ""
     var orderId: String = ""
     var ownerId: String = ""
-    var tine: Int = 0
+    var time: Int = 0
     var type: Int = 0
-    
+    var finishOrderTime: Int = 0
+
     static let MESSAGES = "messages"
     static let MESSAGE = "message"
     static let TYPE = "type"
@@ -26,5 +27,6 @@ struct Message {
     static let TIME = "time"
     static let ORDER_ID = "order id"
     static let OWNER_ID = "owner id"
-    
+    static let FINISH_ORDER_TIME_ID = "finish order time"
+
 }

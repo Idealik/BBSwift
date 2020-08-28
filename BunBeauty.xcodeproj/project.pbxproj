@@ -49,6 +49,15 @@
 		0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */; };
 		0268E314246E19FF00BA7A5E /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E313246E19FF00BA7A5E /* AuthorizationView.swift */; };
 		0268E31A246E1AC500BA7A5E /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */; };
+		0281D55524F8C40C00E4AA7B /* MessageFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D55424F8C40C00E4AA7B /* MessageFirebase.swift */; };
+		0281D55724F8C42600E4AA7B /* OrderFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D55624F8C42600E4AA7B /* OrderFirebase.swift */; };
+		0281D55924F8C44800E4AA7B /* UserCommentFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D55824F8C44800E4AA7B /* UserCommentFirebase.swift */; };
+		0281D55B24F8C45600E4AA7B /* ServiceCommentFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D55A24F8C45600E4AA7B /* ServiceCommentFirebase.swift */; };
+		0281D55D24F8C46800E4AA7B /* SubscriptionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D55C24F8C46800E4AA7B /* SubscriptionFirebase.swift */; };
+		0281D55F24F8C48100E4AA7B /* SubscriberFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D55E24F8C48100E4AA7B /* SubscriberFirebase.swift */; };
+		0281D56124F8C49500E4AA7B /* TagFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D56024F8C49500E4AA7B /* TagFirebase.swift */; };
+		0281D56324F8C4B700E4AA7B /* PhotoServiceFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D56224F8C4B700E4AA7B /* PhotoServiceFirebase.swift */; };
+		0281D56524F8C4C300E4AA7B /* ScheduleFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281D56424F8C4C300E4AA7B /* ScheduleFirebase.swift */; };
 		02A93BF624D2E10A00207134 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BF524D2E10A00207134 /* ProfilePresenter.swift */; };
 		02A93BF824D2E11800207134 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BF724D2E11800207134 /* ProfileView.swift */; };
 		02A93BFB24D2E15400207134 /* ProfileUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A93BFA24D2E15400207134 /* ProfileUserInteractor.swift */; };
@@ -141,6 +150,15 @@
 		0268E311246E19AB00BA7A5E /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		0268E313246E19FF00BA7A5E /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		0268E319246E1AC500BA7A5E /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
+		0281D55424F8C40C00E4AA7B /* MessageFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFirebase.swift; sourceTree = "<group>"; };
+		0281D55624F8C42600E4AA7B /* OrderFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFirebase.swift; sourceTree = "<group>"; };
+		0281D55824F8C44800E4AA7B /* UserCommentFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentFirebase.swift; sourceTree = "<group>"; };
+		0281D55A24F8C45600E4AA7B /* ServiceCommentFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCommentFirebase.swift; sourceTree = "<group>"; };
+		0281D55C24F8C46800E4AA7B /* SubscriptionFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFirebase.swift; sourceTree = "<group>"; };
+		0281D55E24F8C48100E4AA7B /* SubscriberFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberFirebase.swift; sourceTree = "<group>"; };
+		0281D56024F8C49500E4AA7B /* TagFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFirebase.swift; sourceTree = "<group>"; };
+		0281D56224F8C4B700E4AA7B /* PhotoServiceFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceFirebase.swift; sourceTree = "<group>"; };
+		0281D56424F8C4C300E4AA7B /* ScheduleFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFirebase.swift; sourceTree = "<group>"; };
 		02A93BF524D2E10A00207134 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		02A93BF724D2E11800207134 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		02A93BFA24D2E15400207134 /* ProfileUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserInteractor.swift; sourceTree = "<group>"; };
@@ -555,6 +573,15 @@
 			children = (
 				02D651B024A3A64000FBF45B /* UserFirebase.swift */,
 				0202418124D6011E00300E45 /* ServiceFirebase.swift */,
+				0281D55424F8C40C00E4AA7B /* MessageFirebase.swift */,
+				0281D55624F8C42600E4AA7B /* OrderFirebase.swift */,
+				0281D55824F8C44800E4AA7B /* UserCommentFirebase.swift */,
+				0281D55A24F8C45600E4AA7B /* ServiceCommentFirebase.swift */,
+				0281D55C24F8C46800E4AA7B /* SubscriptionFirebase.swift */,
+				0281D55E24F8C48100E4AA7B /* SubscriberFirebase.swift */,
+				0281D56024F8C49500E4AA7B /* TagFirebase.swift */,
+				0281D56224F8C4B700E4AA7B /* PhotoServiceFirebase.swift */,
+				0281D56424F8C4C300E4AA7B /* ScheduleFirebase.swift */,
 			);
 			path = firebase;
 			sourceTree = "<group>";
@@ -761,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02A93C1624D2E32000207134 /* Photo.swift in Sources */,
+				0281D55F24F8C48100E4AA7B /* SubscriberFirebase.swift in Sources */,
 				02D651B824A3AAFD00FBF45B /* BaseInsertCallback.swift in Sources */,
 				02D651C724A3B08200FBF45B /* GetUserCallback.swift in Sources */,
 				0268E312246E19AB00BA7A5E /* AuthorizationPresenter.swift in Sources */,
@@ -779,9 +807,11 @@
 				02A93C1A24D2E34600207134 /* Subscription.swift in Sources */,
 				025581D124D875590061F7D3 /* CreationServiceView.swift in Sources */,
 				0258475524E973D6001B3254 /* RepositoryContainer.swift in Sources */,
+				0281D56324F8C4B700E4AA7B /* PhotoServiceFirebase.swift in Sources */,
 				02D651AC248728AD00FBF45B /* UserRepository.swift in Sources */,
 				021EC02922FCAB7600BCBF82 /* MainScreen.swift in Sources */,
 				0202419224D6092100300E45 /* CreationServicePresenterCallback.swift in Sources */,
+				0281D55524F8C40C00E4AA7B /* MessageFirebase.swift in Sources */,
 				02B53C1F22EE1C2000E35E1A /* WorkWithTimeApi.swift in Sources */,
 				025581D424D983080061F7D3 /* InsertServiceCallback.swift in Sources */,
 				02D651BC24A3ACE900FBF45B /* BaseUpdateCallback.swift in Sources */,
@@ -791,6 +821,7 @@
 				02A93BF624D2E10A00207134 /* ProfilePresenter.swift in Sources */,
 				0255024824DDAE2000CE0967 /* SubscriptionsController.swift in Sources */,
 				02A93C0A24D2E21500207134 /* IProfileSubscriberInteractor.swift in Sources */,
+				0281D56124F8C49500E4AA7B /* TagFirebase.swift in Sources */,
 				02B2A6FE24B45C8100F60827 /* RegistrationPresenterCallback.swift in Sources */,
 				0255024C24DDAE8400CE0967 /* EditServiceController.swift in Sources */,
 				0255025424DDAF6000CE0967 /* UserCommentsController.swift in Sources */,
@@ -799,6 +830,7 @@
 				025581DC24D983810061F7D3 /* GetServicesCallback.swift in Sources */,
 				02A93C0824D2E20200207134 /* IProfileSubscriptionInteractor.swift in Sources */,
 				02A93C1224D2E2F100207134 /* Message.swift in Sources */,
+				0281D55724F8C42600E4AA7B /* OrderFirebase.swift in Sources */,
 				02D651B424A3AA5C00FBF45B /* IUserRepository.swift in Sources */,
 				02D651AF24A2D40C00FBF45B /* AuthorizationPresenterCallback.swift in Sources */,
 				02D651AA2487229400FBF45B /* Service.swift in Sources */,
@@ -810,6 +842,7 @@
 				02E209C422D22C6400AC046C /* VerifyPhoneController.swift in Sources */,
 				02A93C1C24D2E35500207134 /* Tag.swift in Sources */,
 				025581CF24D701A60061F7D3 /* Strings.swift in Sources */,
+				0281D56524F8C4C300E4AA7B /* ScheduleFirebase.swift in Sources */,
 				0202419424D6093D00300E45 /* ProfilePresenterCallback.swift in Sources */,
 				02D651C024A3AD6700FBF45B /* BaseReturnList.swift in Sources */,
 				0202418C24D6087400300E45 /* CreationServiceServiceInteractor.swift in Sources */,
@@ -819,6 +852,7 @@
 				02D651B124A3A64000FBF45B /* UserFirebase.swift in Sources */,
 				02A93C0E24D2E24900207134 /* IProfileDialogInteractor.swift in Sources */,
 				0255024E24DDAEEB00CE0967 /* CreationCommentController.swift in Sources */,
+				0281D55B24F8C45600E4AA7B /* ServiceCommentFirebase.swift in Sources */,
 				0202418024D600FC00300E45 /* ServiceRepository.swift in Sources */,
 				0202417E24D600B400300E45 /* IServiceRepository.swift in Sources */,
 				025581D824D983450061F7D3 /* DeleteServiceCallback.swift in Sources */,
@@ -829,6 +863,7 @@
 				02B2A6F324B44BEC00F60827 /* VerifyPhoneInteractor.swift in Sources */,
 				02577C8624A7B62F00602633 /* VerifyPhoneView.swift in Sources */,
 				02B2A6FC24B45C1800F60827 /* IRegistrationUserInteractor.swift in Sources */,
+				0281D55924F8C44800E4AA7B /* UserCommentFirebase.swift in Sources */,
 				02D651C324A3AE7B00FBF45B /* InsertUserCallback.swift in Sources */,
 				02A93C0324D2E1B700207134 /* ProfileDialogInteractor.swift in Sources */,
 				021EC02522F8579500BCBF82 /* GuestService.swift in Sources */,
@@ -837,6 +872,7 @@
 				02A93BFD24D2E17400207134 /* ProfileSubscriptionInteractor.swift in Sources */,
 				02A93C0624D2E1E800207134 /* IProfileUserInteractor.swift in Sources */,
 				02A93BFB24D2E15400207134 /* ProfileUserInteractor.swift in Sources */,
+				0281D55D24F8C46800E4AA7B /* SubscriptionFirebase.swift in Sources */,
 				02D651C524A3B05E00FBF45B /* UpdateUserCallback.swift in Sources */,
 				0202418824D6082E00300E45 /* ICreationServiceServiceInteractor.swift in Sources */,
 				02A93BF824D2E11800207134 /* ProfileView.swift in Sources */,

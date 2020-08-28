@@ -17,6 +17,7 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var serviceTableView: UITableView!
     @IBOutlet weak var avatarProfileImageView: UIImageView!
     
+    @IBOutlet weak var subscriptionsProfileBtn: UIButton!
     var user:User?
     
     //var profileUserInteractor:ProfileUserInteractor  = ProfileUserInteractor()
@@ -50,6 +51,7 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
     func updateServiceList(ownerId:String) -> Void {
     
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return 0
     }
@@ -63,7 +65,10 @@ class ProfileController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
+    @IBAction func goToSubscriptions(_ sender: Any) {
+        
+    }
     
     @IBAction func goToMainScreen(_ sender: Any) {
         let  mainScreen = storyboard?.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
